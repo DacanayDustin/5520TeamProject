@@ -1,0 +1,21 @@
+Part 1: due on Jan 30.
+Develop a prototype for user interface. Enable the user to select Chapter, Section, and Question in this order.
+ 
+Part 2: due on Feb 15.
+Enable the user to answer a question and give the user feedback. Let the user see the hint if the question has a hint.
+
+Part 3: due on March 1.
+Enable the user to login and store the user answer in the database.
+ 
+
+Question txt layout
+
+#
+number options
+checkbox or toggle
+1.udhsfkdsh
+a.
+b.
+....
+key:
+hint:
