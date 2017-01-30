@@ -5,13 +5,19 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.TextFlow?>
 
 <View fx:id="question" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.csci5520_teamproject.views.QuestionPresenter">
    <center>
       <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <children>
-            <Label fx:id="questionLabel" text="Label" />
+            <Label fx:id="questionLabel" />
             <VBox fx:id="vBoxQuest" prefHeight="200.0" prefWidth="100.0" />
+            <TextFlow fx:id="textFlowHint" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label id="hintLabel" fx:id="hintLabel" />
+               </children>
+            </TextFlow>
             <Button fx:id="back" mnemonicParsing="false" onAction="#go2" text="Button" />
          </children>
       </VBox>
