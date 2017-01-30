@@ -28,8 +28,6 @@ public class QuestionPresenter {
     public String chapterString, sectionString, questionString;
     ArrayList<Question> questionArray = new ArrayList<Question>();
 
-    
-
     @FXML
     private View question;
 
@@ -37,7 +35,7 @@ public class QuestionPresenter {
     private Button back;
 
     @FXML
-    private Label questionLabel;
+    private Label questionLabel, hintLabel;
 
     @FXML
     private VBox vBoxQuest;
@@ -112,7 +110,6 @@ public class QuestionPresenter {
             reader.close();
             writer.close();
         } catch (Exception e) {
-            //System.err.format("Exception occurred trying to read '%s'.", filename);
             e.printStackTrace();
         }
 
@@ -121,25 +118,27 @@ public class QuestionPresenter {
     public void txtFileToArray() {
         try {
             questionArray.add(new Question());
-            int index = questionArray.size()-1;
+            int index = questionArray.size() - 1;
             BufferedReader reader = new BufferedReader(new FileReader("questions.txt"));
             String line;
             boolean go = true;
             while ((line = reader.readLine()) != null && go) {
                 if (line.length() >= 2) {
-                    if (('a' <= line.charAt(0)) && (line.charAt(0) <= 'z') ){
+                    if (('a' <= line.charAt(0)) && (line.charAt(0) <= 'z')) {
                         line.substring(2);
                         questionArray.get(index).addOption(line);
                         System.out.println("Option");
-                    }else if (line.contains("KEY:")) {
+                    } else if (line.contains("KEY:")) {
                         line = line.substring(4);
-                        for (int i = 0; i < line.length();i++){
-                            questionArray.get(index).addKey(line.charAt(i)+"");
-                            if( line.charAt(i) == ' ' ){
-                                questionArray.get(index).addHint(line.substring(i+1));
-                                i = line.length()+1;
+                        for (int i = 0; i < line.length(); i++) {
+                            questionArray.get(index).addKey(line.charAt(i) + "");
+                            if (line.charAt(i) == ' ') {
+                                questionArray.get(index).addHint(line.substring(i + 1));
+                                i = line.length() + 1;
                             }
                         }
+                    } else if (line.contains("ENDQUESTION")) {
+                        //Do Nothing
                     } else {
                         questionArray.get(index).addLineToQuestion(line);
                     }
@@ -151,25 +150,27 @@ public class QuestionPresenter {
             e.printStackTrace();
         }
     }
-    
-    public void ArrayToScene(){
-        for (int i = 0; i < questionArray.size(); i++){
-            for(int j = 0; j < questionArray.get(i).getQuestionStringArray().size(); j++){
-                questionLabel.setText(questionLabel.getText()+ "\n" + questionArray.get(i).getQuestionStringArray().get(j));
+
+    public void ArrayToScene() {
+        for (int i = 0; i < questionArray.size(); i++) {
+            for (int j = 0; j < questionArray.get(i).getQuestionStringArray().size(); j++) {
+                questionLabel.setText(questionLabel.getText() + "\n" + questionArray.get(i).getQuestionStringArray().get(j));
             }
         }
-        
-        for (int i = 0; i < questionArray.size(); i++){
-            for(int j = 0; j < questionArray.get(i).getOptions().size(); j++){
+
+        for (int i = 0; i < questionArray.size(); i++) {
+            for (int j = 0; j < questionArray.get(i).getOptions().size(); j++) {
                 vBoxQuest.getChildren().add(new RadioButton(questionArray.get(i).getOptions().get(j)));
             }
         }
 
-        for (int i = 0; i < questionArray.size(); i++){
-            for(int j = 0; j < questionArray.get(i).getOptions().size(); j++){
-                vBoxQuest.getChildren().add(new RadioButton(questionArray.get(i).getOptions().get(j)));
+        for (int i = 0; i < questionArray.size(); i++) {
+            for (int j = 0; j < questionArray.get(i).getHintArray().size(); j++) {
+                System.out.println(questionArray.get(i).getHintArray().get(j));
+                hintLabel.setText(questionArray.get(i).getHintArray().get(j));
             }
         }
+
     }
 
     @FXML
