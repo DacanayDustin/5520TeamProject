@@ -8,14 +8,5 @@ Part 3: due on March 1.
 Enable the user to login and store the user answer in the database.
  
 
-Question txt layout
-
-#
-number options
-checkbox or toggle
-1.udhsfkdsh
-a.
-b.
-....
-key:
-hint:
+Hint Button
+Change Question 2.1.1 ...31.6.6 etc
