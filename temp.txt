@@ -1,1 +1,1 @@
-chapter02,Section 2.3 Reading Input from the Console ,5
+chapter01,Section 1.2 What is a Computer?,3

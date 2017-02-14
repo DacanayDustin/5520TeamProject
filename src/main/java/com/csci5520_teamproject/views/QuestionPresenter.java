@@ -1,32 +1,32 @@
 package com.csci5520_teamproject.views;
 
 import com.gluonhq.charm.glisten.animation.BounceInRightTransition;
-import com.gluonhq.charm.glisten.application.MobileApplication;
-import com.gluonhq.charm.glisten.control.AppBar;
-import com.gluonhq.charm.glisten.layout.layer.FloatingActionButton;
 import com.gluonhq.charm.glisten.mvc.View;
-import com.gluonhq.charm.glisten.visual.MaterialDesignIcon;
-import com.csci5520_teamproject.CSCI5520_TeamProject;
 import com.csci5520_teamproject.Question;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileReader;
 import java.io.FileWriter;
-import java.io.IOException;
 import java.util.ArrayList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Text;
+import javafx.scene.text.TextFlow;
 
 public class QuestionPresenter {
 
     public String chapterString, sectionString, questionString;
-    ArrayList<Question> questionArray = new ArrayList<Question>();
+    ArrayList<Question> questionArray = new ArrayList<>();
+    ArrayList<RadioButton> radioButtonArray = new ArrayList<>();
+    ArrayList<CheckBox> checkBoxArray = new ArrayList<>();
+    ToggleGroup group = new ToggleGroup();
 
     @FXML
     private View question;
@@ -35,11 +35,13 @@ public class QuestionPresenter {
     private Button back;
 
     @FXML
-    private Label questionLabel, hintLabel;
+    private Label questionLabel, hintLabel, feedBack;
 
     @FXML
     private VBox vBoxQuest;
-    
+
+    @FXML
+    private TextFlow questionTF;
 
     ToggleGroup questionTog = new ToggleGroup();
     public Question t = new Question();
@@ -47,19 +49,6 @@ public class QuestionPresenter {
     public void initialize() {
         question.setShowTransitionFactory(BounceInRightTransition::new);
 
-        question.getLayers().add(new FloatingActionButton(MaterialDesignIcon.INFO.text,
-                e -> System.out.println("Info")).getLayer());
-
-        question.showingProperty().addListener((obs, oldValue, newValue) -> {
-            if (newValue) {
-                AppBar appBar = MobileApplication.getInstance().getAppBar();
-                appBar.setNavIcon(MaterialDesignIcon.MENU.button(e
-                        -> MobileApplication.getInstance().showLayer(CSCI5520_TeamProject.MENU_LAYER)));
-                appBar.setTitleText("Question");
-                appBar.getActionItems().add(MaterialDesignIcon.FAVORITE.button(e
-                        -> System.out.println("Favorite")));
-            }
-        });
         questionsToTxtFile();
         txtFileToArray();
         ArrayToScene();
@@ -88,9 +77,7 @@ public class QuestionPresenter {
             String line;
             boolean go = true;
             while ((line = reader.readLine()) != null && go) {
-
                 if (line.contains(sectionString)) {
-                    System.out.println(line);
                     while ((line = reader.readLine()) != null && go) {
                         if (line.contains(questionString)) {
                             writer.write(line);
@@ -128,7 +115,6 @@ public class QuestionPresenter {
                     if (('a' <= line.charAt(0)) && (line.charAt(0) <= 'z')) {
                         line.substring(2);
                         questionArray.get(index).addOption(line);
-                        System.out.println("Option");
                     } else if (line.contains("KEY:")) {
                         line = line.substring(4);
                         for (int i = 0; i < line.length(); i++) {
@@ -158,25 +144,74 @@ public class QuestionPresenter {
                 questionLabel.setText(questionLabel.getText() + "\n" + questionArray.get(i).getQuestionStringArray().get(j));
             }
         }
-
+        questionTF.getChildren().clear();
+        questionTF.getChildren().add(new Text(questionLabel.getText()));
         for (int i = 0; i < questionArray.size(); i++) {
             for (int j = 0; j < questionArray.get(i).getOptions().size(); j++) {
-                vBoxQuest.getChildren().add(new RadioButton(questionArray.get(i).getOptions().get(j)));
+                if (questionArray.get(i).getKeyArray().size() == 1) {
+                    radioButtonArray.add(new RadioButton(questionArray.get(i).getOptions().get(j)));
+                    vBoxQuest.getChildren().add(radioButtonArray.get(j));
+                    radioButtonArray.get(j).setToggleGroup(group);
+                } else {
+                    checkBoxArray.add(new CheckBox(questionArray.get(i).getOptions().get(j)));
+                    vBoxQuest.getChildren().add(checkBoxArray.get(j));
+                    checkBoxArray.get(j).isSelected();
+                }
             }
         }
 
         for (int i = 0; i < questionArray.size(); i++) {
             for (int j = 0; j < questionArray.get(i).getHintArray().size(); j++) {
-                System.out.println(questionArray.get(i).getHintArray().get(j));
                 hintLabel.setText(questionArray.get(i).getHintArray().get(j));
             }
         }
-
     }
 
     @FXML
     void go2() throws Exception {
         Parent pane = FXMLLoader.load(getClass().getResource("../views/selection.fxml"));
         back.getScene().setRoot(pane);
+    }
+
+    @FXML
+    void submit() {
+
+        for (int i = 0; i < questionArray.size(); i++) {
+            if (questionArray.get(i).getKeyArray().size() == 1) {
+                String selected = group.getSelectedToggle().toString();
+                selected = selected.charAt(selected.indexOf(']') + 2) + "";
+                for (int j = 0; j < questionArray.get(i).getKeyArray().size(); j++) {
+                    if (questionArray.get(i).getKeyArray().get(j).contains(selected)) {
+                        feedBack.setText("Correct");
+                    } else {
+                        feedBack.setText("Wrong");
+                    }
+                }
+            } else {
+                String selected = "";
+                String finSelect = "";
+                String keyString = "";
+                for (int j = 0; j < questionArray.get(i).getKeyArray().size(); j++) {
+                    keyString = keyString + questionArray.get(i).getKeyArray().get(j);
+                }
+
+                boolean correct = true;
+                for (int j = 0; j < checkBoxArray.size(); j++) {
+                    if (checkBoxArray.get(j).isSelected()) {
+                        selected = checkBoxArray.get(j).toString();
+                        selected = selected.charAt(selected.indexOf(']') + 2) + "";
+                        if (!keyString.contains(selected)) {
+                            correct = false;
+                        }
+                    }
+                }
+                if (correct) {
+                    feedBack.setText("Correct");
+                } else {
+                    feedBack.setText("Wrong");
+                }
+            }
+        }
+
     }
 }

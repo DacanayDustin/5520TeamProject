@@ -1,33 +1,25 @@
 package com.csci5520_teamproject.views;
 
-import com.gluonhq.charm.glisten.application.MobileApplication;
-import com.gluonhq.charm.glisten.control.AppBar;
 import com.gluonhq.charm.glisten.mvc.View;
-import com.gluonhq.charm.glisten.visual.MaterialDesignIcon;
-import com.csci5520_teamproject.CSCI5520_TeamProject;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
-import javafx.stage.Stage;
 
 public class SelectionPresenter {
 
-    public String chapterString = "   ";
-    public String sectionString = "   ";
-    public String questionString = "   ";
+    public String chapterString = "";
+    public String sectionString = "";
+    public String questionString = "";
     public ArrayList<String> questionArray = new ArrayList<String>();
 
     @FXML
@@ -40,16 +32,6 @@ public class SelectionPresenter {
     private ComboBox chapCB, secCB, questCB;
 
     public void initialize() {
-        selection.showingProperty().addListener((obs, oldValue, newValue) -> {
-            if (newValue) {
-                AppBar appBar = MobileApplication.getInstance().getAppBar();
-                appBar.setNavIcon(MaterialDesignIcon.MENU.button(e
-                        -> MobileApplication.getInstance().showLayer(CSCI5520_TeamProject.MENU_LAYER)));
-                appBar.setTitleText("Selection");
-                appBar.getActionItems().add(MaterialDesignIcon.SEARCH.button(e
-                        -> System.out.println("Search")));
-            }
-        });
 
         chapCB.getItems().addAll(
                 "Chapter 1: Introduction to Computers, Programs, and Java ",
@@ -109,9 +91,8 @@ public class SelectionPresenter {
             chapterString = "chapter" + chapterString.charAt(8) + chapterString.charAt(9);
         }
         secCB.setItems(findSections(chapterString));
-        //setQuestionArray("CHAPTER", chapterString);
-        sectionString = "   ";
-        questionString = "   ";
+        sectionString = "";
+        questionString = "";
     }
 
     @FXML
@@ -122,7 +103,7 @@ public class SelectionPresenter {
         } else {
             questCB.setItems(findQuestions(sectionString));
         }
-        questionString = "   ";
+        questionString = "";
     }
 
     @FXML
@@ -132,17 +113,18 @@ public class SelectionPresenter {
 
     @FXML
     void go() throws Exception {
-        for (int i = 0; i < questionArray.size(); i++){
-            System.out.println(questionArray.get(i));
+        if (questionString != "") {
+            for (int i = 0; i < questionArray.size(); i++) {
+                System.out.println(questionArray.get(i));
+            }
+            try (BufferedWriter bw = new BufferedWriter(new FileWriter("temp.txt"))) {
+                bw.write(chapterString + "," + sectionString + "," + questionString);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            Parent pane = FXMLLoader.load(getClass().getResource("../views/question.fxml"));
+            chapCB.getScene().setRoot(pane);
         }
-        try (BufferedWriter bw = new BufferedWriter(new FileWriter("temp.txt"))) {
-            String content = "This is the content to write into file\n";
-            bw.write(chapterString + "," + sectionString + "," + questionString);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        Parent pane = FXMLLoader.load(getClass().getResource("../views/question.fxml"));
-        chapCB.getScene().setRoot(pane);
     }
 
     public ObservableList<String> findSections(String chapter) {

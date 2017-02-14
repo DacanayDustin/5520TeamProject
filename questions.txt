@@ -1,27 +1,8 @@
-5. If you enter 1 2 3, when you run this program, what will be the output?
-
-import java.util.Scanner;
-
-public class Test1 {
-  public static void main(String[] args) {
-    Scanner input = new Scanner(System.in);
-    System.out.print("Enter three numbers: ");
-    double number1 = input.nextDouble();
-    double number2 = input.nextDouble();
-    double number3 = input.nextDouble();
-
-    // Compute average
-    double average = (number1 + number2 + number3) / 3;
-
-    // Display result
-    System.out.println(average);
-  }
-}
-
-a.	1.0
-b.	2.0
-c.	3.0
-d.	4.0
-KEY:b (1.0 + 2.0 + 3.0) / 3 is 2.0
+3. The speed of the CPU may be measured in __________. 
+a. megabytes
+b. gigabytes
+c. megahertz
+d. gigahertz
+KEY:cd  1 megahertz equals 1 million pulses per second and 1 gigahertz is 1000 megahertz.
 
 ENDQUESTION
