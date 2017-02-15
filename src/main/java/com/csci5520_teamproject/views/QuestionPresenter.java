@@ -27,12 +27,13 @@ public class QuestionPresenter {
     ArrayList<RadioButton> radioButtonArray = new ArrayList<>();
     ArrayList<CheckBox> checkBoxArray = new ArrayList<>();
     ToggleGroup group = new ToggleGroup();
+    int count = 0;
 
     @FXML
     private View question;
 
     @FXML
-    private Button back;
+    private Button back, show;
 
     @FXML
     private Label questionLabel, hintLabel, feedBack;
@@ -48,7 +49,6 @@ public class QuestionPresenter {
 
     public void initialize() {
         question.setShowTransitionFactory(BounceInRightTransition::new);
-
         questionsToTxtFile();
         txtFileToArray();
         ArrayToScene();
@@ -160,11 +160,6 @@ public class QuestionPresenter {
             }
         }
 
-        for (int i = 0; i < questionArray.size(); i++) {
-            for (int j = 0; j < questionArray.get(i).getHintArray().size(); j++) {
-                hintLabel.setText(questionArray.get(i).getHintArray().get(j));
-            }
-        }
     }
 
     @FXML
@@ -176,6 +171,17 @@ public class QuestionPresenter {
     @FXML
     void submit() {
 
+        if (count > 0) {
+            for (int i = 0; i < questionArray.size(); i++) {
+                for (int j = 0; j < questionArray.get(i).getHintArray().size(); j++) {
+                    show.setVisible(true);
+                    show.setDisable(false);
+                    System.out.println(count);
+                }
+            }
+
+        }
+
         for (int i = 0; i < questionArray.size(); i++) {
             if (questionArray.get(i).getKeyArray().size() == 1) {
                 String selected = group.getSelectedToggle().toString();
@@ -185,6 +191,7 @@ public class QuestionPresenter {
                         feedBack.setText("Correct");
                     } else {
                         feedBack.setText("Wrong");
+                        count++;
                     }
                 }
             } else {
@@ -195,19 +202,8 @@ public class QuestionPresenter {
                     keyString = keyString + questionArray.get(i).getKeyArray().get(j);
                 }
 
-                boolean correct = true;
                 for (int j = 0; j < checkBoxArray.size(); j++) {
                     if (checkBoxArray.get(j).isSelected()) {
-                        selected = checkBoxArray.get(j).toString();
-                        selected = selected.charAt(selected.indexOf(']') + 2) + "";
-                        if (!keyString.contains(selected)) {
-                            correct = false;
-                        }
-                    }
-                }
-
-                for (int j = 0; j < checkBoxArray.size(); j++) {
-                    if (checkBoxArray.get(j).isSelected() ) {
                         selected = checkBoxArray.get(j).toString();
                         finSelect = finSelect + selected.charAt(selected.indexOf(']') + 2);
                     }
@@ -217,9 +213,19 @@ public class QuestionPresenter {
                     feedBack.setText("Correct");
                 } else {
                     feedBack.setText("Wrong");
+                    count++;
                 }
             }
         }
 
+    }
+
+    @FXML
+    void showHint() {
+        for (int i = 0; i < questionArray.size(); i++) {
+            for (int j = 0; j < questionArray.get(i).getHintArray().size(); j++) {
+                hintLabel.setText(questionArray.get(i).getHintArray().get(j));
+            }
+        }
     }
 }
