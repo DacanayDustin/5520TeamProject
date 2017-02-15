@@ -7,6 +7,7 @@ import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileReader;
 import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -56,9 +57,10 @@ public class QuestionPresenter {
 
     public void questionsToTxtFile() {
         try {
-            BufferedReader reader = new BufferedReader(new FileReader("temp.txt"));
-            String line = reader.readLine();
-            reader.close();
+            String line;
+            try (BufferedReader reader = new BufferedReader(new FileReader("temp.txt"))) {
+                line = reader.readLine();
+            }
             String[] parts = line.split(",");
             chapterString = parts[0];
             sectionString = parts[1];
@@ -66,39 +68,38 @@ public class QuestionPresenter {
             if (sectionString.contains("No Sections")) {
                 sectionString = " ";
             }
-        } catch (Exception e) {
+        } catch (IOException e) {
             //System.err.format("Exception occurred trying to read '%s'.", filename);
-            e.printStackTrace();
         }
 
         try {
-            BufferedReader reader = new BufferedReader(new FileReader("mcquestions/" + chapterString + ".txt"));
-            BufferedWriter writer = new BufferedWriter(new FileWriter("questions.txt"));
-            String line;
-            boolean go = true;
-            while ((line = reader.readLine()) != null && go) {
-                if (line.contains(sectionString)) {
-                    while ((line = reader.readLine()) != null && go) {
-                        if (line.contains(questionString)) {
-                            writer.write(line);
-                            writer.newLine();
-                            while ((line = reader.readLine()) != null && go) {
+            BufferedWriter writer;
+            try (BufferedReader reader = new BufferedReader(new FileReader("mcquestions/" + chapterString + ".txt"))) {
+                writer = new BufferedWriter(new FileWriter("questions.txt"));
+                String line;
+                boolean go = true;
+                while ((line = reader.readLine()) != null && go) {
+                    if (line.contains(sectionString)) {
+                        while ((line = reader.readLine()) != null && go) {
+                            if (line.contains(questionString)) {
                                 writer.write(line);
                                 writer.newLine();
-                                if (line.contains("KEY")) {
-                                    go = false;
+                                while ((line = reader.readLine()) != null && go) {
+                                    writer.write(line);
+                                    writer.newLine();
+                                    if (line.contains("KEY")) {
+                                        go = false;
+                                    }
                                 }
                             }
                         }
                     }
                 }
-            };
-            writer.newLine();
-            writer.write("ENDQUESTION");
-            reader.close();
+                writer.newLine();
+                writer.write("ENDQUESTION");
+            }
             writer.close();
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (IOException e) {
         }
 
     }
@@ -107,34 +108,34 @@ public class QuestionPresenter {
         try {
             questionArray.add(new Question());
             int index = questionArray.size() - 1;
-            BufferedReader reader = new BufferedReader(new FileReader("questions.txt"));
-            String line;
-            boolean go = true;
-            while ((line = reader.readLine()) != null && go) {
-                if (line.length() >= 2) {
-                    if (('a' <= line.charAt(0)) && (line.charAt(0) <= 'z')) {
-                        line.substring(2);
-                        questionArray.get(index).addOption(line);
-                    } else if (line.contains("KEY:")) {
-                        line = line.substring(4);
-                        for (int i = 0; i < line.length(); i++) {
-                            questionArray.get(index).addKey(line.charAt(i) + "");
-                            if (line.charAt(i) == ' ') {
-                                questionArray.get(index).addHint(line.substring(i + 1));
-                                i = line.length() + 1;
+            try (BufferedReader reader = new BufferedReader(new FileReader("questions.txt"))) {
+                String line;
+                boolean go = true;
+                while ((line = reader.readLine()) != null && go) {
+                    if (line.length() >= 2) {
+                        if (('a' <= line.charAt(0)) && (line.charAt(0) <= 'z')) {
+                            line.substring(2);
+                            questionArray.get(index).addOption(line);
+                        } else if (line.contains("KEY:")) {
+                            line = line.substring(4);
+                            for (int i = 0; i < line.length(); i++) {
+                                questionArray.get(index).addKey(line.charAt(i) + "");
+                                if (line.charAt(i) == ' ') {
+                                    questionArray.get(index).addHint(line.substring(i + 1));
+                                    i = line.length() + 1;
+                                }
                             }
+                        } else if (line.contains("ENDQUESTION")) {
+                            //Do Nothing
+                        } else {
+                            questionArray.get(index).addLineToQuestion(line);
                         }
-                    } else if (line.contains("ENDQUESTION")) {
-                        //Do Nothing
-                    } else {
-                        questionArray.get(index).addLineToQuestion(line);
                     }
                 }
             }
-            reader.close();
-        } catch (Exception e) {
+        } catch (IOException e) {
             //System.err.format("Exception occurred trying to read '%s'.", filename);
-            e.printStackTrace();
+
         }
     }
 
