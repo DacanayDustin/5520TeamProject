@@ -37,7 +37,8 @@
       <Pane prefHeight="94.0" prefWidth="350.0" BorderPane.alignment="CENTER">
          <children>
             <Button fx:id="submit" layoutX="143.0" layoutY="47.0" mnemonicParsing="false" onAction="#submit" text="Submit" />
-            <Label fx:id="feedBack" layoutX="158.0" layoutY="14.0" text="Label" />
+            <Label fx:id="feedBack" layoutX="158.0" layoutY="14.0" />
+            <Button fx:id="show" disable="true" layoutY="9.0" mnemonicParsing="false" onAction="#showHint" text="Show Hint" visible="false" />
          </children>
       </Pane>
    </bottom>
