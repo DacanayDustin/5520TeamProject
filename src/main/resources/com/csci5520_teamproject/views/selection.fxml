@@ -13,11 +13,11 @@
       <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="15.0" BorderPane.alignment="CENTER">
          <children>
             <Label text="Select Chapter" />
-            <ComboBox fx:id="chapCB" onAction="#dropChapter" prefWidth="150.0" />
+            <ComboBox fx:id="chapCB" onAction="#dropChapter" prefWidth="150.0" promptText="Select Chapter" />
             <Label text="Select Section" />
-            <ComboBox fx:id="secCB" onAction="#dropSection" prefWidth="150.0" />
+            <ComboBox fx:id="secCB" onAction="#dropSection" prefWidth="150.0" promptText="Select Section" />
             <Label text="Select Question" />
-            <ComboBox fx:id="questCB" onAction="#dropQuestion" prefWidth="150.0" />
+            <ComboBox fx:id="questCB" onAction="#dropQuestion" prefWidth="150.0" promptText="Select Question" />
             <Button mnemonicParsing="false" onAction="#go" text="Go!">
                <graphic>
                   <Icon content="LANGUAGE" />
