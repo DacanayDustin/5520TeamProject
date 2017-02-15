@@ -205,7 +205,15 @@ public class QuestionPresenter {
                         }
                     }
                 }
-                if (correct) {
+
+                for (int j = 0; j < checkBoxArray.size(); j++) {
+                    if (checkBoxArray.get(j).isSelected() ) {
+                        selected = checkBoxArray.get(j).toString();
+                        finSelect = finSelect + selected.charAt(selected.indexOf(']') + 2);
+                    }
+                }
+                keyString = keyString.trim();
+                if (keyString.equals(finSelect.trim())) {
                     feedBack.setText("Correct");
                 } else {
                     feedBack.setText("Wrong");
