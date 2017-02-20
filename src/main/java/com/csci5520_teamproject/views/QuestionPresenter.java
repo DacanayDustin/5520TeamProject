@@ -172,7 +172,7 @@ public class QuestionPresenter {
     @FXML
     void submit() {
 
-        if (count > 0) {
+        if (true) {
             for (int i = 0; i < questionArray.size(); i++) {
                 for (int j = 0; j < questionArray.get(i).getHintArray().size(); j++) {
                     show.setVisible(true);
