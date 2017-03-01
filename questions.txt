@@ -1,0 +1,8 @@
+1. ________ is the physical aspect of the computer that can be seen.
+a. Hardware
+b. Software
+c. Operating system
+d. Application program
+KEY:a
+
+ENDQUESTION
