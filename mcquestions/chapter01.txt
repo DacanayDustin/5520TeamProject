@@ -58,8 +58,9 @@ c. Cable modem
 d. NIC
 KEY:d Network Interface Card (NIC) is a device to connect a computer to a local area network.
 
-#
+
 Section 1.3 Program Languages
+#
 8. ____________ are instructions to the computer. 
 a. Hardware
 b. Software
@@ -83,7 +84,7 @@ c. CPU
 d. The operating system
 KEY:b
 
-#
+
 Section 1.4 Operating Systems
 #
 11. ____________ is an operating system. 
@@ -103,8 +104,9 @@ d. Interpreter
 e. Compiler
 KEY:a
 
-#
+
 Section 1.5 Java, World Wide Web, and Beyond
+#
 13. Java was developed by ____________. 
 a. Sun Microsystems 
 b. Microsoft
@@ -148,7 +150,7 @@ d. Ada
 e. Pascal
 KEY:a
 
-#
+
 Section 1.6 The Java Language Specification, API, JDK, and IDE
 #
 18. ________  is a technical definition of the language that includes the syntax and semantics of the Java programming language.
@@ -182,7 +184,7 @@ c. Java JDK
 d. Java IDE
 KEY:d
 
-#
+
 Section 1.7 A Simple Java Program
 #
 22.	The main method header is written as:
@@ -211,7 +213,7 @@ d.	System.out.println('Welcome to Java");
 e.	System.out.println("Welcome to Java');
 KEY:b
 
-#
+
 Section 1.8 Creating, Compiling, and Executing a Java Program
 #
 25. The JDK command to compile a class in the file Test.java is
@@ -311,7 +313,7 @@ c.	brackets
 d.	quotes
 KEY:b
 
-#
+
 Section 1.9 Programming Style and Documentation
 #
 36.	Programming style is important, because ______________.
@@ -377,7 +379,7 @@ c. III
 d. IV
 KEY:d
 
-#
+
 Section 1.10 Programming Errors
 #
 39.	If a program compiles fine, but it produces incorrect result, then the program suffers  __________.

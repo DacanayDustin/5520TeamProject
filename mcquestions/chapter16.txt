@@ -1,12 +1,13 @@
 Chapter 16 JavaFX UI Controls and Multimedia
 
 Section 16.2 Labeled and Label
+#
 1. To create a label with the specified text, use __________.
 a. new Labelled();
 b. new Label();
 c. new Labelled(text);
 d. new Label(text);
-Key:d
+KEY:d
 
 #
 2. To set a red color for the text in the label lbl, use _________.
@@ -14,7 +15,7 @@ a.	lbl.setFill(Color.red);
 b.	lbl.setTextFill(Color.red);
 c.	lbl.setFill(Color.RED);
 d.	lbl.setTextFill(Color.RED);
-Key:d
+KEY:d
 
 #
 3. __________ are properties in Labelled.
@@ -23,7 +24,7 @@ b.	contentDisplay
 c.	graphic
 d.	text
 e.	underline
-Key:abcde
+KEY:abcde
 
 #
 4. To set the node to the right of the text in a label lbl, use _______.
@@ -31,17 +32,18 @@ a.	lbl.setContentDisplay(ContentDisplay.TOP);
 b.	lbl.setContentDisplay(ContentDisplay.BOTTOM);
 c.	lbl.setContentDisplay(ContentDisplay.LEFT);
 d.	lbl.setContentDisplay(ContentDisplay.RIGHT);
-Key:d
+KEY:d
 
-#
+
 Section 16.3 Button
+#
 5.	__________ is a superclass for Button.
 a.	Label
 b.	Labelled
 c.	ButtonBase
 d.	Control
 e.      Node
-Key:bcde
+KEY:bcde
 
 #
 6.	__________ is a superclass for Label.
@@ -50,7 +52,7 @@ b.	Labelled
 c.	ButtonBase
 d.	Control
 e.      Node
-Key:bde
+KEY:bde
 
 #
 7.	The setOnAction method is defined in _________.
@@ -59,7 +61,7 @@ b.	Labelled
 c.	Node
 d.	ButtonBase
 e.      Button
-Key:d
+KEY:d
 
 #
 8.	Analyze the following code:
@@ -99,7 +101,7 @@ a. Two buttons displayed with the same icon.
 b. Only bt2 displays the icon and bt1 does not display the icon.
 c. Only bt1 displays the icon and bt2 does not display the icon.
 d. Two buttons displayed with different icons. 
-Key:a Since images can be shared, both bt1 and bt2 display the same icon. 
+KEY:a Since images can be shared, both bt1 and bt2 display the same icon. 
 
 #
 9.	Analyze the following code:
@@ -138,7 +140,7 @@ a. One button is displayed with the text "Java".
 b. Two buttons are displayed with the same text "Java". 
 c. Three buttons are displayed with the same text "Java".
 d. Four buttons are displayed with the same text "Java".
-Key:a Because you are using a StackPane.
+KEY:a Because you are using a StackPane.
 
 #
 10.	Analyze the following code:
@@ -178,16 +180,17 @@ a. One button is displayed with the text "Java".
 b. Two buttons are displayed with the same text "Java". 
 c. Three buttons are displayed with the same text "Java".
 d. Four buttons are displayed with the same text "Java".
-Key:d 
+KEY:d 
 
-#
+
 Section 16.4 CheckBox
+#
 11. _________ checks whether the CheckBox chk is selected.
 a. chk.getSelected()
 b. chk.selected()
 c. chk.isSelected().
 d. chk.select()
-Key:c
+KEY:c
 
 #
 12. Which of the following statements are true?
@@ -196,17 +199,18 @@ b. CheckBox inherits from Button.
 c. CheckBox inherits from Labelled.
 d. CheckBox inherits from Control.
 e. CheckBox inherits from Node.
-Key:acde
+KEY:acde
 
-#
+
 Section 16.5 RadioButton
+#
 13. Which of the following statements are true?
 a. RadioButton inherits from ButtonBase.
 b. RadioButton inherits from Button.
 c. RadioButton inherits from Labelled.
 d. RadioButton inherits from Control.
 e. RadioButton inherits from Node.
-Key:acde
+KEY:acde
 
 #
 14. _________ checks whether the RadioButton rb is selected.
@@ -214,7 +218,7 @@ a. rb.getSelected()
 b. rb.selected()
 c. rb.isSelected().
 d. rb.select()
-Key:c
+KEY:c
 
 #
 15. Analyze the following code:
@@ -255,17 +259,18 @@ a. The program displays two radio buttons. The two radio buttons are grouped.
 b. The program displays one radio button with text Java. 
 c. The program displays two radio buttons. The two radio buttons are not grouped.
 d. The program displays one radio button with text C++. 
-Key:c To group the two use rb1.setToggleGroup(group); rb2.setToggleGroup(group);
+KEY:c To group the two use rb1.setToggleGroup(group); rb2.setToggleGroup(group);
 
-#
+
 Section 16.6 TextField
+#
 16. Which of the following statements are true?
 a. TextField inherits from TextInputControl.
 b. TextField inherits from ButtonBase.
 c. TextField inherits from Labelled.
 d. TextField inherits from Control.
 e. TextField inherits from Node.
-Key:ade
+KEY:ade
 
 #
 17. The properties ___________ can be used in a TextField.
@@ -274,7 +279,7 @@ b. editable
 c. alignment
 d. prefColumnCount
 e. onAction
-Key:abcde
+KEY:abcde
 
 #
 18.	Which of the following statements are true?
@@ -282,7 +287,7 @@ a.	You can specify a horizontal text alignment in a text field.
 b.	You can specify the number of columns in a text field.
 c.	You can disable editing on a text field.
 d.	You can create a text field with a specified text.
-Key:abcd
+KEY:abcd
 
 #
 19.	The method __________ gets the contents of the text field tf.
@@ -290,7 +295,7 @@ a.	tf.getText(s)
 b.	tf.getText()
 c.	tf.getString()
 d.	tf.findString()
-Key:b
+KEY:b
 
 #
 20. Which of the following statements are true?
@@ -299,16 +304,17 @@ b. PasswordField inherits from TextField.
 c. PasswordField inherits from Labelled.
 d. PasswordField inherits from Control.
 e. PasswordField inherits from Node.
-Key:abde
+KEY:abde
 
-#
+
 Section 16.7 TextArea
+#
 21.	The method __________ appends a string s into the text area ta.
 a.	ta.setText(s)
 b.	ta.appendText(s)
 c.	ta.append(s)
 d.	ta.insertText(s)
-Key:b
+KEY:b
 
 #
 22.	Which of the following statements are true?
@@ -317,7 +323,7 @@ b.	You can specify the number of columns in a text area.
 c.	You can disable editing on a text area.
 d.	You can create a text field with a specified text area.
 e.	You can specify the number of rows in a text area.
-Key:bcde
+KEY:bcde
 
 #
 23.	To wrap a line in a text area ta, invoke ____________.
@@ -326,7 +332,7 @@ b.	ta.setLineWrap(true)
 c.	ta.WrapLine()
 d.	ta.wrapText()
 e. ta.setWrapText(true)
-Key:e
+KEY:e
 
 #
 24.	To wrap a line in a text area jta on words, invoke ____________.
@@ -334,7 +340,7 @@ a.	jta.setWrapStyleWord(false)
 b.	jta.setWrapStyleWord(true)
 c.	jta.wrapStyleWord()
 d.	jta.wrapWord()
-Key:b
+KEY:b
 
 #
 25. Which of the following statements are true?
@@ -343,16 +349,17 @@ b. TextArea inherits from TextField.
 c. TextArea inherits from Labelled.
 d. TextArea inherits from Control.
 e. TextArea inherits from Node.
-Key:ade
+KEY:ade
 
-#
+
 Section 16.8 ComboBox
+#
 26.	How many items can be added into a ComboBox object?
 a.	0
 b.	1
 c.	2
 d.	Unlimited
-Key:d
+KEY:d
 
 #
 27.	How many items can be selected from a ComboBox at a time?
@@ -360,7 +367,7 @@ a.	0
 b.	1
 c.	2
 d.	Unlimited
-Key:b
+KEY:b
 
 #
 28.	_______________ returns the selected item on a ComboBox cbo.
@@ -369,7 +376,7 @@ b.	cbo.getSelectedItem()
 c.	cbo.getSelectedIndices()
 d.	cbo.getSelectedItems()
 e. cbo.getValue()
-Key:e
+KEY:e
 
 #
 29.	The method __________ adds an item s into a ComboBox cbo.
@@ -378,7 +385,7 @@ b.	cbo.addChoice(s)
 c.	cbo.addItem(s)
 d.	cbo.addObject(s)
 e. cbo.getItems().add(s)
-Key:e
+KEY:e
 
 #
 30. Which of the following statements are true?
@@ -387,7 +394,7 @@ b. ComboBox inherits from ButtonBase.
 c. ComboBox inherits from Labelled.
 d. ComboBox inherits from Control.
 e. ComboBox inherits from Node.
-Key:ade
+KEY:ade
 
 #
 31. You can use the _________ properties in a ComboBox.
@@ -396,17 +403,18 @@ b.	editable
 c. onAction
 d. items
 e. visibleRowCount
-Key:abcde
+KEY:abcde
 
-#
+
 Section 16.9 Lists
+#
 32.  ____________ are properties for a ListView.
 a. items
 b. orientation
 c. selectionModel
 d. visibleRowCount
 e. onAction
-Key:abc
+KEY:abc
 
 #
 33. Which of the following statements are true?
@@ -415,7 +423,7 @@ b. ListView inherits from ButtonBase.
 c. ListView inherits from Labelled.
 d. ListView inherits from Control.
 e. ListView inherits from Node.
-Key:de
+KEY:de
 
 #
 34. The statement for registering a listener for processing list view item change is ___________.
@@ -423,17 +431,18 @@ a. lv.getItems().addListener(e -> {processStatements});
 b. lv.addListener(e -> {processStatements});
 c. lv.getSelectionModel().selectedItemProperty().addListener(e -> {processStatements});
 d. lv.getSelectionModel().addListener(e -> {processStatements});
-Key:c
+KEY:c
 
-#
+
 Section 16.10 ScrollBar
+#
 35.	__________ are properties of ScrollBar.
 a.	value
 b.	min
 c.	max
 d.	orientation
 e.      visibleAmount
-Key:abcde
+KEY:abcde
 
 #
 36. The statement for registering a listener for processing scroll bar value change is ___________.
@@ -441,17 +450,18 @@ a. sb.addListener(e -> {processStatements});
 b. sb.getValue().addListener(e -> {processStatements});
 c. sb.valueProperty().addListener(e -> {processStatements});
 d. sb.getItems().addListener(e -> {processStatements});
-Key:c
+KEY:c
 
-#
+
 Section 16.11 Slider
+#
 37.	__________ are properties of Slider.
 a.	value
 b.	min
 c.	max
 d.	orientation
 e.      visibleAmount
-Key:abcde
+KEY:abcde
 
 #
 38. The statement for registering a listener for processing slider change is ___________.
@@ -459,16 +469,17 @@ a. sl.addListener(e -> {processStatements});
 b. sl.getValue().addListener(e -> {processStatements});
 c. sl.valueProperty().addListener(e -> {processStatements});
 d. sl.getItems().addListener(e -> {processStatements});
-Key:c
+KEY:c
 
-#
+
 Section 16.13 Video and Audio 
+#
 39.	Which of the following statements are true?
 a.	A Media can be shared by multiple MediaPlayer.
 b.	A MediaPlayer can be shared by multiple MediaView.
 c.	A MediaView can be placed into multiple Pane.
 d.	A Media can be downloaded from a URL.
-Key:abd
+KEY:abd
 
 #
 40.	You can use the methods _________ to control a MediaPlayer.
@@ -476,7 +487,7 @@ a.	start().
 b.	stop().
 c.	pause().
 d.	play().
-Key:cd
+KEY:cd
 
 #
 41.	You can use the properties _________ to control a MediaPlayer.
@@ -485,7 +496,7 @@ b.	currentCount
 c.	cycleCount
 d.	mute
 e. volume
-Key:abcde
+KEY:abcde
 
 #
 42.	You can use the properties _________ in a MediaView.
@@ -494,4 +505,4 @@ b.	y
 c.	mediaPlayer
 d.	fitWidth
 e. fitHeight
-Key:abcde
+KEY:abcde

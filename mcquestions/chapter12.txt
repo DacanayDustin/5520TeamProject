@@ -1,13 +1,14 @@
 Chapter 12 Exception Handling and Text I/O
 
 Section 12.3 Exception Types
+#
 1. A Java exception is an instance of __________.
 a. RuntimeException
 b. Exception
 c. Error
 d. Throwable 
 e. NumberFormatException
-Key:d
+KEY:d
 
 #
 2. An instance of _________ describes system errors. If this type of error occurs, there is little you can do beyond notifying the user and trying to terminate the program gracefully.
@@ -16,7 +17,7 @@ b. Exception
 c. Error
 d. Throwable
 e. NumberFormatException
-Key:c
+KEY:c
 
 #
 3. An instance of _________ describes the errors caused by your program and external circumstances. These errors can be caught and handled by your program.
@@ -25,7 +26,7 @@ b. Exception
 c. Error
 d. Throwable
 e. NumberFormatException
-Key:b
+KEY:b
 
 #
 4. An instance of _________ describes programming errors, such as bad casting, accessing an out-of-bounds array, and numeric errors..
@@ -34,7 +35,7 @@ b. Exception
 c. Error
 d. Throwable
 e. NumberFormatException
-Key:a
+KEY:a
 
 #
 5. The following code causes Java to throw _________.
@@ -44,7 +45,7 @@ b. Exception
 c. Error
 d. Throwable
 e. no exceptions
-Key:e At present, Java does not throw integer overflow exceptions. The future version of Java may fix this problem to throw an over flow exception.  
+KEY:e At present, Java does not throw integer overflow exceptions. The future version of Java may fix this problem to throw an over flow exception.  
 
 #
 6. An instance of _________ are unchecked exceptions.
@@ -53,7 +54,7 @@ b. Exception
 c. Error
 d. Throwable
 e. NumberFormatException
-Key:ace NumberFormatException is a subclass of RuntimeException
+KEY:ace NumberFormatException is a subclass of RuntimeException
 
 #
 7. What exception type does the following program throw?
@@ -67,7 +68,7 @@ b. ArrayIndexOutOfBoundsException
 c. StringIndexOutOfBoundsException
 d. ClassCastException
 e. No exception
-Key:a
+KEY:a
 
 #
 8. What exception type does the following program throw?
@@ -82,7 +83,7 @@ b. ArrayIndexOutOfBoundsException
 c. StringIndexOutOfBoundsException
 d. ClassCastException
 e. No exception
-Key:b
+KEY:b
 
 #
 9. What exception type does the following program throw?
@@ -97,7 +98,7 @@ b. ArrayIndexOutOfBoundsException
 c. StringIndexOutOfBoundsException
 d. ClassCastException
 e. No exception
-Key:c
+KEY:c
 
 #
 10. What exception type does the following program throw?
@@ -112,7 +113,7 @@ b. ArrayIndexOutOfBoundsException
 c. StringIndexOutOfBoundsException
 d. ClassCastException
 e. No exception
-Key:d
+KEY:d
 
 #
 11. What exception type does the following program throw?
@@ -127,7 +128,7 @@ b. ArrayIndexOutOfBoundsException
 c. StringIndexOutOfBoundsException
 d. ClassCastException
 e. NullPointerException
-Key:e
+KEY:e
 
 #
 12. What exception type does the following program throw?
@@ -142,16 +143,17 @@ b. ArrayIndexOutOfBoundsException
 c. StringIndexOutOfBoundsException
 d. No exception
 e. NullPointerException
-Key:d
+KEY:d
 
-#
+
 Section 12.4 More on Exception Handling
+#
 13. A method must declare to throw ________.
 a. unchecked exceptions
 b. checked exceptions
 c. Error
 d. RuntimeException
-Key:b
+KEY:b
 
 #
 14. Which of the following statements are true?
@@ -159,7 +161,7 @@ a. You use the keyword throws to declare exceptions in the method heading.
 b. A method may declare to throw multiple exceptions.
 c. To throw an exception, use the key word throw.
 d. If a checked exception occurs in a method, it must be either caught or declared to be thrown from the method.
-Key:abcd
+KEY:abcd
 
 #
 15. Analyze the following code:
@@ -177,7 +179,7 @@ a.	You should not declare a class that extends Error, because Error raises a fat
 b.	You cannot declare an exception in the main method.
 c.	You declared an exception in the main method, but you did not throw it.
 d.	The program has a compile error.
-Key:a When an exception of Error type occurs, your program would terminate. Therefore, you should not declare an exception that extends Error.
+KEY:a When an exception of Error type occurs, your program would terminate. Therefore, you should not declare an exception that extends Error.
 
 #
 16.	Analyze the following code:
@@ -203,7 +205,7 @@ a.	The program displays NumberFormatException.
 b.	The program displays RuntimeException.
 c.	The program displays NumberFormatException followed by RuntimeException.
 d.	The program has a compile error.
-Key:d catch (RuntimeException ex) should be specified before catch (Exception ex).
+KEY:d catch (RuntimeException ex) should be specified before catch (Exception ex).
 
 #
 17.	Analyze the following program.
@@ -227,7 +229,7 @@ a.	An exception is raised due to Integer.parseInt(s);
 b.	An exception is raised due to 2 / i;
 c.	The program has a compile error.
 d.	The program compiles and runs without exceptions.
-Key:a Both (A) and (B) would cause exception, but (A) occurred first, so the exception is due to (A).
+KEY:a Both (A) and (B) would cause exception, but (A) occurred first, so the exception is due to (A).
 
 #
 18.	What is displayed on the console when running the following program?
@@ -260,7 +262,7 @@ b.	The program displays NumberFormatException followed by After the method call.
 c.	The program displays NumberFormatException followed by RuntimeException.
 d.	The program has a compile error.
 e.	The program displays RuntimeException.
-Key:a
+KEY:a
 
 #
 19.	What is displayed on the console when running the following program?
@@ -301,10 +303,11 @@ b.	The program displays Exception twice.
 c.	The program displays RuntimeException followed by After the method call.
 d.	The program displays Exception followed by RuntimeException.
 e.	The program has a compile error.
-Key:c 
+KEY:c 
 
-#
+
 Section 12.5 The finally Clause
+#
 20.	What is wrong in the following program?
 
 public class Test {
@@ -318,7 +321,7 @@ a.	You cannot have a try block without a catch block.
 b.	You cannot have a try block without a catch block or a finally block.
 c.	A method call that does not declare exceptions cannot be placed inside a try block.
 d.	Nothing is wrong.
-Key:b
+KEY:b
 
 #
 21.	What is displayed on the console when running the following program?
@@ -337,7 +340,7 @@ a.	Welcome to Java
 b.	Welcome to Java followed by The finally clause is executed in the next line
 c.	The finally clause is executed
 d.	None of the above
-Key:b
+KEY:b
 
 #
 22.	What is displayed on the console when running the following program?
@@ -357,7 +360,7 @@ a.	Welcome to Java
 b.	Welcome to Java followed by The finally clause is executed in the next line
 c.	The finally clause is executed
 d.	None of the above
-Key:b The return statement exits the method, but before exiting the method, the finally clause is executed.
+KEY:b The return statement exits the method, but before exiting the method, the finally clause is executed.
 
 #
 23.	What is displayed on the console when running the following program?
@@ -379,7 +382,7 @@ a.	Welcome to Java, then an error message.
 b.	Welcome to Java followed by The finally clause is executed in the next line, then an error message.
 c.	The program displays three lines: Welcome to Java, Welcome to HTML, The finally clause is executed, then an error message.
 d.	None of the above.
-Key:b
+KEY:b
 
 #
 24.	What is displayed on the console when running the following program?
@@ -401,7 +404,7 @@ a.	Welcome to Java.
 b.	Welcome to Java followed by The finally clause is executed in the next line.
 c.	The program displays three lines: Welcome to Java, Welcome to HTML, The finally clause is executed.
 d.	None of the above.
-Key:c A floating number divided by 0 does not raise an exception.
+KEY:c A floating number divided by 0 does not raise an exception.
 
 #
 25.	What is displayed on the console when running the following program?
@@ -426,7 +429,7 @@ a.	The program displays Welcome to Java three times followed by End of the block
 b.	The program displays Welcome to Java two times followed by End of the block.
 c.	The program displays Welcome to Java three times.
 d.	The program displays Welcome to Java two times.
-Key:b
+KEY:b
 
 #
 26.	What is displayed on the console when running the following program?
@@ -453,7 +456,7 @@ a.	The program displays Welcome to Java three times followed by End of the block
 b.	The program displays Welcome to Java two times followed by End of the block.
 c.	The program displays Welcome to Java two times followed by End of the block two times.
 d.	You cannot catch RuntimeException errors.
-Key:c
+KEY:c
 
 #
 27.	What is displayed on the console when running the following program?
@@ -477,16 +480,17 @@ a.	The program displays Welcome to Java three times followed by End of the block
 b.	The program displays Welcome to Java two times followed by End of the block.
 c.	The program displays Welcome to Java two times followed by End of the block two times.
 d.	The program displays Welcome to Java and End of the block, and then terminates because of an unhandled exception.
-Key:d
+KEY:d
 
-#
+
 Section 12.6 When to Use Exceptions
+#
 28.	Which of the following is not an advantage of Java exception handling?
 a.	Java separates exception handling from normal processing tasks.
 b.	Exception handling improves performance.
 c.	Exception handling makes it possible for the caller's caller to handle the exception.
 d.	Exception handling simplifies programming because the error-reporting and error-handling code can be placed at the catch block.
-Key:b
+KEY:b
 
 #
 29.	Analyze the following code:
@@ -512,10 +516,11 @@ a.	A try-catch block cannot be embedded inside another try-catch block.
 b.	A good programming practice is to avoid nesting try-catch blocks, because nesting makes programs difficult to read. You can rewrite the program using only one try-catch block.
 c.	The program has a compile error because Exception appears before RuntimeException.
 d.	None of the above.
-Key:b The best answer is b. This question does not ask you what happens when you run the program. If you run the program, a RuntimeException would occur and it would be caught be the last catch clause.
+KEY:b The best answer is b. This question does not ask you what happens when you run the program. If you run the program, a RuntimeException would occur and it would be caught be the last catch clause.
 
-#
+
 Section 12.7 Rethrowing Exceptions
+#
 30.	What is displayed on the console when running the following program?
 
 public class Test {
@@ -554,17 +559,18 @@ a.	The program displays NumberFormatException twice.
 b.	The program displays NumberFormatException followed by After the method call.
 c.	The program displays NumberFormatException followed by RuntimeException.
 d.	The program has a compile error.
-Key:c 
+KEY:c 
 
-#
+
 Section 12.10 The File Class
+#
 31.	What are the reasons to create an instance of the File class?
 a.	To determine whether the file exists.
 b.	To obtain the properties of the file such as whether the file can be read, written, or is hidden.
 c.	To rename the file.
 d.	To delete the file.
 e. To read/write data from/to a file
-Key:abcd
+KEY:abcd
 
 #
 32.	Which of the following returns the path separator character?
@@ -573,7 +579,7 @@ b.	File.pathSeparatorChar
 c.	File.separator
 d.	File.separatorChar
 e.   None of the above.
-Key:b
+KEY:b
 
 #
 33.	Which of the following statements creates an instance of File on Window for the file c:\temp.txt?
@@ -581,7 +587,7 @@ a.	new File("c:\temp.txt")
 b.	new File("c:\\temp.txt")
 c.	new File("c:/temp.txt")
 d.	new File("c://temp.txt")
-Key:b
+KEY:b
 
 #
 34.	Which of the following statements are true?
@@ -590,16 +596,17 @@ b.	If a directory (e.g., c:\liang) does not exist, new File("c:\liang") returns 
 c.	If a file (e.g., c:\temp.txt) does not exist, new File("c:\\temp.txt") creates a new file named c:\temp.txt.
 d.	If a directory (e.g., c:\liang) does not exist, new File("c:\liang") creates a new directory named c:\liang.
 e. None of the above.
-Key:e
+KEY:e
 
-#
+
 Section 12.11 Text I/O
+#
 35. Which class contains the method for checking whether a file exists?
 a. File
 b. PrintWriter
 c. Scanner
 d. System
-Key:a
+KEY:a
 
 #
 36. Which class do you use to write data into a text file?
@@ -607,7 +614,7 @@ a. File
 b. PrintWriter
 c. Scanner
 d. System
-Key:b
+KEY:b
 
 #
 37. Which class do you use to read data from a text file?
@@ -615,7 +622,7 @@ a. File
 b. PrintWriter
 c. Scanner
 d. System
-Key:c
+KEY:c
 
 #
 38. Which method can be used to write data?
@@ -623,7 +630,7 @@ a. close
 b. print
 c. exist
 d. rename
-Key:b
+KEY:b
 
 #
 39. Which method can be used to read a whole line from the file?
@@ -631,7 +638,7 @@ a. next
 b. nextLine
 c. nextInt
 d. nextDouble
-Key:b
+KEY:b
 
 #
 40. Which of the following statements are correct?
@@ -664,7 +671,7 @@ a. I
 b. II
 c. III
 d. IV
-Key:abc
+KEY:abc
 
 #
 41. Which of the following statements are correct?
@@ -699,7 +706,7 @@ a. I
 b. II
 c. III
 d. IV
-Key:a File is not a subtyp of AutoCloseable. So it cannot be used to open a resource in a try-with-resources.
+KEY:a File is not a subtyp of AutoCloseable. So it cannot be used to open a resource in a try-with-resources.
 
 #
 42. Which method can be used to create an input object for file temp.txt?
@@ -707,7 +714,7 @@ a. new Scanner("temp.txt")
 b. new Scanner(temp.txt)
 c. new Scanner(new File("temp.txt"))
 d. new Scanner(File("temp.txt"))
-Key:c
+KEY:c
 
 #
 43. Suppose you enter 34.3 57.8 789, then press the ENTER key. Analyze the following code.
@@ -720,7 +727,7 @@ a.	After the last statement is executed, v1 is 34.
 b.	The program has a runtime error because 34.3 is not an integer.
 c.	After the last statement is executed, line contains characters '7', '8', '9', '\n'.
 d.	After the last statement is executed, line contains characters '7', '8', '9'.
-Key:b See discussions in Section 12.11.3.
+KEY:b See discussions in Section 12.11.3.
 
 #
 44. Suppose you enter 34.3 57.8 789, then press the ENTER key. Analyze the following code.
@@ -733,7 +740,7 @@ a.	After the last statement is executed, line contains characters '7', '8', '9'.
 b.	After the last statement is executed, line contains characters '7', '8', '9', '\n'.
 c.	After the last statement is executed, line contains characters ' ', '7', '8', '9', '\n'.
 d.	After the last statement is executed, line contains characters ' ', '7', '8', '9'.
-Key:d See discussions in Section 12.11.3.
+KEY:d See discussions in Section 12.11.3.
 
 #
 45. Suppose you enter 34.3, the ENTER key, 57.8, the ENTER key. Analyze the following code.
@@ -747,7 +754,7 @@ b.	After line 3 is executed, v2 is 57.8.
 c.	After line 4 is executed, line contains an empty string. 
 d.	After line 4 is executed, line is null. 
 e.	After line 4 is executed, line contains character "\n".
-Key:abc See discussions in Section 12.11.3.
+KEY:abc See discussions in Section 12.11.3.
 
 #
 46. Suppose you enter 34.3, the ENTER key, 57.8, the ENTER key, abc, the Enter key. Analyze the following code.
@@ -761,7 +768,7 @@ b.	After line 3 is executed, v2 is 57.8.
 c.	After line 4 is executed, line contains an empty string. 
 d.	After line 4 is executed, line is null. 
 e.	After line 4 is executed, line contains character "abc".
-Key:abc See discussions in Section 12.11.3.
+KEY:abc See discussions in Section 12.11.3.
 
 #
 47. Which method can be used to create an output object for file temp.txt?
@@ -769,13 +776,14 @@ a. new PrintWriter("temp.txt")
 b. new PrintWriter(temp.txt)
 c. new PrintWriter(new File("temp.txt"))
 d. new PrintWriter(File("temp.txt"))
-Key:ac
+KEY:ac
 
-#
+
 Section 12.12 Reading Data from the Web
+#
 48.	To create an InputStream to read from a file on a Web server, you use the method __________ in the URL class.
 a.	getInputStream();
 b.	obtainInputStream();
 c.	openStream();
 d.	connectStream();
-Key:c
+KEY:c

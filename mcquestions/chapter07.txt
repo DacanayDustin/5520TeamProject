@@ -239,7 +239,7 @@ d. String list = {"red", "yellow", "green"};
 e. String list = new String{"red", "yellow", "green"};
 KEY:bc
 
-#
+
 Section 7.5 Copying Arrays
 #
 20. In the following code, what is the output for list2?
@@ -377,7 +377,7 @@ c.	System.arrayCopy(sourceArray, 0, targetArray, 0, sourceArray.length);
 d.	System.arraycopy(sourceArray, 0, targetArray, 0, sourceArray.length);
 KEY:d
 
-#
+
 Section 7.6 Passing Arrays to Methods
 #
 28.	When you pass an array to a method, the method receives __________.
@@ -515,7 +515,7 @@ c. memory block
 d. dynamic memory
 KEY:b
 
-#
+
 Section 7.7 Returning an Array from a Method
 #
 34. When you return an array from a method, the method returns __________.
@@ -562,7 +562,7 @@ c. list1 is 0 0 0 0 0 0
 d. list1 is 6 6 6 6 6 6
 KEY:a
 
-#
+
 Section 7.9 Variable-Length Argument Lists
 #
 38. Which of the following declarations are correct?
@@ -583,7 +583,7 @@ c. printMax(1.0, 2.0, 2.0, 1.0, 4.0);
 d. printMax(new int[]{1, 2, 3});
 KEY:abc The last one printMax(new int[]{1, 2, 3}); is incorrect, because the array must of the double[] type.
 
-#
+
 Section 7.10 Searching Arrays
 #
 40. For the binarySearch method in Section 7.10.2, what is low and high after the first iteration of the while loop when invoking binarySearch(new int[]{1, 4, 6, 8, 10, 15, 20}, 11)?
@@ -602,8 +602,9 @@ c. -(insertion point + 1)
 d. -insertion point
 KEY:c
 
-#
+
 Section 7.11 Sorting Arrays
+#
 42. Use the selectionSort method presented in this section to answer this question. Assume list is {3.1, 3.1, 2.5, 6.4, 2.1}, what is the content of list after the first iteration of the outer loop in the method?
 
 a.	3.1, 3.1, 2.5, 6.4, 2.1
@@ -625,8 +626,9 @@ c.	list1 is 6.4, 3.1, 3.1, 2.5
 d.	list1 is 3.1, 2.5, 3.1, 6.4
 KEY:b
 
-#
+
 Section 7.12 The Arrays Class
+#
 44. The __________ method sorts the array scores of the double[] type.
 a.	java.util.Arrays(scores)
 b.	java.util.Arrays.sorts(scores)
@@ -660,8 +662,9 @@ c.	{1 20 30 40 50}
 d.	[1 20 30 40 50]
 KEY:b
 
-#
+
 Section 7.13 Command-Line Arguments
+#
 48.	How can you get the word "abc" in the main method from the following call?
 
 java Test "+" 3 "abc" 2

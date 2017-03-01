@@ -1,6 +1,7 @@
 Chapter 5 Loops
 
 Section 5.2 The while Loop
+#
 1.	How many times will the following code print "Welcome to Java"?
 
 int count = 0;
@@ -13,7 +14,7 @@ b.	9
 c.	10
 d.	11
 e.      0
-Key:c The count is initialized to 0 before the loop. The loop is executed 10 times for count from 1 to 9. When count is 10, the loop continuation condition becomes false. The loop is finished. So, the correct answer is C.
+KEY:c The count is initialized to 0 before the loop. The loop is executed 10 times for count from 1 to 9. When count is 10, the loop continuation condition becomes false. The loop is finished. So, the correct answer is C.
 
 #
 2. Analyze the following code.
@@ -32,7 +33,7 @@ b.	count < 100 is always true at Point B
 c.	count < 100 is always false at Point B
 d.	count < 100 is always true at Point C
 e.      count < 100 is always false at Point C
-Key:ae The count is initialized to 0 before the loop. The loop is executed 100 times for count from 0 to 99. Inside the loop body, at Point A, count < 100 is true. After executing count++, count < 100 in Point B may become false. After the loop is exited, count < 100 is false at Point C. So, the correct answer is AE.
+KEY:ae The count is initialized to 0 before the loop. The loop is executed 100 times for count from 0 to 99. Inside the loop body, at Point A, count < 100 is true. After executing count++, count < 100 in Point B may become false. After the loop is exited, count < 100 is false at Point C. So, the correct answer is AE.
 
 #
 3.	How many times will the following code print "Welcome to Java"?
@@ -46,10 +47,11 @@ b.	9
 c.	10
 d.	11
 e.      0
-Key:c The count is initialized to 0 before the loop. (count++ < 10) increments count by 1 and uses the old count value to check if count < 10. So, the loop is executed 10 times for count from 0 to 9. The correct answer is C.
+KEY:c The count is initialized to 0 before the loop. (count++ < 10) increments count by 1 and uses the old count value to check if count < 10. So, the loop is executed 10 times for count from 0 to 9. The correct answer is C.
 
-#
+
 Section 5.6 The do-while Loop
+#
 4.	How many times will the following code print "Welcome to Java"?
 
 int count = 0;
@@ -62,7 +64,7 @@ b.	9
 c.	10
 d.	11
 e.      0
-Key:c The count is initialized to 0 before the loop. The loop is executed 10 times for count from 0 to 9. When count is 10, the loop continuation condition becomes false. The loop is finished. So, the correct answer is C.
+KEY:c The count is initialized to 0 before the loop. The loop is executed 10 times for count from 0 to 9. When count is 10, the loop continuation condition becomes false. The loop is finished. So, the correct answer is C.
 
 #
 5.	How many times will the following code print "Welcome to Java"?
@@ -76,7 +78,7 @@ b.	9
 c.	10
 d.	11
 e.      0
-Key:d The count is initialized to 0 before the loop. The loop is executed for the fist time when count is 0. (count++ < 10) increments count by 1 and uses the old count value to check if count < 10. So, the loop is executed 11 times for count from 0 to 10.  Note that when count is 10, the loop body is executed before the loop is exited. The correct answer is D.
+KEY:d The count is initialized to 0 before the loop. The loop is executed for the fist time when count is 0. (count++ < 10) increments count by 1 and uses the old count value to check if count < 10. So, the loop is executed 11 times for count from 0 to 10.  Note that when count is 10, the loop body is executed before the loop is exited. The correct answer is D.
 
 #
 6.	How many times will the following code print "Welcome to Java"?
@@ -90,7 +92,7 @@ b.	9
 c.	10
 d.	11
 e.      0
-Key:c The count is initialized to 0 before the loop. The loop is executed for the fist time when count is 0. (++count < 10) increments count by 1 and uses the new count value to check if count < 10. So, the loop is executed 10 times for count from 0 to 9.  Note that when count is 9, ++count becomes 10, the loop exits. The correct answer is D.
+KEY:c The count is initialized to 0 before the loop. The loop is executed for the fist time when count is 0. (++count < 10) increments count by 1 and uses the new count value to check if count < 10. So, the loop is executed 10 times for count from 0 to 9.  Note that when count is 9, ++count becomes 10, the loop exits. The correct answer is D.
 
 #
 7.	What is the value in count after the following loop is executed?
@@ -105,10 +107,11 @@ b.	9
 c.	10
 d.	11
 e.      0
-Key:c The count is initialized to 0 before the loop. The loop is executed for the fist time when count is 0. (count++ < 9) increments count by 1 and uses the old count value to check if count < 9. So, the loop is executed 10 times for count from 0 to 9.  Note that when count is 9, the loop body is executed and then count++ increments count to 10. The previous count value 9 < 9 is false. So the loop is finished. Now count becomes 10 after the loop exits. The correct answer is C.
+KEY:c The count is initialized to 0 before the loop. The loop is executed for the fist time when count is 0. (count++ < 9) increments count by 1 and uses the old count value to check if count < 9. So, the loop is executed 10 times for count from 0 to 9.  Note that when count is 9, the loop body is executed and then count++ increments count to 10. The previous count value 9 < 9 is false. So the loop is finished. Now count becomes 10 after the loop exits. The correct answer is C.
 
-#
+
 Section 5.7 The for Loop
+#
 8.	Analyze the following statement:
 
 double sum = 0;
@@ -120,7 +123,7 @@ a.	The program has a compile error because the adjustment is missing in the for 
 b.	The program has a compile error because the control variable in the for loop cannot be of the double type.
 c.	The program runs in an infinite loop because d &lt; 10 would always be true.
 d.	The program compiles and runs fine.
-Key:d In this loop, the loop initial action is d = 0, the continuation condition is d < 10, and the action-after-each-iteration is blank. Note that any of these three parts in the loop can be omitted. So, the loop is correct. The correction answer is (D).
+KEY:d In this loop, the loop initial action is d = 0, the continuation condition is d < 10, and the action-after-each-iteration is blank. Note that any of these three parts in the loop can be omitted. So, the loop is correct. The correction answer is (D).
 
 #
 9. Which of the following loops prints "Welcome to Java" 10 times?
@@ -149,7 +152,7 @@ b. ABC
 c. AC
 d. BC
 e. AB
-Key:e In (A), the loop displays Welcome to Java 10 times for count from 1 to 10. In (B), the loop displays Welcome to Java 10 times for count from 0 to 9. In (C), the loop displays Welcome to Java 9 times for count from 1 to 9. In (D), the loop displays Welcome to Java 11 times for count from 0 to 10. Therefore, the correct answer is AB.
+KEY:e In (A), the loop displays Welcome to Java 10 times for count from 1 to 10. In (B), the loop displays Welcome to Java 10 times for count from 0 to 9. In (C), the loop displays Welcome to Java 9 times for count from 1 to 9. In (D), the loop displays Welcome to Java 11 times for count from 0 to 10. Therefore, the correct answer is AB.
 
 #
 10. Which of the following loops correctly computes 1/2 + 2/3 + 3/4 + ... + 99/100?
@@ -194,7 +197,7 @@ b. ABCD
 c. B
 d. CDE
 e. CD
-Key:e Note that 1 / 2 is 0.5 in a math expression. In Java, however, integer division yields an integer. The fraction part is truncated. Therefore, i / (i + 1) is 0. (A) and (B) are incorrect. (E) is incorrect because the last i in the loop is 98. So the last item 99 / 100.0 is not added to sum. So, the correct answer is CD.
+KEY:e Note that 1 / 2 is 0.5 in a math expression. In Java, however, integer division yields an integer. The fraction part is truncated. Therefore, i / (i + 1) is 0. (A) and (B) are incorrect. (E) is incorrect because the last i in the loop is 98. So the last item 99 / 100.0 is not added to sum. So, the correct answer is CD.
 
 #
 11. The following loop displays _______________.
@@ -209,7 +212,7 @@ b. 1 2 3 4 5 6 7 8 9 10
 c. 1 2 3 4 5 
 d. 1 3 5 7 9
 e. 2 4 6 8 10
-Key:d In this for loop, i is initialized to 1. i++ adds 1 to i at the end of the iteration. In the action-after-each-iteration, i is again incremented by 1. So, i is in effect incremented twice. So, i is 1, then 3, 5, 7, and 9.
+KEY:d In this for loop, i is initialized to 1. i++ adds 1 to i at the end of the iteration. In the action-after-each-iteration, i is again incremented by 1. So, i is in effect incremented twice. So, i is 1, then 3, 5, 7, and 9.
 The correct answer is D.
 
 #
@@ -226,7 +229,7 @@ for (int i = 0; i &lt; 10; i++) {
 }
 a.	Yes
 b.	No
-Key:a In this case, ++i and i++ are used standalone with no side-effect. So, (I) and (II) are equivalent. The correct answer is A.
+KEY:a In this case, ++i and i++ are used standalone with no side-effect. So, (I) and (II) are equivalent. The correct answer is A.
 
 #
 13.	What is the output for y?
@@ -242,7 +245,7 @@ b.	11
 c.	12
 d.	13
 e.      45
-Key:e The loop is executed 10 times for i from 0 to 9. Each time, i is added to y. So y = 0 + 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9, which 45. The correct answer is E.
+KEY:e The loop is executed 10 times for i from 0 to 9. Each time, i is added to y. So y = 0 + 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9, which 45. The correct answer is E.
 
 #
 14.	What is i after the following for loop?
@@ -255,7 +258,7 @@ a.	9
 b.	10
 c.	11
 d.	undefined
-Key:d The scope for i is inside the loop. After the loop, i is not defined. So, the correct answer is D.
+KEY:d The scope for i is inside the loop. After the loop, i is not defined. So, the correct answer is D.
 
 #
 15.	Is the following loop correct?
@@ -263,10 +266,11 @@ Key:d The scope for i is inside the loop. After the loop, i is not defined. So, 
 for ( ;  ; );
 a.	Yes
 b.	No
-Key:a Yes. This is equivalent to for (; true; ).
+KEY:a Yes. This is equivalent to for (; true; ).
 
-#
+
 Section 5.8 Which Loop to Use?
+#
 16.	Analyze the following fragment:
 
 double sum = 0;
@@ -279,7 +283,7 @@ a.	The program does not compile because sum and d are declared double, but assig
 b.	The program never stops because d is always 0.1 inside the loop.
 c.	The program may not stop because of the phenomenon referred to as numerical inaccuracy for operating with floating-point numbers.
 d.	After the loop, sum is 0 + 0.1 + 0.2 + 0.3 + ... + 1.9
-Key:c  The correct answer is C. There is no guarantee that d will be exactly 10.0 because real numbers are represented using approximation in a computer system.
+KEY:c  The correct answer is C. There is no guarantee that d will be exactly 10.0 because real numbers are represented using approximation in a computer system.
 
 #
 17. Analyze the following code:
@@ -295,10 +299,11 @@ a.	The program has a compile error because of the semicolon (;) on the for loop 
 b.	The program compiles despite the semicolon (;) on the for loop line, and displays 4.
 c.	The program compiles despite the semicolon (;) on the for loop line, and displays 14.
 d.	The for loop in this program is same as for (i = 0; i < 10; i++) { }; System.out.println(i + 4);
-Key:cd This is a logic error. System.out.println(i + 4) is not a part the for loop because the for loop ends with the last semicolon at for (i=0; i &lt; 10; i++);
+KEY:cd This is a logic error. System.out.println(i + 4) is not a part the for loop because the for loop ends with the last semicolon at for (i=0; i &lt; 10; i++);
 
-#
+
 Section 5.9 Nested Loops
+#
 18.	How many times is the println statement executed?
 
 for (int i = 0; i < 10; i++) 
@@ -309,18 +314,20 @@ a. 100
 b. 20
 c. 10
 d. 45
-Key:d 
+KEY:d 
 
-#
+
 Section 5.10 Minimizing Numerical Errors
+#
 19. To add 0.01 + 0.02 + ... + 1.00, what order should you use to add the numbers to get better accuracy?
 
 a. add 0.01, 0.02, ..., 1.00 in this order to a sum variable whose initial value is 0.
 b. add 1.00, 0.99, 0.98, ..., 0.02, 0.01 in this order to a sum variable whose initial value is 0.
-Key:a Adding the numbers in the order specified in A will result in a more accurate result than in B, because two numbers to be added will be about the same size.
+KEY:a Adding the numbers in the order specified in A will result in a more accurate result than in B, because two numbers to be added will be about the same size.
 
-#
+
 Section 5.12 Keywords break and continue
+#
 20.	Will the following program terminate?
 
 int balance = 10;
@@ -332,7 +339,7 @@ while (true) {
 }
 a.	Yes
 b.	No
-Key:a Yes. Before the loop, balance is 10. The loop-continuation-condition is always true. In the first iteration, balance is reduced to 1. In the second iteration, the break statement is executed since (balance < 9) is now true. The correct answer for this question is A.
+KEY:a Yes. Before the loop, balance is 10. The loop-continuation-condition is always true. In the first iteration, balance is reduced to 1. In the second iteration, the break statement is executed since (balance < 9) is now true. The correct answer for this question is A.
 
 #
 21.	What is sum after the following loop terminates?
@@ -351,7 +358,7 @@ b.	6
 c.	7
 d.	8
 e.      9
-Key:b sum and item are initialized to 0 before the loop. In the loop, item++ increments item by 1 and item is then added to sum. If sum > 4, the break statement exits the loop. item is initially 0, then 1, 2, 3 and sum is initially 0, and then 1, 3, and 6. When sum is 6, (sum > 4) is true, which causes the break statement to be executed. So, the correct answer is B.
+KEY:b sum and item are initialized to 0 before the loop. In the loop, item++ increments item by 1 and item is then added to sum. If sum > 4, the break statement exits the loop. item is initially 0, then 1, 2, 3 and sum is initially 0, and then 1, 3, and 6. When sum is 6, (sum > 4) is true, which causes the break statement to be executed. So, the correct answer is B.
 
 #
 22.	What is the output after the following loop terminates?
@@ -372,7 +379,7 @@ a.	i is 5 isPrime is true
 b.	i is 5 isPrime is false
 c.	i is 6 isPrime is true
 d.	i is 6 isPrime is false
-Key:d The code tests if number is prime by dividing the number with possible divisors 2, 3, 4, and so on. Initially, isPrime is set to true. Once a divisor is found (i.e., number % i == 0 is true), isPrime is set to false. The loop continuation condition now becomes false. The loop ends. If no divisor is found after the loop is finished, isPrime remains true. Since number is 25, number % i  == 0 is true when i is 5. In this case, isPrime is set to false and i++ increments i by 1 in the action-after-each-iteration. So, the output is that i is 6 and isPrime is false. The correct anwer is D.
+KEY:d The code tests if number is prime by dividing the number with possible divisors 2, 3, 4, and so on. Initially, isPrime is set to true. Once a divisor is found (i.e., number % i == 0 is true), isPrime is set to false. The loop continuation condition now becomes false. The loop ends. If no divisor is found after the loop is finished, isPrime remains true. Since number is 25, number % i  == 0 is true when i is 5. In this case, isPrime is set to false and i++ increments i by 1 in the action-after-each-iteration. So, the output is that i is 6 and isPrime is false. The correct anwer is D.
 
 #
 23.	What is the output after the following loop terminates?
@@ -394,7 +401,7 @@ a.	i is 5 isPrime is true
 b.	i is 5 isPrime is false
 c.	i is 6 isPrime is true
 d.	i is 6 isPrime is false
-Key:b The code tests if number is prime by dividing the number with possible divisors 2, 3, 4, and so on. Initially, isPrime is set to true. Once a divisor is found (i.e., number % i == 0 is true), isPrime is set to false and the break statement is then executed to exit the loop. If no divisor is found after the loop is finished, isPrime remains true. Since number is 25, number % i  == 0 is true when i is 5. In this case, isPrime is set to false and the loop exits. So, the output is taht i is 5 and isPrime is true. The correct answer is  B.
+KEY:b The code tests if number is prime by dividing the number with possible divisors 2, 3, 4, and so on. Initially, isPrime is set to true. Once a divisor is found (i.e., number % i == 0 is true), isPrime is set to false and the break statement is then executed to exit the loop. If no divisor is found after the loop is finished, isPrime remains true. Since number is 25, number % i  == 0 is true when i is 5. In this case, isPrime is set to false and the loop exits. So, the output is taht i is 5 and isPrime is true. The correct answer is  B.
 
 #
 24.	What is sum after the following loop terminates?
@@ -413,7 +420,7 @@ b.	7
 c.	8
 d.	9
 e.     10
-Key:a In this loop, when sum >= 4, the continue statement is executed to exit the current iteration so the next statement sum += item after the if statement will not be executed. The loop keeps adding item to sum for item 1, 2, 3, and so on. So sum is 1, 2, and 6. When sum is 6, sum >=4 is true, the continue statement is executed to skip the rest of the iteration. When the loop ends, sum is still 6. So, the correct answer is A.
+KEY:a In this loop, when sum >= 4, the continue statement is executed to exit the current iteration so the next statement sum += item after the if statement will not be executed. The loop keeps adding item to sum for item 1, 2, 3, and so on. So sum is 1, 2, and 6. When sum is 6, sum >=4 is true, the continue statement is executed to skip the rest of the iteration. When the loop ends, sum is still 6. So, the correct answer is A.
 
 #
 25.	Will the following program terminate?
@@ -427,10 +434,11 @@ while (true) {
 }
 a.	Yes
 b.	No
-Key:b Before the loop, balance is 10. In the loop, balance becomes 1. The loop-continuation-condition is always true. When balance < 9 is true, the continue statement is executed to skip the rest statement in the iteration. So the loop continues in an infinite loop. So, the correct answer is B.
+KEY:b Before the loop, balance is 10. In the loop, balance becomes 1. The loop-continuation-condition is always true. When balance < 9 is true, the continue statement is executed to skip the rest statement in the iteration. So the loop continues in an infinite loop. So, the correct answer is B.
 
-#
+
 Sections 5.13-5.14
+#
 26. What is the number of iterations in the following loop?
 
   for (int i = 1; i < n; i++) {
@@ -441,7 +449,7 @@ a. 2*n
 b. n
 c. n - 1
 d. n + 1
-Key:c  The loop is executed n – 1 times for i from 1 to n – 1. So, the correct answer is C.
+KEY:c  The loop is executed n – 1 times for i from 1 to n – 1. So, the correct answer is C.
 
 #
 27. What is the number of iterations in the following loop?
@@ -454,7 +462,7 @@ a. 2*n
 b. n
 c. n - 1
 d. n + 1
-Key:b  The loop is executed n times for i from 1 to n. So, the correct answer is B.
+KEY:b  The loop is executed n times for i from 1 to n. So, the correct answer is B.
 
 #
 28. Suppose the input for number is 9. What is the output from running the following program?
@@ -489,7 +497,7 @@ a. i is 3 followed by 9 is prime
 b. i is 3 followed by 9 is not prime
 c. i is 4 followed by 9 is prime
 d. i is 4 followed by 9 is not prime
-Key:d  The input number is 9. isPrime is initialized to true. The loop tests if number is divisble by i for i from 2, 3, and so on. When i is 3, isPrime is false. The loop continuation condition becomes false. The loop is not finished. Before the loop continuation condition is checked, i++ increments i by 1. So, output is that i is 4 and following by 9 is not prime. So, the correct answer is  is executed n times for i from 1 to n. So, the correct answer is D.
+KEY:d  The input number is 9. isPrime is initialized to true. The loop tests if number is divisble by i for i from 2, 3, and so on. When i is 3, isPrime is false. The loop continuation condition becomes false. The loop is not finished. Before the loop continuation condition is checked, i++ increments i by 1. So, output is that i is 4 and following by 9 is not prime. So, the correct answer is  is executed n times for i from 1 to n. So, the correct answer is D.
 
 #
 29. Analyze the following code:
@@ -510,10 +518,10 @@ a. The program does not compile because the Scanner input = new Scanner(System.i
 b. The program compiles, but does not run because the Scanner input = new Scanner(System.in); statement is inside the loop.
 c. The program compiles and runs, but it is not efficient and unnecessary to execute the Scanner input = new Scanner(System.in); statement inside the loop. You should move the statement before the loop.
 d. The program compiles, but does not run because there is not prompting message for entering the input.
-Key:c To receive input from the keyboard, you need to create an input object from the Scanner class. You should create this object only once in the program. Placing the statement Scanner input = new Scanner(System.in) in the loop causes it to be created multiple times, which is a bad practice and could lead to potential errors. So, the correct answer is C.
+KEY:c To receive input from the keyboard, you need to create an input object from the Scanner class. You should create this object only once in the program. Placing the statement Scanner input = new Scanner(System.in) in the loop causes it to be created multiple times, which is a bad practice and could lead to potential errors. So, the correct answer is C.
+
 
 #
-Section: Extra Questions
 30. What is the output of the following code?
 
 int x = 0;
@@ -527,7 +535,7 @@ b. x is 1
 c. x is 2
 d. x is 3
 e. x is 4
-Key:e x is 0 before the loop.  The loop is executed 4 times for x from 0 to 3. When x is 4 the loop exits. So, the correct answer is E.
+KEY:e x is 0 before the loop.  The loop is executed 4 times for x from 0 to 3. When x is 4 the loop exits. So, the correct answer is E.
 
 #
 31.	What will be displayed when the following code is executed?
@@ -542,7 +550,7 @@ b.	6 3
 c.	3 0
 d.      3 0 -3
 e.      0 -3
-Key:c number is 6 before the loop. In the first iteration, number is reduced to 3. In the second iteration, number is reduced to 0. The loop is now finished. The loop body is executed 2 times for number 6 and 3. Since number is reduced by 3 before the print statement. 3 and 0 and displayed. So, the correct answer is C.
+KEY:c number is 6 before the loop. In the first iteration, number is reduced to 3. In the second iteration, number is reduced to 0. The loop is now finished. The loop body is executed 2 times for number 6 and 3. Since number is reduced by 3 before the print statement. 3 and 0 and displayed. So, the correct answer is C.
 
 #
 32. Given the following four patterns,
@@ -566,7 +574,7 @@ a.	Pattern A
 b.	Pattern B
 c.	Pattern C
 d.	Pattern D
-Key:c The outer loop displays a line. The inner loop displays all the numbers in the line. The outer loop is repeated 6 times for i from 1 to 6. For each i, the inner loops displays i as the first number in the line since j is from 6 to 1. j is printed for j <= i. Otherwise, a space is printed. Clearly, this code will print Pattern C.
+KEY:c The outer loop displays a line. The inner loop displays all the numbers in the line. The outer loop is repeated 6 times for i from 1 to 6. For each i, the inner loops displays i as the first number in the line since j is from 6 to 1. j is printed for j <= i. Otherwise, a space is printed. Clearly, this code will print Pattern C.
 
 #
 33.	How many times is the println statement executed?
@@ -579,7 +587,7 @@ a. 100
 b. 20
 c. 10
 d. 45
-Key:a The outer loop is executed 10 times for i from 0 to 9 and the inner loop is executed 10 times from j from 0 to 9. So the print statement is executed 100 times. The correct answer is A.
+KEY:a The outer loop is executed 10 times for i from 0 to 9 and the inner loop is executed 10 times from j from 0 to 9. So the print statement is executed 100 times. The correct answer is A.
 
 #
 55.	Analyze the following code.
@@ -592,7 +600,7 @@ A.	The program has a syntax error because the adjustment statement is incorrect 
 B.	The program has a syntax error because the control variable in the for loop cannot be of the double type.
 C.	The program compiles but does not stop because d would always be less than 10.
 D.	The program compiles and runs fine.
-Key:d In this loop, the loop initial action is d = 0, the continuation condition is d < 10, and the action-after-each-iteration is sum += sum + d. The loop body is d += 1. This code is correct in syntax.  d is initially 0 and d += 0.1 adds 0.1 to d in each iteration. Eventually d will be greater than or equal to 10. So the loop will terminate. The correct answer for this question is (D) The program compiles and runs fine.
+KEY:d In this loop, the loop initial action is d = 0, the continuation condition is d < 10, and the action-after-each-iteration is sum += sum + d. The loop body is d += 1. This code is correct in syntax.  d is initially 0 and d += 0.1 adds 0.1 to d in each iteration. Eventually d will be greater than or equal to 10. So the loop will terminate. The correct answer for this question is (D) The program compiles and runs fine.
 
 #
 55.	What is y after the following for loop statement is executed?
@@ -605,7 +613,7 @@ A.	9
 B.	10
 C.	11
 D.	12
-Key:b Before the loop, y is 0. The loop is executed 10 times. Each time, 1 is added to y. So, after the loop is finished, y is 10. The correct answer is (B).
+KEY:b Before the loop, y is 0. The loop is executed 10 times. Each time, 1 is added to y. So, after the loop is finished, y is 10. The correct answer is (B).
 
 #
 99.	What balance after the following code is executed?
@@ -622,7 +630,7 @@ B.	0
 C.	1
 D.	2
 E.	The loop does not end
-Key:e Before the loop, balance is 10. The loop-continuation-condition is true (10 >= 1). In the first iteration, balance is reduced to 1. Since 1 >= 1 is true, the loop body is executed. Since balance < 9 is true, the continue statement is executed to skip the rest statement in the iteration. balance continues to be 1 and the continue statement is executed to skip the rest statement in the iteration. So the loop runs infinitely. So the correct answer to this question is E.
+KEY:e Before the loop, balance is 10. The loop-continuation-condition is true (10 >= 1). In the first iteration, balance is reduced to 1. Since 1 >= 1 is true, the loop body is executed. Since balance < 9 is true, the continue statement is executed to skip the rest statement in the iteration. balance continues to be 1 and the continue statement is executed to skip the rest statement in the iteration. So the loop runs infinitely. So the correct answer to this question is E.
 
 #
 99.	What is the value of balance after the following code is executed?
@@ -638,4 +646,4 @@ A. 	-1
 B.	0
 C.	1
 D.	2
-Key:c Before the loop, balance is 10. The loop-continuation-condition is true (10 >= 1). In the first iteration, balance is reduced to 1. Since 1 >= 1 is true, the loop body is executed. Since balance < 9 is true, the break statement is executed to exit the loop. So, balance is 1 after the loop is finished. The correct answer for this question is C.
+KEY:c Before the loop, balance is 10. The loop-continuation-condition is true (10 >= 1). In the first iteration, balance is reduced to 1. Since 1 >= 1 is true, the loop body is executed. Since balance < 9 is true, the break statement is executed to exit the loop. So, balance is 1 after the loop is finished. The correct answer for this question is C.

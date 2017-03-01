@@ -1,12 +1,13 @@
 Chapter 6 Methods
 Sections 6.2 Defining a Method
+#
 1. Suppose your method does not return any value, which of the following keywords can be used as a return type?
 a.	void
 b.	int
 c.	double
 d.	public
 e.	None of the above
-Key:a
+KEY:a
 
 #
 2.	The signature of a method consists of ____________.
@@ -14,7 +15,7 @@ a.	method name
 b.	method name and parameter list
 c.	return type, method name, and parameter list
 d.	parameter list
-Key:b By definition, a method signature consists of method name and parameter list.
+KEY:b By definition, a method signature consists of method name and parameter list.
 	
 #
 3.	All Java applications must have a method __________.
@@ -23,16 +24,17 @@ b.	public static Main(String args[])
 c.	public static void main(String[] args)
 d.	public void main(String[] args)
 e.      public static main(String[] args)
-Key:c Java application's starting method is the main method.
+KEY:c Java application's starting method is the main method.
 
-#
-Sections 6.3 Calling a Method	
+
+Sections 6.3 Calling a Method
+#	
 4.	Arguments to methods always appear within __________.
 a.	brackets
 b.	parentheses
 c.	curly braces
 d.	quotation marks
-Key:b 
+KEY:b 
 
 #
 5.	Does the return statement in the following method cause compile errors?
@@ -46,7 +48,7 @@ public static void main(String[] args) {
 }
 a.	Yes
 b.	No
-Key:b It is rare, but sometimes useful to have a return statement for circumventing the normal flow of control in a void method. 
+KEY:b It is rare, but sometimes useful to have a return statement for circumventing the normal flow of control in a void method. 
 
 #
 6.	Does the method call in the following method cause compile errors?
@@ -56,7 +58,7 @@ public static void main(String[] args) {
 }
 a.	Yes
 b.	No
-Key:b A value-returning method can also be invoked as a statement in Java. In this case, the caller simply ignores the return value. This is rare, but permissible if the caller is not interested in the return value.
+KEY:b A value-returning method can also be invoked as a statement in Java. In this case, the caller simply ignores the return value. This is rare, but permissible if the caller is not interested in the return value.
 
 #
 7. Each time a method is invoked, the system stores parameters and local variables in an area of memory, known as _______, which stores elements in last-in first-out fashion.
@@ -64,16 +66,17 @@ a. a heap
 b. storage area
 c. a stack
 d. an array
-key:c 
+KEY:c 
 
-#
+
 Sections 6.4 void Method Example
+#
 8. Which of the following should be defined as a void method?
 a. Write a method that prints integers from 1 to 100.
 b. Write a method that returns a random integer from 1 to 100.
 c. Write a method that checks whether current second is an integer from 1 to 100.
 d. Write a method that converts an uppercase letter to lowercase.
-key:a
+KEY:a
 
 #
 9. You should fill in the blank in the following code with ______________.
@@ -112,7 +115,7 @@ b. double
 c. boolean
 d. char
 e. void
-key:e  void should here because the method does not return any value.
+KEY:e  void should here because the method does not return any value.
 
 #
 10. You should fill in the blank in the following code with ______________.
@@ -142,16 +145,17 @@ b. double
 c. boolean
 d. char
 e. void
-key:d  char should be placed here because the method returns a character.
+KEY:d  char should be placed here because the method returns a character.
 
-#
+
 Sections 6.5 Passing Parameters by Values
+#
 11. When you invoke a method with a parameter, the value of the argument is passed to the parameter. This is referred to as _________.
 a. method invocation
 b. pass by value
 c. pass by reference
 d. pass by name
-key:b 
+KEY:b 
 
 #
 12. Given the following method
@@ -168,7 +172,7 @@ a.	aaaaa
 b.	aaaa
 c.	aaa
 d.	invalid call
-Key:d Invalid call because char 'a' cannot be passed to string message
+KEY:d Invalid call because char 'a' cannot be passed to string message
 	
 #
 13. Given the following method
@@ -188,10 +192,11 @@ a.	0
 b.	1
 c.	2
 d.	3
-Key:c
+KEY:c
 	
-#
+
 Section 6.8 Overloading Methods
+#
 14. Analyze the following code:
 
 public class Test {
@@ -213,7 +218,7 @@ a.	The program displays int, long followed by 5.
 b.	The program displays long, long followed by 5.
 c.	The program runs fine but displays things other than 5.
 d.	The program does not compile because the compiler cannot distinguish which xmethod to invoke.
-Key:a
+KEY:a
 	
 #
 15.	Analyze the following code:
@@ -237,7 +242,7 @@ a. The program displays int followed by 5.
 b. The program displays long followed by 5.
 c. The program runs fine but displays things other than 5.
 d. The program does not compile because the compiler cannot distinguish which xmethod to invoke.
-Key:b
+KEY:b
 	
 #	
 16. Analyze the following code.
@@ -270,7 +275,7 @@ b. The program cannot compile because the compiler cannot determine which max me
 c. The program runs and prints 2 followed by "max(int, double)" is invoked.
 d. The program runs and prints 2 followed by "max(double, int)" is invoked.
 e. The program runs and prints "max(int, double) is invoked" followed by 2.
-Key:b This is known as ambiguous method invocation.
+KEY:b This is known as ambiguous method invocation.
 
 #	
 17. Analyze the following code.
@@ -292,16 +297,17 @@ a. The program has a compile error because the two methods m have the same signa
 b. The program has a compile error because the second m method is defined, but not invoked in the main method.
 c. The program runs and prints 2 once.
 d. The program runs and prints 2 twice.
-Key:a You cannot override the methods based on the type returned.
+KEY:a You cannot override the methods based on the type returned.
 
-#
+
 Section 6.9 The Scope of Variables
+#
 18. A variable defined inside a method is referred to as __________.
 a. a global variable
 b. a method variable
 c. a block variable
 d. a local variable
-key:d
+KEY:d
 
 #
 19.	What is k after the following block executes?
@@ -315,16 +321,17 @@ a.	0
 b.	1
 c.	2
 d.	k is not defined outside the block. So, the program has a compile error
-Key:d k is defined inside the block. Outside the block, k is not defined.
+KEY:d k is defined inside the block. Outside the block, k is not defined.
 
-#
+
 Section 6.10 Case Study: Generating Random Characters
+#
 20. (int)(Math.random() * (65535 + 1)) returns a random number __________.
 a. between 1 and 65536
 b. between 1 and 65535
 c. between 0 and 65535
 d. between 0 and 65536
-key:c
+KEY:c
 
 #
 21. (int)('a' + Math.random() * ('z' - 'a' + 1)) returns a random number __________.
@@ -332,7 +339,7 @@ a. between 0 and (int)'z'
 b. between (int)'a' and (int)'z'
 c. between 'a' and 'z'
 d. between 'a' and 'y'
-key:b
+KEY:b
 
 #
 22. (char)('a' + Math.random() * ('z' - 'a' + 1)) returns a random character __________.
@@ -340,7 +347,7 @@ a. between 'a' and 'z'
 b. between 'a' and 'y'
 c. between 'b' and 'z'
 d. between 'b' and 'y'
-key:a
+KEY:a
 
 #
 23. Which of the following is the best for generating random integer 0 or 1?
@@ -349,16 +356,17 @@ b. (int)Math.random() + 1
 c. (int)(Math.random() + 0.5)
 d. (int)(Math.random() + 0.2)
 e. (int)(Math.random() + 0.8)
-key:c
+KEY:c
 
-#
+
 Section 6.11 Method Abstraction and Stepwise Refinement 
+#
 24. The client can use a method without knowing how it is implemented. The details of the implementation are encapsulated in the method and hidden from the client who invokes the method. This is known as __________.
 a. information hiding 
 b. encapsulation
 c. method hiding
 d. simplifying method
-key:ab
+KEY:ab
 
 #
 25. __________ is to implement one method in the structure chart at a time from the top to the bottom.
@@ -366,7 +374,7 @@ a. Bottom-up approach
 b. Top-down approach
 c. Bottom-up and top-down approach
 d. Stepwise refinement
-key:b
+KEY:b
 
 #
 26. __________ is a simple but incomplete version of a method.
@@ -374,10 +382,9 @@ a. A stub
 b. A main method
 c. A non-main method
 d. A method developed using top-down approach
-key:a
+KEY:a
 
 #
-Section: Extra Questions
 99. Consider the following incomplete code:
 
 public class Test {
@@ -396,4 +403,4 @@ a. return "number";
 b. System.out.println(number);
 c. System.out.println("number");
 d. return number;
-Key:d
+KEY:d

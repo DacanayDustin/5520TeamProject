@@ -1,6 +1,7 @@
 Chapter 2 Elementary Programming
 
 Section 2.2 Writing a Simple Program
+#
 1. _______ is the code with natural language mixed with Java code.
 a. Java program
 b. A Java statement
@@ -21,8 +22,9 @@ c. 	area3.5
 d.      area 3.5
 KEY:c The first print statement prints a string followed by the second print statement that prints a number.
 
-#
+
 Section 2.3 Reading Input from the Console 
+#
 3.	Suppose a Scanner object is created as follows:
 
 Scanner input = new Scanner(System.in);
@@ -77,8 +79,9 @@ c.	3.0
 d.	4.0
 KEY:b (1.0 + 2.0 + 3.0) / 3 is 2.0
 
-#
+
 Section 2.4 Identifiers
+#
 6. Every letter in a Java KEYword is in lowercase?
 a.	true
 b.	false
@@ -93,8 +96,9 @@ d.      8+9
 e.      radius
 KEY:ae class is a KEYword, which cannot be used as an identifier. Identifiers cannot start with a number.
 
-#
+
 Section 2.5 Variables
+#
 8.	Which of the following are correct names for variables according to Java naming conventions?
 a.	radius
 b.	Radius
@@ -111,8 +115,9 @@ c. 	int length; width;
 d.      int length, int width;
 KEY:ab Note that a semicolon ends a statement. In B, length and width are both declared as int.
 
-#
+
 Section 2.6 Assignment Statements and Assignment Expressions
+#
 10.	____________ is the Java assignment operator.
 a.	==
 b.	:=
@@ -137,8 +142,9 @@ c. 	i = 1 = j = 1 = k = 1;
 d.      i == j == k == 1;
 KEY:cd
 
-#
+
 Section 2.7 Named Constants
+#
 13.	To declare a constant MAX_LENGTH inside a method with value 99.98, you write
 a.	final MAX_LENGTH = 99.98;
 b.	final float MAX_LENGTH = 99.98;
@@ -163,8 +169,9 @@ c.	constants
 d.	classes
 KEY:c A constant gives a literal a descriptive name and makes the code more readable.
 
-#
+
 Section 2.8 Naming Conventions
+#
 16.	According to Java naming convention, which of the following names can be variables?
 a.	FindArea
 b.	findArea
@@ -173,8 +180,9 @@ d.	TOTAL_LENGTH
 e.      class
 KEY:bc The first word in a variable is in lowercase. So B and C are correct.
 
-#
+
 Section 2.9 Numeric Data Types and Operations
+#
 17.	Which of these data types requires the most amount of memory?
 a.	long
 b.	int
@@ -295,8 +303,9 @@ c.	Math.pow(a, b)
 d.	Math.pow(b, a)
 KEY:c
 
-#
+
 Section 2.10 Numeric Literals
+#
 31.	To declare an int variable number with initial value 2, you write
 a.	int number = 2L;
 b.	int number = 2l;
@@ -335,8 +344,9 @@ c. float x = 1.0;
 d. double x = 1.0;
 KEY:c
 
-#
+
 Section 2.11 Evaluating Expressions and Operator Precedence
+#
 35.     The expression 4 + 20 / (3 - 1) * 2 is evaluated to
 a.	4
 b.	20
@@ -345,8 +355,9 @@ d.      9
 e.      25
 KEY:c
 
-#
+
 Section 2.12 Case Study: Displaying the Current Time
+#
 36. The System.currentTimeMillis() returns ________________ .
 a.	the current time.
 b.	the current time in milliseconds.
@@ -382,8 +393,9 @@ d.      System.currentTimeMillis() / 1000 / 60 % 60
 e.      System.currentTimeMillis() / 1000 / 60 / 60 % 24
 KEY:e
 
-#
+
 Section 2.13 Augmented Assignment Operators
+#
 40.      To add a value 1 to variable x, you write
 a.	1 + x = x;
 b.	x += 1;
@@ -457,8 +469,9 @@ c. (B) and (C) are the same
 d. (A), (B), and (C) are the same	
 KEY:b	
 
-#
+
 Section 2.14 Increment and Decrement Operators
+#
 47.	Are the following four statements equivalent?
 
   number += 1;
@@ -535,8 +548,9 @@ c. y is 3.
 d. y is 4.
 KEY:b When evaluating x + x++, x is evaluated first, which is 1. X++ returns 1 since it is post-increment and 2. Therefore y is 1 + 1.
 
-#
+
 Section 2.15 Numeric Type Conversions
+#
 52.	To assign a double variable d to a float variable x, you write
 a.	x = (long)d
 b.	x = (int)d;
@@ -617,8 +631,9 @@ c.	long
 d.	double
 KEY:d
 
-#
+
 Section 2.16 Software Life Cycle 
+#
 61. _____________ is a formal process that seeks to understand the problem and document in detail what the software system needs to do. 
 a. Requirements specification
 b. Analysis
@@ -636,8 +651,9 @@ d. Implementation
 e. Testing
 KEY:b 
 
-#
+
 Section 2.18 Common Errors and Pitfalls
+#
 63.	Analyze the following code:
 
 public class Test {

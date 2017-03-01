@@ -80,7 +80,7 @@ d.	3, 3, and 4
 e.      2, 2, and 2
 KEY:b
 
-#
+
 Section 8.3 Processing Two-Dimensional Arrays
 #
 9.	What is the output of the following program?
@@ -198,7 +198,7 @@ d. 2 5 9 13
 e. 3 6 10 14
 KEY:b
 
-#
+
 Section 8.4 Passing Two-Dimensional Arrays to Methods
 #
 14. Suppose a method p has the following heading:
@@ -242,7 +242,7 @@ d.	5 33
 e.      33 5
 KEY:d
 
-#
+
 Section 8.8 Multidimensional Arrays
 #
 16.	Assume double[][][] x = new double[4][5][6], what are x.length, x[2].length, and x[0][0].length?
