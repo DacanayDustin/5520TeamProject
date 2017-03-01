@@ -1,80 +1,81 @@
 Chapter 36 Internationalization
 
+#
 Section 36.2 The Locale Class
 #
-1.	How do you set a button jbt's text to a character with the Unicode 13AE? 
-a.	jbt.setText("13AE");
-b.	jbt.setText("\13AE");
-c.	jbt.setText("\u13AE");
-d.	jbt.setText("/u13AE");
-e.	jbt.setText('\u13AE');
-Key:c
+1.How do you set a button jbt's text to a character with the Unicode 13AE? 
+a. jbt.setText("13AE");
+b. jbt.setText("\13AE");
+c. jbt.setText("\u13AE");
+d. jbt.setText("/u13AE");
+e. jbt.setText('\u13AE');
+KEY:c
 
 #
-2.	How do you create a locale for the United States? 
-a.	new Locale("en", "US");
-b.	new Locale("US", "en");
-c.	Locale.US;
-d.	Locale.getLocale("en", "US")
-Key:ac
+2. How do you create a locale for the United States? 
+a. new Locale("en", "US");
+b. new Locale("US", "en");
+c. Locale.US;
+d. Locale.getLocale("en", "US")
+KEY:ac
 
 #
-3.	Which of the following methods is defined in the Locale class? 
-a.	getLanguage()
-b.	getCountry()
-c.	getVariant()
-d.	getCountryVariant()
-Key:abc
+3. Which of the following methods is defined in the Locale class? 
+a. getLanguage()
+b. getCountry()
+c. getVariant()
+d. getCountryVariant()
+KEY:abc
 
 #
-4.	Which of the following methods is correct to obtain the available locales in the classes Calendar, Collator, DateFormat, and NumberFormat?
-a.	getLocales()
-b.	getAllLocales()
-c.	getAvailableLocales()
-d.	availableLocales()
-Key:c
+4. Which of the following methods is correct to obtain the available locales in the classes Calendar, Collator, DateFormat, and NumberFormat?
+a. getLocales()
+b. getAllLocales()
+c. getAvailableLocales()
+d. availableLocales()
+KEY:c
 
 #
-5.	Which of the following classes have the getAvailableLocales() method?
+5. Which of the following classes have the getAvailableLocales() method?
 a. Calendar
 b. Collator
 c. DateFormat
 d. NumberFormat
-Key:abcd
+KEY:abcd
 
 #
 Section 36.3 Processing Date and Time
 #
-6.	Which of the following set of code lines displays the current time in locale sensitive format? 
+6. Which of the following set of code lines displays the current time in locale sensitive format? 
 a. GregorianCalendar gcal = new GregorianCalendar(); System.out.println(gcal.toString());
 b. Date d = new Date(); System.out.println(d.toString());
 c. GregorianCalendar gcal = new&nbsp; GregorianCalendar(new TimeZone("CST")); System.out.println(gcal.toString());
 d. GregorianCalendar gcal = new GregorianCalendar(); DateFormat myFormat = DateFormat.getDateTimeInstance();  myFormat.setTimeZone(TimeZone.getTimeZone("CST")); System.out.println(myFormat.format(gcal.getTime())); 
-Key:d
+KEY:d
 
 #
-7.	Which of the following code is correct to obtain hour from a Calendar object cal? 
-a.	cal.getHour();
-b.	cal.hour();
-c.	cal.get(Hour);
-d.	cal.get(Calendar.HOUR); 	
-Key:d
+7. Which of the following code is correct to obtain hour from a Calendar object cal? 
+a. cal.getHour();
+b. cal.hour();
+c. cal.get(Hour);
+d. cal.get(Calendar.HOUR); 	
+KEY:d
 
 #
-8.	Which of the following code is correct to set a time zone in a Calendar object? 
-a.	cal.timeZone("CST");
-b.	cal.setTimeZone("CST");
-c.	cal.getTimeZone();
-d.	cal.get(Calendar.HOUR);
-Key:b
+8. Which of the following code is correct to set a time zone in a Calendar object? 
+a. cal.timeZone("CST");
+b. cal.setTimeZone("CST");
+c. cal.getTimeZone();
+d. cal.get(Calendar.HOUR);
+KEY:b
 
 #
-9.	Which of the following constants are the valid date and time format? 
-a.	DateFormat.SHORT
-b.	DateFormat.MEDIUM
-c.	DateFormat.LONG
-d.	DateFormat.FULL
-Key:abcd
+9. Which of the following constants are the valid date and time format? 
+a. DateFormat.SHORT
+b. DateFormat.MEDIUM
+c. DateFormat.LONG
+d. DateFormat.FULL
+KEY:abcd
 
 #
 10. Which of the following statements are true?
@@ -82,7 +83,7 @@ a. SimpleDateFormat is a subclass of DateFormat.
 b. DateFormatSymbols is a subclass of SimpleDateFormat.
 c. SimpleDateFormat enables you to choose any user-defined pattern for date and time formatting. 
 d. You can obtain localizable date-time formatting data, such as the names of the months, the names of the days of the week, and the time zone data, from an instance of DateFormatSymbols.
-Key:acd
+KEY:acd
 
 #
 11. Suppose DateFormatSymbols symbols = new DateFormatSymbols(), Which of the following statements is correct to return month names?
@@ -90,7 +91,7 @@ a. String[] monthNames = symbols.getMonths();
 b. String[] weekdayNames = symbols.getWeekdays();
 c. String[] eras = symbols.getEras();
 d. String[] eras = symbols.getAmPmStrings();
-Key:a
+KEY:a
 
 #
 12. Which of the following are in the java.text package?
@@ -99,33 +100,33 @@ b. DateFormat
 c. SimpleDateFormat
 d. Date
 e. Locale
-Key:abc
+KEY:abc
 
 #
 Section 36.4 Formatting Numbers
 #
-13.	Which of the following code is correct to create an instance for formatting numbers? 
-a.	NumberFormat.getInstance();
-b.	NumberFormat.getNumberInstance(locale);
-c.	NumberFormat.getInstance(locale);
-d.	NumberFormat.getNumberFormatInstance(locale);
-Key:abc
+13. Which of the following code is correct to create an instance for formatting numbers? 
+a. NumberFormat.getInstance();
+b. NumberFormat.getNumberInstance(locale);
+c. NumberFormat.getInstance(locale);
+d. NumberFormat.getNumberFormatInstance(locale);
+KEY:abc
 
 #
-14.	Which of the following code is correct to create an instance for formatting numbers in currency? 
-a.	NumberFormat.getCurrencyInstance(locale);
-b.	NumberFormat.getCurrencyInstance();
-c.	NumberFormat.currencyInstance(locale);
-d.	NumberFormat.currencyInstance();
-Key:ab
+14. Which of the following code is correct to create an instance for formatting numbers in currency? 
+a. NumberFormat.getCurrencyInstance(locale);
+b. NumberFormat.getCurrencyInstance();
+c. NumberFormat.currencyInstance(locale);
+d. NumberFormat.currencyInstance();
+KEY:ab
 
 #
-15.	Which of the following code is correct to create an instance for formatting numbers in percent? 
-a.	NumberFormat.getPercentInstance(locale);
-b.	NumberFormat.getPercentInstance();
-c.	NumberFormat.percentInstance(locale);
-d.	NumberFormat.percentInstance();
-Key:ab
+15. Which of the following code is correct to create an instance for formatting numbers in percent? 
+a. NumberFormat.getPercentInstance(locale);
+b. NumberFormat.getPercentInstance();
+c. NumberFormat.percentInstance(locale);
+d. NumberFormat.percentInstance();
+KEY:ab
 
 #
 16. Which of the following are valid methods in NumberFormat?
@@ -133,14 +134,14 @@ a. format(double)
 b. format(long)
 c. setMaximumIntegerDigits(int)
 d. setMinimumIntegerDigits(int)
-Key:abcd
+KEY:abcd
 
 #
-17.	Which of the following code displays the numbers with at least two digits before and after the decimal point?
+17. Which of the following code displays the numbers with at least two digits before and after the decimal point?
 a. NumberFormat numberForm = NumberFormat.getNumberInstance(); DecimalFormat df = (DecimalFormat)numberForm;<br>df.applyPattern("00.00");
-b.NumberFormat numberForm = NumberFormat.getNumberInstance(); numberForm.setMaximumFractionDigits(2); numberForm.setMinimumFractionDigits(2);
-c.NumberFormat numberForm = NumberFormat.getNumberInstance();<br>numberForm.setMaximumFractionDigits(2);
-Key:a
+b. NumberFormat numberForm = NumberFormat.getNumberInstance(); numberForm.setMaximumFractionDigits(2); numberForm.setMinimumFractionDigits(2);
+c. NumberFormat numberForm = NumberFormat.getNumberInstance();<br>numberForm.setMaximumFractionDigits(2);
+KEY:a
 
 #
 18. Suppose that NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(Locale.US). Which of the following statement is legal?
@@ -148,7 +149,7 @@ a. Number number = NumberFormat.parse("$5,000.56");
 b. Number number = currencyFormat.parse("$5,000.56");
 c. Number number = currencyFormat.parseCurrency("$5,000.56");
 d. Number number = currencyFormat.parse("5,000.56");
-Key:b
+KEY:b
 
 #
 19. Which of the following statements are true?
@@ -157,7 +158,7 @@ b. You can create an instance of DecimalFormat using new DecimalFormat(Local).
 c. You can create an instance of NumberFormat using new NumberFormat(Local).
 d. You can create an instance of NumberFormat using the static factory methods in NumberFormat.
 e. An instance created using the static factory methods in NumberFormat is also an instance of DecimalFormat.
-Key:ade
+KEY:ade
 
 #
 20. Which of the following statements are true regarding DecimalFormat?
@@ -166,7 +167,7 @@ b. The characters '0' and '#' are used to specify a required digit and an option
 c. The optional digit is not displayed if it is zero. 
 d. If there are more actual digits before the decimal point, all the digits are displayed.
 e. If there are more digits after the decimal point, the digits are rounded.
-Key:abcde
+KEY:abcde
 
 # 
 21. Suppose you apply the pattern "00.0##" on a DecimalFormat object f using f.applyPattern("00.0##"). What is the return value from decimalFormat.format(111.2226)?
@@ -174,7 +175,7 @@ a. 11.223
 b. 111.222
 c. 111.223
 d. 11.2226
-Key:c
+KEY:c
 
 # 
 22. Suppose you apply the pattern "00.0##%" on a DecimalFormat object f using f.applyPattern("00.0##%"). What is the return value from decimalFormat.format(111.2226)?
@@ -183,7 +184,7 @@ b. 111.222%
 c. 11122.3%
 d. 1122.3%
 e. 11122.26%
-Key:e
+KEY:e
 
 #
 Section 36.5 Resource Bundles
@@ -193,12 +194,12 @@ a. a Java source code that contains image, audio, and text files
 b. a Java class file or a text file that provides locale-specific information
 c. an image file
 d. an audio file
-Key:b
+KEY:b
 
 #
-24.	Which of the following code is correct to create an instance of ResourceBundle? 
-a.	ResourceBundle.getBundle();
-b.	ResourceBundle.getBundle(locale);
-c.	ResourceBundle.getBundle(resourcefilename);
-d.	ResourceBundle.getBundle(resourcefilename, locale);
-Key:c
+24. Which of the following code is correct to create an instance of ResourceBundle? 
+a. ResourceBundle.getBundle();
+b. ResourceBundle.getBundle(locale);
+c. ResourceBundle.getBundle(resourcefilename);
+d. ResourceBundle.getBundle(resourcefilename, locale);
+KEY:c

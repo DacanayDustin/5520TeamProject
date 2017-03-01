@@ -1,10 +1,12 @@
 Chapter 29 Weighted Graphs and Applications
 
+#
 Section 29.2 Representing Weighted Graphs
+#
 1. True or False? The WeightedEdge class extends AbstractGraph.Edge.
 a. True
 b. False
-Key:a
+KEY:a
 
 #
 2. A WeightedEdge object contains the public data fields _______.
@@ -12,7 +14,7 @@ a. u
 b. v
 c. weight
 d. length
-Key:abc
+KEY:abc
 
 #
 3. The adjacent edge for each vertex in the WeightedGraph class is stored in _________.
@@ -20,30 +22,32 @@ a. an ArrayList
 b. a LinkedList
 c. a PriorityQueue
 d. a Stack
-Key:a
+KEY:a
 
 #
 Section 29.3 The WeightedGraph Class
+#
 4. The WeightedGraph is a subtype of _________.
 a. UnweightedGraph
 b. AbstractGraph
 c. Graph
 d. WeightedEdge
-Key:bc
+KEY:bc
 
 #
 5. The addEge(u, v, w) method performs the following operations:
 a. Invokes super.add(u, v) to add an edge.
 b. Adds a weighed edge to the adjacent list for vertex u.
 c. Adds a weighed edge to the adjacent list for vertex v.
-Key:abc
+KEY:abc
 
 #
 Section 29.4 Minimum Spanning Trees
+#
 6. A graph may have several minimum spanning tree.
 a. True
 b. False
-Key:a
+KEY:a
 
 #
 7. The MST class is subtype of __________.
@@ -51,7 +55,7 @@ a. BST
 b. AVLTree
 c. AbstractGraph.Tree
 d. Tree
-Key:c
+KEY:c
 
 #
 8. The getMinimumSpanningTree() method returns __________.
@@ -59,7 +63,7 @@ a. an ArrayList
 b. a LinkedList
 c. a queue
 d. a MST
-Key:d
+KEY:d
 
 #
 9. Suppose a weighted graph is created in the following code. What is total weight of a minimum spanning tree?
@@ -78,20 +82,20 @@ Key:d
       new WeightedGraph<>(vertices, edges);
     WeightedGraph<Integer>.MST tree1 = graph1.getMinimumSpanningTree();
     System.out.println("Total weight is " + tree1.getTotalWeight());
-
 a. 10
 b. 11
 c. 12
 d. 13
 e. 14
-Key:d
+KEY:d
 
 #
 Section 29.5 Finding Shortest Paths
+#
 10. A ___________ of a graph is a subgraph that is a tree and connects all vertices in the graph.
 a. spanning tree
 b. shortest path 
-Key:a
+KEY:a
 
 #
 11. The ShortestPathTree class is subtype of __________.
@@ -99,7 +103,7 @@ a. BST
 b. AVLTree
 c. AbstractGraph.Tree
 d. Tree
-Key:c
+KEY:c
 
 #
 12. The getShortestPath() method returns __________.
@@ -107,7 +111,7 @@ a. an ArrayList
 b. a LinkedList
 c. a ShortestPathTree
 d. a MST
-Key:c
+KEY:c
 
 #
 13. Suppose a weighted graph is created in the following code. What is the shortest path from vertex 4 to 0?
@@ -129,10 +133,9 @@ Key:c
     
     System.out.println("Shortest path from 4 to 0 is " +
       tree1.getPath(4));
-
 a. 4 1 0
 b. 4 1 3 2 0
 c. 4 3 2 0
 d. 4 3 1 0
 e. 4 1 2 0
-Key:c
+KEY:c

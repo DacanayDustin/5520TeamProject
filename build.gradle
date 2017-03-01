@@ -16,11 +16,17 @@ repositories {
     }
 }
 
-mainClassName = 'com.csci5520_teamproject.CSCI5520_TeamProject'
+mainClassName = 'com.csci5520teamproject.CSCI5520TeamProject'
 
+ext.CHARM_DOWN_VERSION = "1.0.0"
 dependencies {
     compile 'com.gluonhq:charm:4.2.0'
     compile 'mysql:mysql-connector-java:5.1.23'
+    compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.6'
+    compile group: 'org.apache.derby', name: 'derbyclient', version: '10.13.1.1'
+ 
+    desktopRuntime "com.gluonhq:charm-down-desktop:$CHARM_DOWN_VERSION"
+    desktopRuntime 'org.xerial:sqlite-jdbc:3.8.11.2'
 }
 
 jfxmobile {

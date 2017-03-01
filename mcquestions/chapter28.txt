@@ -1,12 +1,14 @@
 Chapter 28 Graphs and Applications
 
+#
 Section 28.2 Basic Graph Terminologies
+#
 1. A ____ is an edge that links a vertex to itself. 
 a. loop
 b. parallel edge
 c. weighted edge
 d. directed edge
-Key:a
+KEY:a
 
 #
 2. If two vertices are connected by two or more edges, these edges are called ______. 
@@ -14,14 +16,14 @@ a. loop
 b. parallel edge
 c. weighted edge
 d. directed edge
-Key:b
+KEY:b
 
 #
 3. A _________  is the one in which every two pairs of vertices are connected.
 a. complete graph
 b. weighted graph
 c. directed graph
-Key:a
+KEY:a
 
 #
 4. What is the number of edges in a complete graph of n vertices?
@@ -29,7 +31,7 @@ a. n
 b. n - 1
 c. n(n-1)/2
 d. n*n
-Key:c
+KEY:c
 
 #
 5. What is the number of edges in a tree of n vertices?
@@ -37,10 +39,11 @@ a. n
 b. n - 1
 c. n(n-1)/2
 d. n*n
-Key:b
+KEY:b
 
 #
 Section 28.4
+#
 6. Suppose a graph is created in the following code. What is the output of the following code?
 
     String[] vertices = {"Atlanta", "Dallas", "Chicago", "New York", "Seattle"};
@@ -61,7 +64,7 @@ b. 2
 c. 3
 d. 4
 e. 5
-Key:b
+KEY:b
 
 #
 7. Suppose a graph is created in the following code. What is the number of vertices in the graph?
@@ -84,7 +87,7 @@ b. 2
 c. 3
 d. 4
 e. 5
-Key:e
+KEY:e
 
 #
 8. Suppose a graph is created in the following code. What is the degree of vertex 3 in the graph?
@@ -107,20 +110,21 @@ b. 2
 c. 3
 d. 4
 e. 5
-Key:c
+KEY:c
 
 #
 Section 28.7
+#
 9. The _______ search of a graph first visits a vertex, then it recursively visits all the vertices adjacent to that vertex.
 a. depth-first 
 b. breadth-first
-Key:a
+KEY:a
 
 #
 10. The time complexity of the DFS algorithm is O(|E| + |V|).
 a. true
 b. false
-Key:a
+KEY:a
 
 #
 11. Suppose a graph is created in the following code. Using the dfs algorithm in the text, what is the output for the path from 4 to 0?
@@ -143,20 +147,21 @@ b. [4, 3, 1, 0]
 c. [4, 1, 0]
 d. [4, 3, 2, 1, 0]
 e. [4, 1, 2, 0]
-Key:d
+KEY:d
 
 #
 Section 28.9
+#
 12. The _______ search of a graph first visits a vertex, then all its adjacent vertices, then all the vertices adjacent to those vertices, and so on.
 a. depth-first 
 b. breadth-first
-Key:b
+KEY:b
 
 #
 13. The time complexity of the BFS algorithm is O(|E| + |V|).
 a. true
 b. false
-Key:a
+KEY:a
 
 #
 14. Suppose a graph is created in the following code. Using the bfs algorithm in the text, what is the output for the path from 4 to 0?
@@ -179,4 +184,4 @@ b. [4, 3, 1, 0]
 c. [4, 1, 0]
 d. [4, 3, 2, 1, 0]
 e. [4, 1, 2, 0]
-Key:c
+KEY:c

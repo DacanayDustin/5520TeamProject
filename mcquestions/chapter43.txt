@@ -7,7 +7,7 @@ b. All leaf nodes are colored black in a red-black tree.
 c. All leaf nodes are colored red in a red-black tree.
 d. All external nodes are leaf nodes. 
 e. All leaf nodes are external nodes. 
-Key:ae
+KEY:ae
 
 #
 2. Which of the following statements are correct?
@@ -15,4 +15,4 @@ a. The black depth of a node is defined as the number of black nodes in a path f
 b. The root is black.
 c. Two adjacent nodes cannot be both red.
 d. All external nodes have the same black depth.
-Key:abcd
+KEY:abcd

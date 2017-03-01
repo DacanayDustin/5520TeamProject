@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.mvc.View?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.TextFlow?>
+
+<View fx:id="create" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.csci5520teamproject.views.CreatePresenter">
+   <center>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="15.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="624.0" prefWidth="350.0">
+               <children>
+                  <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#backAction" text="Back" />
+                  <Button layoutX="144.0" layoutY="529.0" mnemonicParsing="false" onAction="#createAction" text="Create" />
+                  <Label layoutX="68.0" layoutY="187.0" text="First Name" />
+                  <Label layoutX="71.0" layoutY="283.0" text="Username" />
+                  <Label layoutX="73.0" layoutY="331.0" text="Password" />
+                  <Label layoutX="18.0" layoutY="378.0" text="Confirm Password" />
+                  <TextField fx:id="lastNameTF" layoutX="149.0" layoutY="229.0" />
+                  <TextField fx:id="userTF" layoutX="149.0" layoutY="278.0" />
+                  <TextField fx:id="passTF" layoutX="149.0" layoutY="326.0" />
+                  <TextField fx:id="confirmTF" layoutX="149.0" layoutY="373.0" />
+                  <TextFlow fx:id="flagFlow" layoutX="63.0" layoutY="449.0" prefHeight="52.0" prefWidth="225.0" />
+                  <ComboBox fx:id="typeCB" layoutX="151.0" layoutY="90.0" onAction="#dropType" prefHeight="31.0" prefWidth="182.0" promptText="I am a ..." />
+                  <TextField fx:id="firstNameTF" layoutX="149.0" layoutY="182.0" />
+                  <TextField fx:id="codeTF" layoutX="149.0" layoutY="136.0" />
+                  <Label layoutX="69.0" layoutY="234.0" text="Last Name" />
+                  <Label layoutX="67.0" layoutY="141.0" text="Class Code" />
+                  <Label layoutX="48.0" layoutY="95.0" text="Account Type" />
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+   </center>
+</View>
