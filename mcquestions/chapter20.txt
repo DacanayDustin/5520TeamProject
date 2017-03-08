@@ -1,5 +1,6 @@
 Chapter 20 Lists, Stacks, Queues, and Priority Queues
 
+#
 Section 20.2 Collections
 #
 1. All the concrete classes in the Java Collections Framework implement _____________.
@@ -42,7 +43,7 @@ c. delete(o: E): boolean
 d. deleteAll(c: Collection<?>): boolean
 KEY:ab
 
-
+#
 Section 20.3 Iterators
 #
 6. For an instance of Collection, you can obtain its iterator using ________________.
@@ -76,7 +77,7 @@ c. Iterable
 d. ArrayList
 KEY:c
 
-
+#
 Section 20.5 Lists
 #
 10. Which of the following statements are true?
@@ -89,19 +90,19 @@ KEY:abcde
 
 #
 11. Which of the following statements are true?
-a.	An ArrayList can grow automatically.
-b.	An ArrayList can shrink automatically.
-c.	You can reduce the capacity of an ArrayList by invoking the trimToSize() method on the list.
-d.	You can reduce the capacity of a LinkedList by invoking the trimToSize() method on the list.
+a. An ArrayList can grow automatically.
+b. An ArrayList can shrink automatically.
+c. You can reduce the capacity of an ArrayList by invoking the trimToSize() method on the list.
+d. You can reduce the capacity of a LinkedList by invoking the trimToSize() method on the list.
 KEY:ac A LinkedList does not have excess capacity.
 
 #
 12. Which of the following methods are in java.util.List?
-a.	add(int index, E element)
-b.	get(int index)
-c.	set(int index, E element)
-d.	remove(int index)
-e.	subList(int fromIndex, int toIndex)
+a. add(int index, E element)
+b. get(int index)
+c. set(int index, E element)
+d. remove(int index)
+e. subList(int fromIndex, int toIndex)
 KEY:abcde
 
 #
@@ -122,7 +123,6 @@ for (int i = 0; i < list1.size(); i++)
 B:
 for (int i = 0; i < list2.size(); i++)
   sum += list2.get(i);
-
 a. Code fragment A runs faster than code fragment B.
 b. Code fragment B runs faster than code fragment A.
 c. Code fragment A runs as fast as code fragment B.
@@ -138,7 +138,6 @@ for (int i = 0; i < list.size(); i++)
 B:
 for (int i: list)
   sum += i;
-
 a. Code fragment A runs faster than code fragment B.
 b. Code fragment B runs faster than code fragment A.
 c. Code fragment A runs as fast as code fragment B.
@@ -146,11 +145,11 @@ KEY:b Becuase code fragment B uses an iterator to traverse the elements in a lin
 
 #
 16. Which method do you use to test if an element is in a set or list named x?
-a.	(element instanceof List) || (element instanceof Set)
-b. 	x.in(element)
-c.	x.contain(element)
-d.	x.contains(element)
-e. 	x.include(element)
+a. (element instanceof List) || (element instanceof Set)
+b. x.in(element)
+c. x.contain(element)
+d. x.contains(element)
+e. x.include(element)
 KEY:d The contains method defined in the Collection interface checks if an element is in the collection (set or list)
 
 #
@@ -172,11 +171,11 @@ KEY:bcd There is no element at index 3.
 
 #
 19. Which method do you use to find the number of elements in a set or list named x?
-a.	x.length()
-b. 	x.count()
-c.	x.counts()
-d.	x.size()
-e. 	x.sizes()
+a. x.length()
+b. x.count()
+c. x.counts()
+d. x.size()
+e. x.sizes()
 KEY:d The size method defined in the Collection interface returns the number of elements in the collection (set or list)
 
 #
@@ -197,28 +196,28 @@ KEY:b The remove method defined in the Collection interface removes the element 
         list.add("D");
         for (int i = 0; i < list.size(); i++)
             System.out.print(list.remove(i));
-a.	ABCD
-b. 	AB
-c.	AC
-d.	AD
-e. 	ABC
+a. ABCD
+b. AB
+c. AC
+d. AD
+e. ABC
 KEY:c Before the loop, the list is [A, B, C, D]. After invoking list.remove(0), the list becomes [B, C, D] and size becomes 3. Invoking remove(1) now deletes C from the list. The list becomes [B, D]. Now the list size is 2 and i is 2. So the loop ends.
 
 #
 22. Suppose list list1 is [1, 2, 5] and list list2 is [2, 3, 6]. After list1.addAll(list2), list1 is __________.
-a.	[1, 2, 2, 3, 5, 6]
-b. 	[1, 2, 3, 5, 6]
-c.	[1, 5]
-d. 	[2]
+a. [1, 2, 2, 3, 5, 6]
+b. [1, 2, 3, 5, 6]
+c. [1, 5]
+d. [2]
 KEY:a
 
 #
 23. Suppose list list1 is [1, 2, 5] and list list2 is [2, 3, 6]. After list1.addAll(list2), list2 is __________.
-a.	[1, 2, 2, 3, 5, 6]
-b. 	[1, 2, 3, 5, 6]
-c.	[1, 5]
-d. 	[2]
-e. 	[2, 3, 6]
+a. [1, 2, 2, 3, 5, 6]
+b. [1, 2, 3, 5, 6]
+c. [1, 5]
+d. [2]
+e. [2, 3, 6]
 KEY:e
 
 #
@@ -235,10 +234,10 @@ KEY:acd
 
     list.remove("red");
 
-a.	{"red", "green", "red", "green"}
-b.	{"green", "red", "green"}
-c.	{"green", "green"}
-d.	{"red", "green", "green"}
+a. {"red", "green", "red", "green"}
+b. {"green", "red", "green"}
+c. {"green", "green"}
+d. {"red", "green", "green"}
 KEY:b
 
 #
@@ -251,11 +250,11 @@ KEY:b
         i--;
       }
 
-a.	{"red", "red", "green"}
-b.	{"red", "green"}
-c.	{"green", "green"}
-d.	{"green"}
-e.      {}
+a. {"red", "red", "green"}
+b. {"red", "green"}
+c. {"green", "green"}
+d. {"green"}
+e. {}
 KEY:c
 
 #
@@ -265,12 +264,11 @@ KEY:c
     for (int i = list.size() - 1; i >= 0; i--)
       if (list.get(i).equals(element))
         list.remove(element);
-
-a.	{"red", "red", "green"}
-b.	{"red", "green"}
-c.	{"green", "green"}
-d.	{"green"}
-e.      {}
+a. {"red", "red", "green"}
+b. {"red", "green"}
+c. {"green", "green"}
+d. {"green"}
+e. {}
 KEY:c
 
 #
@@ -282,7 +280,6 @@ KEY:c
     list.add(3);
     list.remove(2);
     System.out.println(list);
-
 a. [1, 2, 3]	
 b. [1, 2]
 c. [1]	
@@ -308,7 +305,6 @@ public class Test {
     System.out.println(list);
   }
 }
-
 a. Collection
 b. List
 c. ArrayList
@@ -316,7 +312,7 @@ d. AbstractList
 KEY:a If list is declared as Collection<Integer>, list.remove(i) is the same as list.remove(new Integer(i)). If list is declared as List<Integer>, ArrayList<Integer>, or AbstractList<Integer>, list.remove(i) is to remove the element at the index i. The list has three elements and the last index is 2. After removing the first element, the last index becomes 1. After removing another element, the last index becomes 0. You will receive an IndexOutOfBoundsException.
 
 
-
+#
 Section 20.6 The Comparator Interface
 #
 30. Which of the following statements are true?
@@ -403,7 +399,7 @@ c. [[Sarah, 34], [Jill, 50], [Peter, 65]] [[Jill, 50], [Peter, 65], [Sarah, 34]]
 d. [[Jill, 50], [Peter, 65], [Sarah, 34]] [[Sarah, 34], [Jill, 50], [Peter, 65]]
 KEY:c
 
-
+#
 Section 20.8 Static Methods for Lists and Collections
 #
 33. Which of the following is correct to sort the elements in a list lst?
@@ -474,84 +470,84 @@ d. shuffle an array.
 e. do a binary search on an array.
 KEY:ce
 
-
+#
 Section 20.9 The Vector and Stack Classes
 #
 41. Which data type should you use if you want to store duplicate elements and be able to insert or delete elements anywhere efficiently?
-a.	ArrayList
-b. 	LinkedList
-c.	Vector
-d.	Set
-e.	Stack
+a. ArrayList
+b. LinkedList
+c. Vector
+d. Set
+e. Stack
 KEY:b
 
 #
 42. java.util.Vector is a subtype of __________.
-a.	java.util.ArrayList
-b. 	java.util.LinkedList
-c.	java.util.AbstractList
-d.	java.util.Vector
-e.      java.util.List
+a. java.util.ArrayList
+b. java.util.LinkedList
+c. java.util.AbstractList
+d. java.util.Vector
+e. java.util.List
 KEY:ce
 
 #
 43. The methods for modifying element in the ___________ class are synchronized.
-a.	ArrayList
-b. 	LinkedList
-c.	TreeMap
-d.	Vector
-e. 	HashSet
+a. ArrayList
+b. LinkedList
+c. TreeMap
+d. Vector
+e. HashSet
 KEY:d
 
 #
 44. java.util.Stack is a subclass of __________.
-a.	java.util.ArrayList
-b. 	java.util.LinkedList
-c.	java.util.AbstractList
-d.	java.util.Vector
-e.      java.util.List
+a. java.util.ArrayList
+b. java.util.LinkedList
+c. java.util.AbstractList
+d. java.util.Vector
+e. java.util.List
 KEY:cde (E) is correct since Vector is a subclass of List.
 
-
+#
 Section 20.10 Queues and Priority Queues
 #
 45. The __________ method in the Queue interface retrieves and removes the head of this queue, or null if this queue is empty.
-a.	poll()
-b. 	remove()
-c.	peek()
-d.	element()
+a. poll()
+b. remove()
+c. peek()
+d. element()
 KEY:a
 
 #
 46. The __________ method in the Queue interface retrieves and removes the head of this queue and throws an exception if this queue is empty.
-a.	poll()
-b. 	remove()
-c.	peek()
-d.	element()
+a. poll()
+b. remove()
+c. peek()
+d. element()
 KEY:b
 
 #
 47. The __________ method in the Queue interface retrieves, but does not remove, the head of this queue, returning null if this queue is empty.
-a.	poll()
-b. 	remove()
-c.	peek()
-d.	element()
+a. poll()
+b. remove()
+c. peek()
+d. element()
 KEY:c
 
 #
 48. The __________ method in the Queue interface retrieves, but does not remove, the head of this queue, throwing an exception if this queue is empty.
-a.	poll()
-b. 	remove()
-c.	peek()
-d.	element()
+a. poll()
+b. remove()
+c. peek()
+d. element()
 KEY:d
 
 #
 49. Which of the following statements are true?
-a.	java.util.LinkedList implements the java.util.Queue interface.
-b. 	java.util.ArrayList implements the java.util.Queue interface.
-c.	java.util.HashSet implements the java.util.Queue interface.
-d.	java.util.LinkedHashSet implements the java.util.Queue interface.
+a. java.util.LinkedList implements the java.util.Queue interface.
+b. java.util.ArrayList implements the java.util.Queue interface.
+c. java.util.HashSet implements the java.util.Queue interface.
+d. java.util.LinkedHashSet implements the java.util.Queue interface.
 e. java.util.PriorityQueue implements the java.util.Queue interface.
 KEY:ae
 

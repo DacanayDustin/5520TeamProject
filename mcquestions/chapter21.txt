@@ -1,39 +1,40 @@
 Chapter 21 Sets and Maps
 
+#
 Section 21.2 Sets
 #
 1. Which of the data types below does not allow duplicates?
-a.	Set
-b.	List
-c.      Vector
-d.      Stack
-e.	LinkedList
+a. Set
+b. List
+c. Vector
+d. Stack
+e. LinkedList
 KEY:a
 
 #
 2. Which of the following data types does not implement the Collection interface?
-a.	HashSet
-b. 	TreeSet
-c.	ArrayList
-d. 	LinkedList
-e.	Map
+a. HashSet
+b.  TreeSet
+c. ArrayList
+d.  LinkedList
+e. Map
 KEY:e
 
 #
 3. Which of the data types below could be used to store elements in their natural order based on the compareTo method?
-a.	HashSet
-b. 	TreeSet
-c.	LinkedHashSet
-d. 	Collection
-e.      Set
+a. HashSet
+b. TreeSet
+c. LinkedHashSet
+d. Collection
+e. Set
 KEY:b	
 
 #
 4. If two objects o1 and o2 are equal, what are the values for o1.equals(o2) and o1.hashCode() == o2.hashCode()?
-a.	true true
-b. 	true false
-c.	false true
-d. 	false false
+a. true true
+b. true false
+c. false true
+d. false false
 KEY:a
 
 #
@@ -66,11 +67,10 @@ class A  {
     return r;
   }
 }
-
-a.	[1]
-b. 	[1, 1]
-c.	[1, 1, 1]
-d. 	[1, 1, 1, 1]
+a. [1]
+b. [1, 1]
+c. [1, 1, 1]
+d. [1, 1, 1, 1]
 KEY:a
 
 #
@@ -131,11 +131,10 @@ class A  {
     return r;
   }
 }
-
-a.	[1]
-b. 	[1, 1]
-c.	[1, 1, 1]
-d. 	[1, 1, 1, 1]
+a. [1]
+b. [1, 1]
+c. [1, 1, 1]
+d. [1, 1, 1, 1]
 KEY:d
 
 #
@@ -164,61 +163,60 @@ class A  {
     return this.r == ((A)o).r;
   }
 }
-
-a.	[1]
-b. 	[1, 1]
-c.	[1, 1, 1]
-d. 	[1, 1, 1, 1]
+a. [1]
+b. [1, 1]
+c. [1, 1, 1]
+d. [1, 1, 1, 1]
 KEY:d	
 
 #
 9. Which of the following data types have iterators?
-a.	HashSet
-b. 	TreeSet
-c.	ArrayList
-d. 	LinkedList
-e.	LinkedHashSet
+a. HashSet
+b. TreeSet
+c. ArrayList
+d. LinkedList
+e. LinkedHashSet
 KEY:abcde The Collection interface has the iterator() method to return an iterator from a collection.
 
 #
 10. To get an iterator from a set, you may use the __________ method.
-a.	getIterator
-b. 	findIterator
-c.	iterator
-d. 	iterators
+a. getIterator
+b. findIterator
+c. iterator
+d. iterators
 KEY:c
 
 #
 11. Suppose set s1 is [1, 2, 5] and set s2 is [2, 3, 6]. After s1.addAll(s2), s1 is __________.
-a.	[1, 2, 2, 3, 5, 6]
-b. 	[1, 2, 3, 5, 6]
-c.	[1, 5]
-d. 	[2]
+a. [1, 2, 2, 3, 5, 6]
+b. [1, 2, 3, 5, 6]
+c. [1, 5]
+d. [2]
 KEY:b
 
 #
 12. Suppose set s1 is [1, 2, 5] and set s2 is [2, 3, 6]. After s1.addAll(s2), s2 is __________.
-a.	[1, 2, 2, 3, 5, 6]
-b. 	[1, 2, 3, 5, 6]
-c.	[1, 5]
-d. 	[2, 3, 6]
-e.      [2]
+a. [1, 2, 2, 3, 5, 6]
+b. [1, 2, 3, 5, 6]
+c. [1, 5]
+d. [2, 3, 6]
+e. [2]
 KEY:d
 
 #
 13. Suppose set s1 is [1, 2, 5] and set s2 is [2, 3, 6]. After s1.removeAll(s2), s1 is __________.
-a.	[1, 2, 2, 3, 5, 6]
-b. 	[1, 2, 3, 5, 6]
-c.	[1, 5]
-d. 	[2]
+a. [1, 2, 2, 3, 5, 6]
+b. [1, 2, 3, 5, 6]
+c. [1, 5]
+d. [2]
 KEY:c
 
 #
 14. Suppose set s1 is [1, 2, 5] and set s2 is [2, 3, 6]. After s1.retainAll(s2), s1 is __________.
-a.	[1, 2, 2, 3, 5, 6]
-b. 	[1, 2, 3, 5, 6]
-c.	[1, 5]
-d. 	[2]
+a. [1, 2, 2, 3, 5, 6]
+b. [1, 2, 3, 5, 6]
+c. [1, 5]
+d. [2]
 KEY:d
 
 #
@@ -291,11 +289,11 @@ KEY:acd For (E), the program will compile fine, but will get a runtime ClassCast
 
 #
 19. If you want to store non-duplicated objects in the order in which they are inserted, you should use ____________.
-a.	HashSet
-b. 	LinkedHashSet
-c.	TreeSet
-d.	ArrayList
-e. 	LinkedList
+a. HashSet
+b. LinkedHashSet
+c. TreeSet
+d. ArrayList
+e. LinkedList
 KEY:b
 
 #
@@ -309,26 +307,26 @@ KEY:acd TreeSet has the first(), last(), headSet(toElement), and tailSet(fromEle
 
 #
 21. Which of the following is correct to perform the set union of two sets s1 and s2?
-a.	s1.union(s2)
-b. 	s1 + s2
-c.	s1.addAll(s2)
-d.	s1.add(s2)
+a. s1.union(s2)
+b. s1 + s2
+c. s1.addAll(s2)
+d. s1.add(s2)
 KEY:c
 
 #
 22. Which of the following is correct to perform the set difference of two sets s1 and s2?
-a.	s1.difference(s2)
-b. 	s1 - s2
-c.	s1.subtract(s2)
-d.	s1.removeAll(s2)
+a. s1.difference(s2)
+b. s1 - s2
+c. s1.subtract(s2)
+d. s1.removeAll(s2)
 KEY:d
 
 #
 23. Which of the following is correct to perform the set intersection of two sets s1 and s2?
-a.	s1.intersect(s2)
-b. 	s1.join(s2)
-c.	s1.retainAll(s2) 
-d.	s1.intersection(s2)
+a. s1.intersect(s2)
+b. s1.join(s2)
+c. s1.retainAll(s2) 
+d. s1.intersection(s2)
 KEY:c
 
 #
@@ -347,10 +345,10 @@ public class Test {
     System.out.println(set.first());
   }
 }
-a.	The program displays Red
-b. 	The program displays Blue
-c.	The program displays Green
-d.	The program may display Red, Blue, or Green.
+a. The program displays Red
+b. The program displays Blue
+c. The program displays Green
+d. The program may display Red, Blue, or Green.
 e. The program cannot compile, because the first() method is not defined in Set.
 KEY:e first() is defined in TreeSet. To compile this program, replace Set set = new TreeSet() with TreeSet set = new TreeSet().
 
@@ -370,10 +368,10 @@ public class Test {
     System.out.println(set.last());
   }
 }
-a.	The program displays Red
-b. 	The program displays Blue
-c.	The program displays Green
-d.	The program may display Red, Blue, or Green.
+a. The program displays Red
+b. The program displays Blue
+c. The program displays Green
+d. The program may display Red, Blue, or Green.
 e. The program cannot compile, because the last() method is not defined in Set.
 KEY:a
 
@@ -395,10 +393,10 @@ public class Test {
     System.out.println(temp.first());
   }
 }
-a.	The program displays Red
-b. 	The program displays Blue
-c.	The program displays Green
-d.	The program displays Yellow
+a. The program displays Red
+b. The program displays Blue
+c. The program displays Green
+d. The program displays Yellow
 e. The program displays Purple
 KEY:b
 
@@ -420,21 +418,21 @@ public class Test {
     System.out.println(temp.first());
   }
 }
-a.	The program displays Red
-b. 	The program displays Blue
-c.	The program displays Green
-d.	The program displays Yellow
+a. The program displays Red
+b. The program displays Blue
+c. The program displays Green
+d. The program displays Yellow
 e. The program displays Purple
 KEY:a
 
-
+#
 Section 21.5 Maps
 #
 28. To empty a Collection or a Map, you use the __________ method.
-a.	empty
-b. 	clear
-c.	zero
-d.	setEmpty
+a. empty
+b. clear
+c. zero
+d. setEmpty
 KEY:b
 
 #
@@ -474,15 +472,15 @@ KEY:abce
 
 #
 33. The elements in ________ are sorted.
-a.	TreeSet
-b. 	List
-c.	TreeMap
-d.	HashSet
-e.	LinkedHashSet
+a. TreeSet
+b. List
+c. TreeMap
+d. HashSet
+e. LinkedHashSet
 KEY:ac
 
 #
-34.  Suppose your program frequently tests whether a student is in a soccer team, what is the best data structure to store the students in a soccer team?
+34. Suppose your program frequently tests whether a student is in a soccer team, what is the best data structure to store the students in a soccer team?
 a. ArrayList
 b. HashSet
 c. TreeSet
@@ -491,7 +489,7 @@ e. Vector
 KEY:b
 
 #
-35.  Suppose your program frequently tests whether a student is in a soccer team and also need to know the student’s information such as phone number, address, and age, what is the best data structure to store the students in a soccer team?
+35. Suppose your program frequently tests whether a student is in a soccer team and also need to know the studentï¿½s information such as phone number, address, and age, what is the best data structure to store the students in a soccer team?
 a. ArrayList
 b. HashMap
 c. TreeMap

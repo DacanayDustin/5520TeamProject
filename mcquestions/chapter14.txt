@@ -1,5 +1,6 @@
 Chapter 14 JavaFX Basics
 
+#
 Section 14.2 JavaFX vs Swing and AWT
 #
 1. Why is JavaFX preferred?
@@ -9,7 +10,7 @@ c. JavaFX has a built-in 3D, animation support, video and audio playback, and ru
 d. JavaFX incorporates modern GUI technologies to enable you to develop rich Internet applications. 
 KEY:abcd
 
-
+#
 Section 14.3 The Basic Structure of a JavaFX Program
 #
 2. Every JavaFX main class __________.
@@ -55,7 +56,7 @@ d. launch application. start method is invoked. Test constructor is invoked.
 e. launch application. Test constructor is invoked. start method is invoked. 
 KEY:e
 
-
+#
 Section 14.4 Panes, UI Controls, and Shapes
 #
 5. Which of the following statements are true?
@@ -99,7 +100,7 @@ d. Pane is a subclass of Node.
 e. Scene is a subclass on Node.
 KEY:abcd
 
-
+#
 Section 14.5 Binding Properties
 #
 10. Which of the following are binding properties?
@@ -146,7 +147,6 @@ public class Test {
       + " and d2 is " + d2.getValue());
   }
 }
-
 a. d1 is 2 and d2 is 2, d1 is 3 and d2 is 3
 b. d1 is 2 and d2 is 2, d1 is 2 and d2 is 3
 c. d1 is 1 and d2 is 2, d1 is 1 and d2 is 3
@@ -178,7 +178,7 @@ c. d1 is 1 and d2 is 2, d1 is 1 and d2 is 3
 d. d1 is 1 and d2 is 2, d1 is 3 and d2 is 3
 KEY:a
  
-
+#
 Section 14.6 Common Properties and Methods for Nodes
 #
 15. Which of the following statements correctly sets the fill color of circle to black?
@@ -197,7 +197,7 @@ c. button.setRotate(360 - 45);
 d. button.setRotate(-45);
 KEY:cd
 
-
+#
 Section 14.7 The Color Class
 #
 17. Which of the following statements correctly creates a Color object?
@@ -208,7 +208,7 @@ d. Color.color(0.3, 0.5, 0.5);
 e. Color.color(0.3, 0.5, 0.5, 0.1);
 KEY:bde
 
-
+#
 Section 14.8 The Font Class
 #
 18. Which of the following statements correctly creates a Font object?
@@ -227,7 +227,7 @@ c. You cannot change the contents in a Color object once it is created.
 d. You cannot change the contents in a Font object once it is created.
 KEY:abcd
 
-
+#
 Section 14.9 The Image and ImageView Classes
 #
 20. Which of the following statements correctly creates an ImageView object?
@@ -279,7 +279,7 @@ c. The image object cannot be shared by two ImageViews.
 d. The addAll method needs to be replaced by the add method.
 KEY:b
 
-
+#
 Section 14.10 Layout Panes
 #
 22. To add a node into a pane, use ______.
@@ -323,36 +323,36 @@ KEY:abcd
 
 #
 27. To add a node to the the first row and second column in a GridPane pane, use ________.
-a.	pane.getChildren().add(node, 1, 2);
-b.	pane.add(node, 1, 2);
-c.	pane.getChildren().add(node, 0, 1);
-d.	pane.add(node, 0, 1);
-e.	pane.add(node, 1, 0);
+a. pane.getChildren().add(node, 1, 2);
+b. pane.add(node, 1, 2);
+c. pane.getChildren().add(node, 0, 1);
+d. pane.add(node, 0, 1);
+e. pane.add(node, 1, 0);
 KEY:e
 
 #
 28. To add two nodes node1 and node2 to the the first row in a GridPane pane, use ________.
-a.	pane.add(node1, 0, 0); pane.add(node2, 1, 0);
-b.	pane.add(node1, node2, 0); 
-c.	pane.addRow(0, node1, node2); 
-d.	pane.addRow(1, node1, node2);
-e.	pane.add(node1, 0, 1); pane.add(node2, 1, 1);
+a. pane.add(node1, 0, 0); pane.add(node2, 1, 0);
+b. pane.add(node1, node2, 0); 
+c. pane.addRow(0, node1, node2); 
+d. pane.addRow(1, node1, node2);
+e. pane.add(node1, 0, 1); pane.add(node2, 1, 1);
 KEY:ac
 
 #
-29.	To place a node in the left of a BorderPane p, use ___________.
-a.	p.setEast(node);
-b.	p.placeLeft(node);
-c.	p.setLeft(node);
-d.	p.left(node);
+29. To place a node in the left of a BorderPane p, use ___________.
+a. p.setEast(node);
+b. p.placeLeft(node);
+c. p.setLeft(node);
+d. p.left(node);
 KEY:c
 
 #
-30.	To place two nodes node1 and node2 in a HBox p, use ___________.
-a.	p.add(node1, node2);
-b.	p.addAll(node1, node2);
-c.	p.getChildren().add(node1, node2);
-d.	p.getChildren().addAll(node1, node2);
+30. To place two nodes node1 and node2 in a HBox p, use ___________.
+a. p.add(node1, node2);
+b. p.addAll(node1, node2);
+c. p.getChildren().add(node1, node2);
+d. p.getChildren().addAll(node1, node2);
 KEY:d
 
 #
@@ -391,20 +391,20 @@ public class Test extends Application {
     launch(args);
   }
 }
-a.	The program has a compile error since the circle is added to a pane twice.
-b.	The program has a runtime error since the circle is added to a pane twice.
-c.	The program runs fine and displays one circle.
-d.	The program runs fine and displays two circles.
+a. The program has a compile error since the circle is added to a pane twice.
+b. The program has a runtime error since the circle is added to a pane twice.
+c. The program runs fine and displays one circle.
+d. The program runs fine and displays two circles.
 KEY:a
 
-
+#
 Section 14.11 Shapes
 #
-32.	The _________ properties are defined in the javafx.scene.shape.Shape class.
-a.	stroke
-b.	strokeWidth
-c.	fill
-d.	centerX 
+32. The _________ properties are defined in the javafx.scene.shape.Shape class.
+a. stroke
+b. strokeWidth
+c. fill
+d. centerX 
 KEY:abc
 
 #

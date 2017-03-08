@@ -1,80 +1,81 @@
 Chapter 15 Event-Driven Programming and Animations
 
+#
 Section 15.2 Events and Event Sources
 #
-1.	A JavaFX action event handler is an instance of _______.
-a.	ActionEvent
-b.	Action
-c.	EventHandler
-d.	EventHandler<ActionEvent>
+1. A JavaFX action event handler is an instance of _______.
+a. ActionEvent
+b. Action
+c. EventHandler
+d. EventHandler<ActionEvent>
 KEY:d
 
 #
-2.	A JavaFX action event handler contains a method ________.
-a.	public void actionPerformed(ActionEvent e)
-b.	public void actionPerformed(Event e)
-c.	public void handle(ActionEvent e)
-d.	public void handle(Event e)
+2. A JavaFX action event handler contains a method ________.
+a. public void actionPerformed(ActionEvent e)
+b. public void actionPerformed(Event e)
+c. public void handle(ActionEvent e)
+d. public void handle(Event e)
 KEY:c
 
 #
-3.	A JavaFX event handler for event type T is an instance of _______.
-a.	ActionEvent
-b.	Action
-c.	EventHandler
-d.	EventHandler<T>
+3. A JavaFX event handler for event type T is an instance of _______.
+a. ActionEvent
+b. Action
+c. EventHandler
+d. EventHandler<T>
 KEY:d
 
 #
-4.	Which of the following are the classes in JavaFX for representing an event?
-a.	ActionEvent
-b.	MouseEvent
-c.	KeyEvent
-d.	WindowEvent
+4. Which of the following are the classes in JavaFX for representing an event?
+a. ActionEvent
+b. MouseEvent
+c. KeyEvent
+d. WindowEvent
 KEY:abcd
 
 #
-5.	To register a source for an action event with a handler, use __________.
-a.	source.addAction(handler)
-b.	source.setOnAction(handler)
-c.	source.addOnAction(handler)
-d.	source.setActionHandler(handler)
+5. To register a source for an action event with a handler, use __________.
+a. source.addAction(handler)
+b. source.setOnAction(handler)
+c. source.addOnAction(handler)
+d. source.setActionHandler(handler)
 KEY:b
 
 #
-6.	Which of the following statements are true?
-a.	A handler object fires an event.
-b.	A source object fires an event.
-c.      Any object such a String object can fire an event.
-d.      A handler is registered with the source object for processing the event.
+6. Which of the following statements are true?
+a. A handler object fires an event.
+b. A source object fires an event.
+c. Any object such a String object can fire an event.
+d. A handler is registered with the source object for processing the event.
 KEY:bd
 
 #
-7.	Which of the following statements are true?
-a.	A Button can fire an ActionEvent.
-b.	A Button can fire a MouseEvent.
-c.      A Button can fire a KeyEvent.
-d.      A TextField can fire an ActionEvent.
+7. Which of the following statements are true?
+a. A Button can fire an ActionEvent.
+b. A Button can fire a MouseEvent.
+c. A Button can fire a KeyEvent.
+d. A TextField can fire an ActionEvent.
 KEY:abcd
 
 #
-8.	Which of the following statements are true?
-a.	A Node can fire an ActionEvent.
-b.	A Noden can fire a MouseEvent.
-c.      A Node can fire a KeyEvent.
-d.      A Scene can fire a MouseEvent.
+8. Which of the following statements are true?
+a. A Node can fire an ActionEvent.
+b. A Noden can fire a MouseEvent.
+c. A Node can fire a KeyEvent.
+d. A Scene can fire a MouseEvent.
 KEY:abcd
 
 #
-9.	Which of the following statements are true?
-a.	A Shape can fire an ActionEvent.
-b.	A Shape can fire a MouseEvent.
-c.      A Shape can fire a KeyEvent.
-d.      A Text is a Shape.
-e.      A Circle is a Shape.
+9. Which of the following statements are true?
+a. A Shape can fire an ActionEvent.
+b. A Shape can fire a MouseEvent.
+c. A Shape can fire a KeyEvent.
+d. A Text is a Shape.
+e. A Circle is a Shape.
 KEY:bcde
 
-
+#
 Section 15.4 Inner Classes
 #
 10. Which of the following statements are true?
@@ -93,15 +94,15 @@ d. Test&A.class
 KEY:b
 
 #
-12. 	Which statement is true about a non-static inner class?
-a.	It must implement an interface. 
-b.	It is accessible from any other class. 
-c.	It can only be instantiated in the enclosing class. 
-d.	It must be final if it is declared in a method scope. 
-e.	It can access private instance variables in the enclosing object.
+12. Which statement is true about a non-static inner class?
+a. It must implement an interface. 
+b. It is accessible from any other class. 
+c. It can only be instantiated in the enclosing class. 
+d. It must be final if it is declared in a method scope. 
+e. It can access private instance variables in the enclosing object.
 KEY:e
 
-
+#
 Section 15.5 Anonymous Class Handlers
 #
 13. Which of the following statements are true?
@@ -210,7 +211,7 @@ c. When clicking either button, the program displays The OK button is clicked tw
 d. The program has a runtime error, because the handler is registered with more than one source.
 KEY:ab
 
-
+#
 Section 15.6 Simplifying Event Handing Using Lambda Expressions
 #
 17. Analyze the following code. 
@@ -295,7 +296,6 @@ public class Test {
 interface T2 {
   public void m(Double d);
 }
-
 a. () -> System.out.print(e)
 b. (e) -> System.out.print(e)
 c. e -> System.out.print(e)
@@ -343,14 +343,13 @@ interface T {
   public void m1();
   public void m2();
 }
-
 a. The program displays Action 1.
 b. The program has a compile error because T is not a functional interface. T contains multiple methods.
 c. The program would work if you delete the method m2 from the interface T.
 d. The program has a runtime error because T is not a functional interface. T contains multiple methods.
 KEY:bc
 
-
+#
 Section 15.8 Mouse Events
 #
 23. To handle the mouse click event on a pane p, register the handler with p using ______.
@@ -394,7 +393,7 @@ c. pane.setOnMousePressed(e -> System.out.println(e.getX() + ", " + e.getY()));
 d. pane.setOnMouseDragged((e) -> System.out.println(e.getX() + ", " + e.getY()));
 KEY:c
 
-
+#
 Section 15.9 Key Events
 #
 25. To handle the key pressed event on a pane p, register the handler with p using ______.
@@ -436,7 +435,6 @@ public class Test extends Application {
     launch(args);
   }
 }
-
 a. () -> text.setText(e.getText())
 b. (e) -> text.setText(e.getText())
 c. e -> text.setText(e.getText())
@@ -485,8 +483,7 @@ d. Key pressed B
 KEY:a
 
 #
-28. Supose the follwoing program displays a pane in the stage. What is the output if the user presses the DOWN arrow key? 
-
+28. Suppose the following program displays a pane in the stage. What is the output if the user presses the DOWN arrow key? 
 
 import javafx.application.Application;
 import static javafx.application.Application.launch;
@@ -526,7 +523,7 @@ c. Key typed UNDEFINED
 d. Key pressed DOWN 
 KEY:d
 
-
+#
 Section 15.10 Listeners for Observable Objects
 #
 29. Analyze the following code:
@@ -549,7 +546,7 @@ c. The program would display 4.5 if the balance.set(4.5) is placed before the ba
 d. The program would display 6.5 if the balance.set(4.5) is placed before the balance.addLisnter(...) statement.
 KEY:b
 
-
+#
 Section 15.11 Animation 
 #
 30. Which of the following methods is not defined in the Animation class?
@@ -599,5 +596,3 @@ b. FadeTransition
 c. Timeline
 d. Duration
 KEY:abc
-
-

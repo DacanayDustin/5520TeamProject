@@ -1,5 +1,6 @@
 Chapter 11 Inheritance and Polymorphism
 
+#
 Section 11.2 Superclasses and Subclasses
 #
 1. Object-oriented programming allows you to derive new classes from existing classes. This is called ____________.
@@ -17,11 +18,8 @@ c. "class A extends B" means A is a subclass of B.
 d. "class A extends B" means B is a subclass of A.
 KEY:bc
 
-
-Section 11.3 Using the super Keyword
 #
-
-Section 11.3.1 Calling Superclass Constructors
+Section 11.3 Using the super Keyword
 #
 3. Suppose you create a class Square to be a subclass of GeometricObject. Analyze the following code:
 
@@ -54,7 +52,7 @@ d. The program would compile fine if you add the following constructor into A: A
 KEY:bd 
 
 #
-5.	Analyze the following code:
+5. Analyze the following code:
 
 public class Test extends A { 
   public static void main(String[] args) {
@@ -80,10 +78,8 @@ c. The program would compile if a default constructor A(){ } is added to class A
 d. The program compiles, but it has a runtime error due to the conflict on the method name print.
 KEY:bc See the last Note in the section, "Using the super keyword."
 
-
-Section 11.3.2 Constructor Chaining
 #
-6.	What is the output of running class C?
+6. What is the output of running class C?
 
 class A {
   public A() {
@@ -104,11 +100,11 @@ public class C  {
     B b = new B();
   }
 }
-a.	Nothing displayed
-b.	"The default constructor of B is invoked"
-c.	"The default constructor of A is invoked" followded by "The default constructor of B is invoked"
-d.	"The default constructor of B is invoked" followed by "The default constructor of A is invoked"
-e. 	"The default constructor of A is invoked"
+a. Nothing displayed
+b. "The default constructor of B is invoked"
+c. "The default constructor of A is invoked" followded by "The default constructor of B is invoked"
+d. "The default constructor of B is invoked" followed by "The default constructor of A is invoked"
+e. "The default constructor of A is invoked"
 KEY:c Superclass's constructor is called before executing the statements in the subclass constructor.
 
 #
@@ -117,11 +113,9 @@ a. A constructor may be static.
 b. A constructor may be private.
 c. A constructor may invoke a static method.
 d. A constructor may invoke an overloaded constructor.
-e. A constructor invokes its superclass no-arg constructor by default if a constructor does not invoke an overloaded constructor or its superclass’s constructor. 
+e. A constructor invokes its superclass no-arg constructor by default if a constructor does not invoke an overloaded constructor or its superclassï¿½s constructor. 
 KEY:a A constructor cannot be static, because you use a constructor to create a specific instance. A constructor may be private. In this case, the use cannot create an instance using this constructor. For example, the constructor in the Math class is private. A constructor may invoke a static method just like any method can invoke a static method. A constructor can invoke an overloaded constructor using the this keyword. So, the correct answer is A.
 
-
-Section 11.3.3 Calling Superclass Methods
 #	
 8. Which of the statements regarding the super keyword is incorrect?
 a. You can use super to invoke a super class constructor.
@@ -130,7 +124,7 @@ c. You can use super.super.p to invoke a method in superclass's parent class.
 d. You cannot invoke a method in superclass's parent class.
 KEY:c Using super.super is not allowed in Java. So, the answer to this question is C.
 
-
+#
 Section 11.4 Overriding Methods
 #
 9. Analyze the following code:
@@ -203,14 +197,13 @@ class A extends B {
     return "A string";
   }
 }
-
 a. I
 b. II
 c. Both I and II
 d. Neither 
 KEY:b
 
-
+#
 Section 11.5 Overriding vs. Overloading
 #
 11. Which of the following statements are true?
@@ -306,7 +299,7 @@ c. The constructor of class A is called and it displays "i from A is 40".
 d. The constructor of class A is called and it displays "i from A is 60".
 KEY:d When invoking new B(), B's superclass A's constructor is invoked first. It invokes setI(20). The setI method in B is used becasue object created is new B(). The setI method in B assigns 3 * 20 to i. So it displays i from A is 60.
 
-
+#
 Section 11.6 The Object Class and Its toString() Method
 #
 15. Analyze the following code:
@@ -334,7 +327,7 @@ c. When executing System.out.println(a2), the toString() method in the Object cl
 d. When executing System.out.println(a1), the toString() method in the A class is invoked.
 KEY:cd Since a1 is an instance of A, the toString() method in the A class is invoked at runtime.
 
-
+#
 Sections 11.7-11.8 
 #
 16. Which of the following statements is false?
@@ -448,7 +441,7 @@ c. Stduent Student
 d. Student Person
 KEY:a Note that the getInfo method is private in Person. It is not known to the outside of the class. This is the method invoked from the printPerson() method.
 
-
+#
 Section 11.9 Casting Objects and the instanceof Operator
 #
 20. Which of the following are Java keywords?
@@ -459,27 +452,27 @@ d. casting
 KEY:b A simple rule: the keywords are all in lowercase.
 
 #
-21.	Assume Cylinder is a subtype of Circle. Analyze the following code:
+21. Assume Cylinder is a subtype of Circle. Analyze the following code:
 
 Cylinder cy = new Cylinder(1, 1);
 Circle c = cy;
-a.	The code has a compile error.
-b.	The code has a runtime error.
-c.	The code is fine.
+a. The code has a compile error.
+b. The code has a runtime error.
+c. The code is fine.
 KEY:c You can assign a variable of a subtype to a supertype.
 
 #
-22.	Assume Cylinder is a subtype of Circle.  Analyze the following code:
+22. Assume Cylinder is a subtype of Circle.  Analyze the following code:
 
 Circle c = new Circle (5);
 Cylinder c = cy;
-a.	The code has a compile error.
-b.	The code has a runtime error.
-c.	The code is fine.
+a. The code has a compile error.
+b. The code has a runtime error.
+c. The code is fine.
 KEY:a You cannot assign a variable of a supertype to a subtype without explicit casting.
 
 #
-23.	Given the following classes and their objects:
+23. Given the following classes and their objects:
 
 class C1 {};
 class C2 extends C1 {};
@@ -491,14 +484,14 @@ C3 c3 = new C3();
 Analyze the following statement:
 
 c2 = (C2)((C1)c3);
-a.	c3 is cast into c2 successfully.
-b.	You will get a runtime error because you cannot cast objects from sibling classes.
-c.	You will get a runtime error because the Java runtime system cannot perform multiple casting in nested form.
-d.	The statement is correct.
+a. c3 is cast into c2 successfully.
+b. You will get a runtime error because you cannot cast objects from sibling classes.
+c. You will get a runtime error because the Java runtime system cannot perform multiple casting in nested form.
+d. The statement is correct.
 KEY:b
 
 #
-24.	Given the following code:
+24. Given the following code:
 
 class C1 {}
 class C2 extends C1 { }
@@ -511,10 +504,10 @@ C3 c3 = new C3();
 C4 c4 = new C4();
 
 Which of the following expressions evaluates to false?
-a.	c1 instanceof C1
-b.	c2 instanceof C1
-c.	c3 instanceof C1
-d.	c4 instanceof C2
+a. c1 instanceof C1
+b. c2 instanceof C1
+c. c3 instanceof C1
+d. c4 instanceof C2
 KEY:d
 
 #
@@ -542,8 +535,8 @@ d. new String[100]
 e. new java.util.Date[100]
 KEY:de Primitive data type array is not compatible with Object[].
 
-
-Section 11.10 The Object’s equals() Method
+#
+Section 11.10 The Objectï¿½s equals() Method
 #
 27. The equals method is defined in the Object class. Which of the following is correct to override it in the String class?
 a. public boolean equals(String other)
@@ -734,7 +727,7 @@ c. Program 1 displays true and Program 2 displays false
 d. Program 1 displays false and Program 2 displays false
 KEY:a In Program 1, ((A)a1).equals((A)a2) matches the equals(A a) method in the class A.
 
-
+#
 Section 11.11 The ArrayList Class
 #
 36. You can create an ArrayList using _________.
@@ -802,7 +795,6 @@ list.add("Beijing");
 list.add("Tokyo");
 list.add("Shanghai");
 list.set(3, "Hong Kong");
-
 a. The last line in the code causes a runtime error because there is no element at index 3 in the array list.
 b. The last line in the code has a compile error because there is no element at index 3 in the array list.
 c. If you replace the last line by list.add(3, "Hong Kong"), the code will compile and run fine.
@@ -817,7 +809,6 @@ KEY:ac There is no element at index 3.
     list.add(d);
     list.add(d);    
     System.out.println((list.get(0) == list.get(1)) + " " + (list.get(0)).equals(list.get(1)));
-
 a. true false
 b. false true
 c. true true
@@ -833,7 +824,6 @@ KEY:c list.get(0) and list.get(1) point to the same object.
     list.add(s1);
     list.add(s2);    
     System.out.println((list.get(0) == list.get(1)) + " " + (list.get(0)).equals(list.get(1)));
-
 a. true false
 b. false true
 c. true true
@@ -844,11 +834,10 @@ KEY:b list.get(0) and list.get(1) point to two different objects with the same s
 46. Suppose an ArrayList list contains {"red", "green", "red", "green"}. What is the list after the following code?
 
     list.remove("red");
-
-a.	{"red", "green", "red", "green"}
-b.	{"green", "red", "green"}
-c.	{"green", "green"}
-d.	{"red", "green", "green"}
+a. {"red", "green", "red", "green"}
+b. {"green", "red", "green"}
+c. {"green", "green"}
+d. {"red", "green", "green"}
 KEY:b
 
 #
@@ -858,11 +847,10 @@ KEY:b
     for (int i = 0; i < list.size(); i++)
       if (list.get(i).equals(element))
         list.remove(element);
-
-a.	{"red", "red", "green"}
-b.	{"red", "green"}
-c.	{"green"}
-d.	{}
+a. {"red", "red", "green"}
+b. {"red", "green"}
+c. {"green"}
+d. {}
 KEY:b
 
 #
@@ -874,11 +862,10 @@ KEY:b
         list.remove(element);
         i--;
       }
-
-a.	{"red", "red", "green"}
-b.	{"red", "green"}
-c.	{"green"}
-d.	{}
+a. {"red", "red", "green"}
+b. {"red", "green"}
+c. {"green"}
+d. {}
 KEY:c
 
 #
@@ -888,11 +875,10 @@ KEY:c
     for (int i = list.size() - 1; i >= 0; i--)
       if (list.get(i).equals(element))
         list.remove(element);
-
-a.	{"red", "red", "green"}
-b.	{"red", "green"}
-c.	{"green"}
-d.	{}
+a. {"red", "red", "green"}
+b. {"red", "green"}
+c. {"green"}
+d. {}
 KEY:c
 
 #
@@ -904,96 +890,91 @@ java.util.ArrayList<String> list1 = list;
 list.add("Atlanta"); 
 list1.add("Dallas"); 
 System.out.println(list1);
-
 a. [New York]
 b. [New York, Atlanta]
 c. [New York, Atlanta, Dallas]
 d. [New York, Dallas]
 KEY:c 
 
-
+#
 Section 11.12 Useful Methods for Lists
 #
-51.	Show the output of the following code:
+51. Show the output of the following code:
 
     String[] array = {"red", "green", "blue"};
     ArrayList<String> list = new ArrayList<>(Arrays.asList(array));
     list.add(0, "red");
     System.out.println(list);
 
-a.	["red", "green", "blue", "red"]
-b.	["red", "green", "blue"]
-c.	["red", "red", "green", "blue"]
-d.	["red", "green", "red", "blue"]
+a. ["red", "green", "blue", "red"]
+b. ["red", "green", "blue"]
+c. ["red", "red", "green", "blue"]
+d. ["red", "green", "red", "blue"]
 KEY:c
 
 #
-52.	Analyze the following code:
+52. Analyze the following code:
 
     Double[] array = {1, 2, 3};
     ArrayList<Double> list = new ArrayList<>(Arrays.asList(array));
     System.out.println(list);
-
-a.	The code is correct and displays [1, 2, 3]. 
-b.	The code is correct and displays [1.0, 2.0, 3.0]. 
-c.	The code has a compile error because an integer such as 1 is automatically converted into an Integer object, but the array element type is Double.
-d.	The code has a compile error because asList(array) requires that the array elements are objects.
+a. The code is correct and displays [1, 2, 3]. 
+b. The code is correct and displays [1.0, 2.0, 3.0]. 
+c. The code has a compile error because an integer such as 1 is automatically converted into an Integer object, but the array element type is Double.
+d. The code has a compile error because asList(array) requires that the array elements are objects.
 KEY:c
 
 #
-53.	Analyze the following code:
+53. Analyze the following code:
 
     double[] array = {1, 2, 3};
     ArrayList<Double> list = new ArrayList<>(Arrays.asList(array));
     System.out.println(list);
-
-a.	The code is correct and displays [1, 2, 3]. 
-b.	The code is correct and displays [1.0, 2.0, 3.0]. 
-c.	The code has a compile error because an integer such as 1 is automatically converted into an Integer object, but the array element type is Double.
-d.	The code has a compile error because asList(array) requires that the array elements are objects.
+a. The code is correct and displays [1, 2, 3]. 
+b. The code is correct and displays [1.0, 2.0, 3.0]. 
+c. The code has a compile error because an integer such as 1 is automatically converted into an Integer object, but the array element type is Double.
+d. The code has a compile error because asList(array) requires that the array elements are objects.
 KEY:d
 
 #
-54.	Analyze the following code:
+54. Analyze the following code:
 
     double[] c = {1, 2, 3};
     System.out.println(java.util.Collections.max(c));
-
-a.	The code is correct and displays 3. 
-b.	The code is correct and displays 3.0. 
-c.	The code has a compile error on Collections.max(c). c cannot be an array.
-d.	The code has a compile error on Integer[] c = {1, 2, 3}. 
+a. The code is correct and displays 3. 
+b. The code is correct and displays 3.0. 
+c. The code has a compile error on Collections.max(c). c cannot be an array.
+d. The code has a compile error on Integer[] c = {1, 2, 3}. 
 KEY:c
 
 #
-55.	Analyze the following code:
+55. Analyze the following code:
 
     Integer[] c = {3, 5};
     java.util.Collections.shuffle(c);
     System.out.println(java.util.Arrays.toString(c));
-
-a.	The code is correct and displays [3, 5]. 
-b.	The code is correct and displays [5, 3]. 
-c.	The code has a compile error on Collections.shuffle(c). c cannot be an array.
-d.	The code has a compile error on Integer[] c = {3, 5}. 
+a. The code is correct and displays [3, 5]. 
+b. The code is correct and displays [5, 3]. 
+c. The code has a compile error on Collections.shuffle(c). c cannot be an array.
+d. The code has a compile error on Integer[] c = {3, 5}. 
 KEY:c
 
-
+#
 Section 11.14 The protected Data and Methods
 #
-56.	What modifier should you use on a class so that a class in the same package can access it but a class in a different package cannot access it?
-a.	public
-b.	private
-c.	protected
-d.	Use the default modifier.
+56. What modifier should you use on a class so that a class in the same package can access it but a class in a different package cannot access it?
+a. public
+b. private
+c. protected
+d. Use the default modifier.
 KEY:d
 
 #
-57.	What modifier should you use on the members of a class so that they are not accessible to another class in a different package, but are accessible to any subclasses in any package?
-a.	public
-b.	private
-c.	protected
-d.	Use the default modifier.
+57. What modifier should you use on the members of a class so that they are not accessible to another class in a different package, but are accessible to any subclasses in any package?
+a. public
+b. private
+c. protected
+d. Use the default modifier.
 KEY:c
 
 #
@@ -1005,12 +986,12 @@ d. none (if no modifier is used), protected, private, and public.
 KEY:b
 
 #
-59. 	A class design requires that a particular member variable must be accessible by any subclasses of this class, but otherwise not by classes which are not members of the same package. What should be done to achieve this?
-a.	The variable should be marked public.
-b.	The variable should be marked private.
-c.	The variable should be marked protected.
-d.	The variable should have no special access modifier. 
-e.	The variable should be marked private and an accessor method provided.
+59. A class design requires that a particular member variable must be accessible by any subclasses of this class, but otherwise not by classes which are not members of the same package. What should be done to achieve this?
+a. The variable should be marked public.
+b. The variable should be marked private.
+c. The variable should be marked protected.
+d. The variable should have no special access modifier. 
+e. The variable should be marked private and an accessor method provided.
 KEY:c See the section on the protected modifier. 
 
 #
@@ -1033,7 +1014,6 @@ class B extends A {
   private int k;
   protected int m;
 }
-
 a. An object of B contains data fields i, j, k, m.
 b. An object of B contains data fields j, k, m.
 c. An object of B contains data fields j, m.
@@ -1055,25 +1035,24 @@ class B extends A {
 
   // some methods omitted
 }
-
 a. In the class B, an instance method can only access i, j, k, m.
 b. In the class B, an instance method can only access j, k, m.
 c. In the class B, an instance method can only access j, m.
 d. In the class B, an instance method can only access k, m.
 KEY:b
 
-
+#
 Section 11.15 Preventing Extending and Overriding
 #
-63.	Which of the following classes cannot be extended?
+63. Which of the following classes cannot be extended?
 a. class A {    }
 b. class A {&nbsp;&nbsp; private A() {&nbsp;&nbsp;}}
 c. final class A {    }
 d. class A {&nbsp;&nbsp; protected A() {&nbsp;&nbsp;}}
 KEY:c
 
-
-Section Comprehensive
+#
+Section 11.00 Comprehensive
 #
 64. Polymorphism means ______________.
 a. that data fields should be declared private

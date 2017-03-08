@@ -1,5 +1,6 @@
 Chapter 18 Recursion
 
+#
 Section 18.2 Example: Factorials
 #
 1. Which of the following statements are true?
@@ -20,7 +21,6 @@ KEY:abc
     else
       return _____________; // Recursive call
   }
-
 a. n * (n - 1)
 b. n 
 c. n * factorial(n - 1)
@@ -28,7 +28,7 @@ d. factorial(n - 1) * n
 KEY:cd
 
 #
-3.  What are the base cases in the following recursive method?
+3. What are the base cases in the following recursive method?
 
   public static void xMethod(int n) {
     if (n > 0) {
@@ -36,7 +36,6 @@ KEY:cd
       xMethod(n / 10);
     }
   }
-
 a. n > 0
 b. n <= 0
 c. no base cases
@@ -64,6 +63,7 @@ c. 5
 d. 6
 KEY:d
 
+#
 Section 18.3 Example: Fibonacci Numbers
 #
 6. Which of the following statements are true?
@@ -93,14 +93,13 @@ KEY:b Hint: number of time fib is invoked in fib(5) = 1 + number of time fib is 
     else  // Reduction and recursive calls
       return __________________;
   }
-
 a. fib(index - 1)
 b. fib(index - 2)
 c. fib(index - 1) + fib(index - 2)
 d. fib(index - 2) + fib(index - 1)
 KEY:cd
 
-
+#
 Section 18.4 Problem Solving Using Recursion
 #
 9. In the following method, what is the base case?
@@ -143,7 +142,6 @@ public static boolean isPalindrome(String s) {
   else
     return isPalindrome(s.substring(1, s.length() - 1));   
 }
-
 a. (s.charAt(0) != s.charAt(s.length() - 1)) // Base case
 b. (s.charAt(0) != s.charAt(s.length())) // Base case
 c. (s.charAt(1) != s.charAt(s.length() - 1)) // Base case
@@ -151,7 +149,7 @@ d. (s.charAt(1) != s.charAt(s.length())) // Base case
 KEY:a
 
 #
-12.	Analyze the following code:
+12. Analyze the following code:
 
 public class Test {
   public static void main(String[] args) {
@@ -164,13 +162,13 @@ public class Test {
     xMethod(x, length - 1);
   }
 }
-a.	The program displays 1 2 3 4 6.
-b.	The program displays 1 2 3 4 5 and then raises an ArrayIndexOutOfBoundsException.
-c.	The program displays 5 4 3 2 1.
-d.	The program displays 5 4 3 2 1 and then raises an ArrayIndexOutOfBoundsException.
+a. The program displays 1 2 3 4 6.
+b. The program displays 1 2 3 4 5 and then raises an ArrayIndexOutOfBoundsException.
+c. The program displays 5 4 3 2 1.
+d. The program displays 5 4 3 2 1 and then raises an ArrayIndexOutOfBoundsException.
 KEY:d xMethod(x, 5) is invoked, then xMethod(x, 4), xMethod(x, 3), xMethod(x, 2), xMethod(x, 1), xMethod(x, 0). When invoking xMethod(x, 0), a runtime exception is raised because  System.out.print(" "+x[0-1]) causes array out of bound.
 
-
+#
 Section 18.5 Recursive Helper Methods
 #
 13. Fill in the code to complete the following method for checking whether a string is a palindrome.
@@ -255,7 +253,7 @@ c. recursiveBinarySearch(list, key, low - 1, high + 1)
 d. recursiveBinarySearch(list, key, low, high)
 KEY:d
 
-
+#
 Section 18.7 Tower of Hanoi
 #
 16. How many times is the recursive moveDisks method invoked for 3 disks?
@@ -274,7 +272,7 @@ d. 20
 KEY:c
 
 #
-18.	Analyze the following two programs:
+18. Analyze the following two programs:
 
 A:
 
@@ -304,14 +302,14 @@ public class Test {
     }
   }
 }
-a.	The two programs produce the same output 5 4 3 2 1.
-b.	The two programs produce the same output 1 2 3 4 5.
-c.	The two programs produce the same output 4 3 2 1.
-d.	The two programs produce the same output 1 2 3 4.
-e. 	Program A produces the output 4 3 2 1 and Program B prints 4 3 2 1 1 1 .... 1 infinitely.
+a. The two programs produce the same output 5 4 3 2 1.
+b. The two programs produce the same output 1 2 3 4 5.
+c. The two programs produce the same output 4 3 2 1.
+d. The two programs produce the same output 1 2 3 4.
+e. Program A produces the output 4 3 2 1 and Program B prints 4 3 2 1 1 1 .... 1 infinitely.
 KEY:e In Program B, xmethod(5) invokes xmethod(4), xmethod(4) invokes xmethod(3), xmethod(3) invokes xmethod(2), xmethod(2) invokes xmethod(1), xmethod(1) returns control to xmethod(2), xmethod(2) invokes xmethod(1) because of the while loop. This continues infinitely.
 
-
+#
 Section 18.8 Fractals 
 #
 19. The following program draws squares recursively. Fill in the missing code.
@@ -350,17 +348,17 @@ c. null
 d. g
 KEY:d
 
-
+#
 Section 18.9 Recursion versus Iteration 
 #
-20.	Which of the following statements are true?
+20. Which of the following statements are true?
 a. Recursive methods run faster than non-recursive methods.
 b. Recursive methods usually take more memory space than non-recursive methods.
 c. A recursive method can always be replaced by a non-recursive method.
 d. In some cases, however, using recursion enables you to give a natural, straightforward, simple solution to a program that would otherwise be difficult to solve.
 KEY:bcd
 
-
+#
 Section 18.10 Tail Recursion
 #
 21. Analyze the following functions;
@@ -386,7 +384,6 @@ public class Test1 {
       return f2(n - 1, n + result);
   }
 }
-
 a. f1 is tail recursion, but f2 is not
 b. f2 is tail recursion, but f1 is not
 c. f1 and f2 are both tail recursive
@@ -408,7 +405,6 @@ public class Test1 {
       return f2(n - 1, n + result);
   }
 }
-
 a. 0
 b. 1
 c. 2

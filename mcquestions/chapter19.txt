@@ -1,5 +1,6 @@
 Chapter 19 Generics
 
+#
 Section 19.2 Motivations and Benefits
 #
 1. Which of the following statements is correct?
@@ -49,7 +50,7 @@ c. Double doubleObject = list.get(0); // No casting is needed
 d. double d = list.get(1); // Automatically converted to double
 KEY:abcd
 
-
+#
 Section 19.3 Declaring Generic Classes and Interfaces
 #
 7. To declare a class named A with a generic type, use
@@ -91,7 +92,7 @@ c. ArrayList<int> list = new ArrayList<int>();
 d. ArrayList<Number> list = new ArrayList<>();
 KEY:b
 
-
+#
 Section 19.4 Generic Methods
 #
 12. The method header is left blank in the following code. Fill in the header.
@@ -145,14 +146,14 @@ e. report warning and generate a class file if no other errors in the program.
 KEY:e For javac, a class file is generated even if the program has compile warnings.
 
 #
-16. If you use the javac –Xlint:unchecked command to compile a program that contains raw type, what would the compiler do?
+16. If you use the javac ï¿½Xlint:unchecked command to compile a program that contains raw type, what would the compiler do?
 a. report compile error
 b. report warning and generate a class file
 c. report warning without generating a class file 
 d. no error and generate a class file
 KEY:b
 
-
+#
 Section 19.7 Wildcards
 #
 17. Is ArrayList<Integer> a subclass of ArrayList<Object>? 
@@ -210,7 +211,6 @@ public class WildCardDemo3 {
       stack2.push(stack1.pop());
   }
 }
-
 a. ? super Object
 b. ? super T
 c. ? extends T
@@ -236,14 +236,13 @@ public class WildCardDemo3 {
       stack2.push(stack1.pop());
   }
 }
-
 a. add(GenericStack<T> stack1, GenericStack<T> stack2)
 b. add(GenericStack<? extends T> stack1, GenericStack<T> stack2)
 c. add(GenericStack<T> stack1, GenericStack<? super T> stack2)
 d. add(GenericStack<T> stack1, GenericStack<Object> stack2)
 KEY:bc
 
-
+#
 Section 19.8 Erasure and Restrictions on Generics
 #
 25. ArrayList<String> and ArrayList<Integer> are two types. Does the JVM load two classes ArrayList<String> and ArrayList<Integer>? 
@@ -289,7 +288,6 @@ public class MyInt implements _______ {
       return 0;
   }
 }
-
 a. Comparable / Object
 b. Comparable<MyInt> / MyInt
 c. Comparable<MyInt> / Object

@@ -1,5 +1,6 @@
 Chapter 16 JavaFX UI Controls and Multimedia
 
+#
 Section 16.2 Labeled and Label
 #
 1. To create a label with the specified text, use __________.
@@ -11,60 +12,60 @@ KEY:d
 
 #
 2. To set a red color for the text in the label lbl, use _________.
-a.	lbl.setFill(Color.red);
-b.	lbl.setTextFill(Color.red);
-c.	lbl.setFill(Color.RED);
-d.	lbl.setTextFill(Color.RED);
+a. lbl.setFill(Color.red);
+b. lbl.setTextFill(Color.red);
+c. lbl.setFill(Color.RED);
+d. lbl.setTextFill(Color.RED);
 KEY:d
 
 #
 3. __________ are properties in Labelled.
-a.	alignment
-b.	contentDisplay
-c.	graphic
-d.	text
-e.	underline
+a. alignment
+b. contentDisplay
+c. graphic
+d. text
+e. underline
 KEY:abcde
 
 #
 4. To set the node to the right of the text in a label lbl, use _______.
-a.	lbl.setContentDisplay(ContentDisplay.TOP);
-b.	lbl.setContentDisplay(ContentDisplay.BOTTOM);
-c.	lbl.setContentDisplay(ContentDisplay.LEFT);
-d.	lbl.setContentDisplay(ContentDisplay.RIGHT);
+a. lbl.setContentDisplay(ContentDisplay.TOP);
+b. lbl.setContentDisplay(ContentDisplay.BOTTOM);
+c. lbl.setContentDisplay(ContentDisplay.LEFT);
+d. lbl.setContentDisplay(ContentDisplay.RIGHT);
 KEY:d
 
-
+#
 Section 16.3 Button
 #
-5.	__________ is a superclass for Button.
-a.	Label
-b.	Labelled
-c.	ButtonBase
-d.	Control
-e.      Node
+5. __________ is a superclass for Button.
+a. Label
+b. Labelled
+c. ButtonBase
+d. Control
+e. Node
 KEY:bcde
 
 #
-6.	__________ is a superclass for Label.
-a.	Scene
-b.	Labelled
-c.	ButtonBase
-d.	Control
-e.      Node
+6. __________ is a superclass for Label.
+a. Scene
+b. Labelled
+c. ButtonBase
+d. Control
+e. Node
 KEY:bde
 
 #
-7.	The setOnAction method is defined in _________.
-a.	Label
-b.	Labelled
-c.	Node
-d.	ButtonBase
-e.      Button
+7. The setOnAction method is defined in _________.
+a. Label
+b. Labelled
+c. Node
+d. ButtonBase
+e. Button
 KEY:d
 
 #
-8.	Analyze the following code:
+8. Analyze the following code:
 
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -104,7 +105,7 @@ d. Two buttons displayed with different icons.
 KEY:a Since images can be shared, both bt1 and bt2 display the same icon. 
 
 #
-9.	Analyze the following code:
+9. Analyze the following code:
 
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -143,7 +144,7 @@ d. Four buttons are displayed with the same text "Java".
 KEY:a Because you are using a StackPane.
 
 #
-10.	Analyze the following code:
+10. Analyze the following code:
 
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -182,7 +183,7 @@ c. Three buttons are displayed with the same text "Java".
 d. Four buttons are displayed with the same text "Java".
 KEY:d 
 
-
+#
 Section 16.4 CheckBox
 #
 11. _________ checks whether the CheckBox chk is selected.
@@ -201,7 +202,7 @@ d. CheckBox inherits from Control.
 e. CheckBox inherits from Node.
 KEY:acde
 
-
+#
 Section 16.5 RadioButton
 #
 13. Which of the following statements are true?
@@ -261,7 +262,7 @@ c. The program displays two radio buttons. The two radio buttons are not grouped
 d. The program displays one radio button with text C++. 
 KEY:c To group the two use rb1.setToggleGroup(group); rb2.setToggleGroup(group);
 
-
+#
 Section 16.6 TextField
 #
 16. Which of the following statements are true?
@@ -282,19 +283,19 @@ e. onAction
 KEY:abcde
 
 #
-18.	Which of the following statements are true?
-a.	You can specify a horizontal text alignment in a text field.
-b.	You can specify the number of columns in a text field.
-c.	You can disable editing on a text field.
-d.	You can create a text field with a specified text.
+18. Which of the following statements are true?
+a. You can specify a horizontal text alignment in a text field.
+b. You can specify the number of columns in a text field.
+c. You can disable editing on a text field.
+d. You can create a text field with a specified text.
 KEY:abcd
 
 #
-19.	The method __________ gets the contents of the text field tf.
-a.	tf.getText(s)
-b.	tf.getText()
-c.	tf.getString()
-d.	tf.findString()
+19. The method __________ gets the contents of the text field tf.
+a. tf.getText(s)
+b. tf.getText()
+c. tf.getString()
+d. tf.findString()
 KEY:b
 
 #
@@ -306,40 +307,40 @@ d. PasswordField inherits from Control.
 e. PasswordField inherits from Node.
 KEY:abde
 
-
+#
 Section 16.7 TextArea
 #
-21.	The method __________ appends a string s into the text area ta.
-a.	ta.setText(s)
-b.	ta.appendText(s)
-c.	ta.append(s)
-d.	ta.insertText(s)
+21. The method __________ appends a string s into the text area ta.
+a. ta.setText(s)
+b. ta.appendText(s)
+c. ta.append(s)
+d. ta.insertText(s)
 KEY:b
 
 #
-22.	Which of the following statements are true?
-a.	You can specify a horizontal text alignment in a text area.
-b.	You can specify the number of columns in a text area.
-c.	You can disable editing on a text area.
-d.	You can create a text field with a specified text area.
-e.	You can specify the number of rows in a text area.
+22. Which of the following statements are true?
+a. You can specify a horizontal text alignment in a text area.
+b. You can specify the number of columns in a text area.
+c. You can disable editing on a text area.
+d. You can create a text field with a specified text area.
+e. You can specify the number of rows in a text area.
 KEY:bcde
 
 #
-23.	To wrap a line in a text area ta, invoke ____________.
-a.	ta.setLineWrap(false)
-b.	ta.setLineWrap(true)
-c.	ta.WrapLine()
-d.	ta.wrapText()
+23. To wrap a line in a text area ta, invoke ____________.
+a. ta.setLineWrap(false)
+b. ta.setLineWrap(true)
+c. ta.WrapLine()
+d. ta.wrapText()
 e. ta.setWrapText(true)
 KEY:e
 
 #
-24.	To wrap a line in a text area jta on words, invoke ____________.
-a.	jta.setWrapStyleWord(false)
-b.	jta.setWrapStyleWord(true)
-c.	jta.wrapStyleWord()
-d.	jta.wrapWord()
+24. To wrap a line in a text area jta on words, invoke ____________.
+a. jta.setWrapStyleWord(false)
+b. jta.setWrapStyleWord(true)
+c. jta.wrapStyleWord()
+d. jta.wrapWord()
 KEY:b
 
 #
@@ -351,39 +352,39 @@ d. TextArea inherits from Control.
 e. TextArea inherits from Node.
 KEY:ade
 
-
+#
 Section 16.8 ComboBox
 #
-26.	How many items can be added into a ComboBox object?
-a.	0
-b.	1
-c.	2
-d.	Unlimited
+26. How many items can be added into a ComboBox object?
+a. 0
+b. 1
+c. 2
+d. Unlimited
 KEY:d
 
 #
-27.	How many items can be selected from a ComboBox at a time?
-a.	0
-b.	1
-c.	2
-d.	Unlimited
+27. How many items can be selected from a ComboBox at a time?
+a. 0
+b. 1
+c. 2
+d. Unlimited
 KEY:b
 
 #
-28.	_______________ returns the selected item on a ComboBox cbo.
-a.	cbo.getSelectedIndex()
-b.	cbo.getSelectedItem()
-c.	cbo.getSelectedIndices()
-d.	cbo.getSelectedItems()
+28. _______________ returns the selected item on a ComboBox cbo.
+a. cbo.getSelectedIndex()
+b. cbo.getSelectedItem()
+c. cbo.getSelectedIndices()
+d. cbo.getSelectedItems()
 e. cbo.getValue()
 KEY:e
 
 #
-29.	The method __________ adds an item s into a ComboBox cbo.
-a.	cbo.add(s)
-b.	cbo.addChoice(s)
-c.	cbo.addItem(s)
-d.	cbo.addObject(s)
+29. The method __________ adds an item s into a ComboBox cbo.
+a. cbo.add(s)
+b. cbo.addChoice(s)
+c. cbo.addItem(s)
+d. cbo.addObject(s)
 e. cbo.getItems().add(s)
 KEY:e
 
@@ -398,14 +399,14 @@ KEY:ade
 
 #
 31. You can use the _________ properties in a ComboBox.
-a.	value 
-b.	editable
+a. value 
+b. editable
 c. onAction
 d. items
 e. visibleRowCount
 KEY:abcde
 
-
+#
 Section 16.9 Lists
 #
 32.  ____________ are properties for a ListView.
@@ -433,15 +434,15 @@ c. lv.getSelectionModel().selectedItemProperty().addListener(e -> {processStatem
 d. lv.getSelectionModel().addListener(e -> {processStatements});
 KEY:c
 
-
+#
 Section 16.10 ScrollBar
 #
-35.	__________ are properties of ScrollBar.
-a.	value
-b.	min
-c.	max
-d.	orientation
-e.      visibleAmount
+35. __________ are properties of ScrollBar.
+a. value
+b. min
+c. max
+d. orientation
+e. visibleAmount
 KEY:abcde
 
 #
@@ -452,15 +453,15 @@ c. sb.valueProperty().addListener(e -> {processStatements});
 d. sb.getItems().addListener(e -> {processStatements});
 KEY:c
 
-
+#
 Section 16.11 Slider
 #
-37.	__________ are properties of Slider.
-a.	value
-b.	min
-c.	max
-d.	orientation
-e.      visibleAmount
+37. __________ are properties of Slider.
+a. value
+b. min
+c. max
+d. orientation
+e. visibleAmount
 KEY:abcde
 
 #
@@ -471,38 +472,38 @@ c. sl.valueProperty().addListener(e -> {processStatements});
 d. sl.getItems().addListener(e -> {processStatements});
 KEY:c
 
-
+#
 Section 16.13 Video and Audio 
 #
-39.	Which of the following statements are true?
-a.	A Media can be shared by multiple MediaPlayer.
-b.	A MediaPlayer can be shared by multiple MediaView.
-c.	A MediaView can be placed into multiple Pane.
-d.	A Media can be downloaded from a URL.
+39. Which of the following statements are true?
+a. A Media can be shared by multiple MediaPlayer.
+b. A MediaPlayer can be shared by multiple MediaView.
+c. A MediaView can be placed into multiple Pane.
+d. A Media can be downloaded from a URL.
 KEY:abd
 
 #
-40.	You can use the methods _________ to control a MediaPlayer.
-a.	start().
-b.	stop().
-c.	pause().
-d.	play().
+40. You can use the methods _________ to control a MediaPlayer.
+a. start().
+b. stop().
+c. pause().
+d. play().
 KEY:cd
 
 #
-41.	You can use the properties _________ to control a MediaPlayer.
-a.	autoPlay
-b.	currentCount
-c.	cycleCount
-d.	mute
+41. You can use the properties _________ to control a MediaPlayer.
+a. autoPlay
+b. currentCount
+c. cycleCount
+d. mute
 e. volume
 KEY:abcde
 
 #
-42.	You can use the properties _________ in a MediaView.
-a.	x
-b.	y
-c.	mediaPlayer
-d.	fitWidth
+42. You can use the properties _________ in a MediaView.
+a. x
+b. y
+c. mediaPlayer
+d. fitWidth
 e. fitHeight
 KEY:abcde
