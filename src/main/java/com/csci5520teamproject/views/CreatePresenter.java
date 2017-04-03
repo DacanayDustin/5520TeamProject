@@ -29,14 +29,13 @@ public class CreatePresenter {
     @FXML
     private TextFlow flagFlow;
 
-   // @FXML
+    // @FXML
     //private ComboBox typeCB;
-
     private Text flagText = new Text();
     private String type = "S";
 
     public void initialize() {
-       // typeCB.getItems().addAll("Student", "Teacher");
+        // typeCB.getItems().addAll("Student", "Teacher");
     }
 //
 //    @FXML
@@ -57,6 +56,7 @@ public class CreatePresenter {
 
     @FXML
     void createAction() throws IOException, ClassNotFoundException, SQLException {
+        flagFlow.getChildren().clear();
         boolean go = true;
 
         flagText.setText("");
@@ -85,7 +85,7 @@ public class CreatePresenter {
             go = false;
         }
         //if (type.trim().equals("S") && !containsDBClass(codeTF.getText().toString())) {
-          //  flagText.setText(flagText.getText().toString() + "Code Doesn't Exist\n");
+        //  flagText.setText(flagText.getText().toString() + "Code Doesn't Exist\n");
         //    go = false;
         //}
         if (type.trim().equals("T") && !codeTF.getText().toString().trim().equals("")) {
@@ -110,8 +110,10 @@ public class CreatePresenter {
                 ps.setString(4, lastNameTF.getText().toString());
                 ps.setString(5, "S");
                 ps.setString(6, "");
-
                 int i = ps.executeUpdate();
+                flagText.setText("Please Wiat While Account is Created");
+                flagFlow.getChildren().clear();
+                flagFlow.getChildren().add(flagText);
                 if (i > 0) {
                     if (type.equals("T")) {
                         flagText.setText("Sucessfully Registered\nHit Back to Login");
@@ -167,13 +169,13 @@ public class CreatePresenter {
 
     private boolean createAccoutDB(String username) {
         try {
-        Class.forName("com.mysql.jdbc.Driver");
-        Class.forName("org.sqlite.JDBC");
-        System.out.println("Driver loaded");
-        Connection con = DriverManager.getConnection("jdbc:mysql://liang.armstrong.edu:3306/team3", "team3", "tiger");
-        System.out.println("Database connected");
-        for (int i = 1; i < 45; i++) {
-            for (int j = 1; j < findQuestionAmount(Integer.toString(i)) + 1; j++) {
+            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("org.sqlite.JDBC");
+            System.out.println("Driver loaded");
+            Connection con = DriverManager.getConnection("jdbc:mysql://liang.armstrong.edu:3306/team3", "team3", "tiger");
+            System.out.println("Database connected");
+            for (int i = 1; i < 45; i++) {
+                for (int j = 1; j < findQuestionAmount(Integer.toString(i)) + 1; j++) {
                     PreparedStatement ps = con.prepareStatement("insert into entries values(?,?,?,?,?,?,?,?)");
                     ps.setString(1, userTF.getText().toString());
                     ps.setString(2, Integer.toString(i));
@@ -188,11 +190,11 @@ public class CreatePresenter {
                     if (k == 0) {
                         return false;
                     }
-            }
-        }
-        } catch (Exception ex) {
-                    System.out.println(ex);
                 }
+            }
+        } catch (Exception ex) {
+            System.out.println(ex);
+        }
         return true;
     }
 
