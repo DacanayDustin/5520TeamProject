@@ -12,6 +12,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.TextField;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
 
@@ -46,17 +48,17 @@ public class LoginPresenter {
 
         flagText.setText("");
         if (userTF.getText().trim().equals("")) {
-            flagText.setText(flagText.getText() + "Username Cannot be Empty\n");
+            flagText.setText(flagText.getText() + "**Username Cannot be Empty\n");
             go = false;
         } else if (!containsDB(userTF.getText())) {
-            flagText.setText(flagText.getText() + "Username Doesn't Exist\n");
+            flagText.setText(flagText.getText() + "**Username Doesn't Exist\n");
             go = false;
         }
         if (passTF.getText().trim().equals("")) {
-            flagText.setText(flagText.getText() + "Password Cannot be Empty\n");
+            flagText.setText(flagText.getText() + "**Password Cannot be Empty\n");
             go = false;
         }
-
+flagText.setFont(Font.font("Times", FontWeight.BOLD, 14));
         flagFlow.getChildren().clear();
         flagFlow.getChildren().add(flagText);
         if (go) {

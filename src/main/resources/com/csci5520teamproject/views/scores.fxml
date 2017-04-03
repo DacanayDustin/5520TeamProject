@@ -7,16 +7,16 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.Pane?>
 
-<View fx:id="scores" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.csci5520teamproject.views.ScoresPresenter">
+<View fx:id="scores" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="375.0" styleClass="questionBG" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.csci5520teamproject.views.ScoresPresenter">
    <center>
       <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="backBtn" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#goHome" text="Back" />
-            <ScrollPane layoutX="-1.0" layoutY="52.0" prefHeight="549.0" prefWidth="350.0">
+            <ScrollPane hbarPolicy="NEVER" layoutX="-1.0" layoutY="52.0" pannable="true" prefHeight="549.0" prefWidth="350.0" vbarPolicy="NEVER">
                <content>
-                  <Accordion fx:id="scoresAccord" prefHeight="550.0" prefWidth="330.0" />
+                  <Accordion id = "titled-pane" fx:id="scoresAccord" prefHeight="550.0" prefWidth="350.0" styleClass = "createAcc" />
                </content>
             </ScrollPane>
+            <Button fx:id="backBtn" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#goHome" text="Home" />
          </children>
       </Pane>
    </center>

@@ -43,12 +43,12 @@ public class QuestionPresenter extends SelectionPresenter {
     Image xmark = new Image("file:xmark.gif");
 
     int current = 0;
-
+    double changeHeight;
     Connection con;
     PreparedStatement ps;
 
     @FXML
-    private View question;
+    private View create;
 
     @FXML
     private Button hintBTN;
@@ -184,6 +184,7 @@ public class QuestionPresenter extends SelectionPresenter {
         checkBoxArray.clear();
         vBoxQuest.getChildren().clear();
         questionTF.getChildren().clear();
+        double total = 0;
         for (int j = 0; j < questionArray.get(index).getQuestionStringArray().size(); j++) {
             String[] words = questionArray.get(index).getQuestionStringArray().get(j).split("(?<!^|[a-zA-Z'])|(?![a-zA-Z'])");
             ArrayList<Text> texts = new ArrayList<>();
@@ -208,7 +209,7 @@ public class QuestionPresenter extends SelectionPresenter {
 
             for (int i = 0; i < texts.size(); i++) {
                 if (containsKeyword(texts.get(i).getText())) {
-                    texts.get(i).setFill(Color.GREEN);
+                    texts.get(i).setFill(Color.DARKGREEN);
                 }
 
                 if (texts.get(i).getText().matches("\".*\"")) {
@@ -216,23 +217,49 @@ public class QuestionPresenter extends SelectionPresenter {
                 }
 
                 questionTF.getChildren().add(texts.get(i));
-
+                total += texts.size();
             }
+            if(questionArray.get(index).getQuestionStringArray().size() - 1 == j){
+            double origHeight = 600;
+            total = total/ 6;
+            changeHeight = origHeight;
+            System.out.println(total);
+            if (total > 500) {
+                changeHeight = (changeHeight + (total/7));
+                System.out.println(changeHeight);
+            }
+            create.setPrefHeight(changeHeight);}
             questionTF.getChildren().add(new Text("\n"));
         }
         for (int j = 0; j < questionArray.get(index).getOptions().size(); j++) {
             System.out.println(questionArray.get(index).getKeyArray());
             if (questionArray.get(index).getKeyArray().size() == 1) {
+
                 radioButtonArray.add(new RadioButton(questionArray.get(index).getOptions().get(j)));
+                if (vBoxQuest.getHeight() > 300) {
+                    changeHeight = (changeHeight + (vBoxQuest.getHeight() / 4));
+                    create.setPrefHeight(changeHeight);
+                }
+               
+                radioButtonArray.get(j).setToggleGroup(group);
                 vBoxQuest.getChildren().add(radioButtonArray.get(j));
                 radioButtonArray.get(j).setToggleGroup(group);
+                radioButtonArray.get(j).setWrapText(true);
+                radioButtonArray.get(j).setMaxWidth(300);
                 if (answerString != null) {
                     if (radioButtonArray.get(j).getText().charAt(0) == (answerString.charAt(0))) {
                         radioButtonArray.get(j).setSelected(true);
                     }
                 }
             } else {
-                checkBoxArray.add(new CheckBox(questionArray.get(index).getOptions().get(j)));
+               checkBoxArray.add(new CheckBox(questionArray.get(index).getOptions().get(j)));
+                checkBoxArray.get(j).setWrapText(true);
+                checkBoxArray.get(j).setMaxWidth(300);
+                
+                if (vBoxQuest.getHeight() > 300) {
+                    changeHeight = (changeHeight + (vBoxQuest.getHeight() / 4));
+                    create.setPrefHeight(changeHeight);
+                }
                 vBoxQuest.getChildren().add(checkBoxArray.get(j));
 
                 if (answerString != null) {

@@ -13,7 +13,7 @@
 
 <ScrollPane hbarPolicy="NEVER" maxHeight = "Infinity" minHeight="-Infinity" minWidth="-Infinity" pannable="true" vbarPolicy="NEVER" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.csci5520teamproject.views.QuestionPresenter">
    <content>
-      <View fx:id="create" maxHeight="Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="350.0" styleClass="createAcc" stylesheets="@stylesheet.css">
+      <View fx:id="create" maxHeight="Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="350.0" styleClass="questionBG" stylesheets="@stylesheet.css">
           <top>
               <Pane maxHeight="1.7976931348623157E308" prefHeight="51.0" BorderPane.alignment="CENTER">
       

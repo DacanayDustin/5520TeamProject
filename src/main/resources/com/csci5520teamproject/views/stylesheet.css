@@ -7,7 +7,13 @@ login {
     
 }
 .createAcc{
-    -fx-background-color: #e5f0f5;
+    -fx-background-color: #9cb9d1;
+}
+textflow{
+    -fx-font-weight: bold;
+}
+.questionBG{
+    -fx-background-color: #d2dfea;
 }
 .hyperlink{
     -fx-text-fill: black;
@@ -35,7 +41,7 @@ login {
   -fx-font-weight: bold;
   -fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );  
 }*/
-.scroll-bar:vertical {
+.scroll-bar: vertical {
  -fx-track-background: transparent;
 }
 .button {
@@ -43,29 +49,17 @@ login {
     -fx-font-family: "Arial Narrow";
     -fx-font-weight: bold;
     -fx-text-align: center;
-    -fx-background-color: #006ca4;
+    -fx-background-color: #094d74;
      -fx-background-radius: 30;
     -fx-background-insets: 0,1,1;
    
-/*    -fx-height: 100px;
-    -fx-line-height:100px;*/
-    /*-fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );*/
 }
 
 .button:hover,pressedOn {
-    -fx-background-color: black;
-    -fx-text-fill: yellow;
+    -fx-background-color: #eef0f6;
+    -fx-text-fill: black;
 }
-/*.button {
-    -fx-text-fill: white;
-    -fx-font-family: "Arial Narrow";
-    -fx-font-weight: bold;
-    -fx-text-align: center;
-    -fx-background-color: #006ca4;
-     -fx-background-radius: 30;
-    -fx-background-insets: 7,7,7,7;
-    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
-}*/
+
 .textflow{
     -fx-font-size: 500;
 }
@@ -73,12 +67,8 @@ login {
     -fx-font-family: Arial, Sans-Serif;
     -fx-font-size: 13px;
     -fx-border-color: black;
-    /*-fx-margin-bottom: 5px;*/
     -fx-display: block;
-    /*-fx-padding: 4px;*/
-   /*-fx-border: solid 1px #fff;*/
     -fx-width: 300px;
-/*    -fx-background-color: #ffc;*/
 } 
 #login {
     -fx-background-color: rgba(255,255,255,0.5);
@@ -88,12 +78,37 @@ login {
     -fx-background-color: transparent;
 }
 .combo-box {
-    -fx-background-color: #b2d2e3;
-    
+    -fx-background-color: #eef0f6;
+/*    #b2d2e3*/
 }
 .combo-box .text-field {
     -fx-prompt-text-fill: white;
 }
 .combo-box .text-field:focused {
     -fx-prompt-text-fill: transparent ;
+}
+
+.titled-pane > .title {
+    -fx-background-color: #b2d2e3;
+    -fx-border: solid 2px;
+}
+.titled-pane: focused > .title 
+{
+    -fx-background-color: black;
+-fx-text-fill: yellow;
+}
+.titled-pane: focused 
+{
+    
+-fx-text-fill: yellow;
+}
+.titled-pane > *.content 
+{
+-fx-background-color: #e5f0f5;
+-fx-background-insets: 0, 0 1 1 1;
+-fx-padding: 0.167em;
+ }
+ .titled-pane:focused > .title > .arrow-button .arrow 
+{
+-fx-background-color: white;
 }
