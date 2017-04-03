@@ -208,7 +208,7 @@ public class QuestionPresenter extends SelectionPresenter {
 
             for (int i = 0; i < texts.size(); i++) {
                 if (containsKeyword(texts.get(i).getText())) {
-                    texts.get(i).setFill(Color.GREEN);
+                    texts.get(i).setFill(Color.DARKGREEN);
                 }
 
                 if (texts.get(i).getText().matches("\".*\"")) {
@@ -226,6 +226,8 @@ public class QuestionPresenter extends SelectionPresenter {
                 radioButtonArray.add(new RadioButton(questionArray.get(index).getOptions().get(j)));
                 vBoxQuest.getChildren().add(radioButtonArray.get(j));
                 radioButtonArray.get(j).setToggleGroup(group);
+                radioButtonArray.get(j).setWrapText(true);
+                radioButtonArray.get(j).setMaxWidth(300);
                 if (answerString != null) {
                     if (radioButtonArray.get(j).getText().charAt(0) == (answerString.charAt(0))) {
                         radioButtonArray.get(j).setSelected(true);
@@ -233,6 +235,8 @@ public class QuestionPresenter extends SelectionPresenter {
                 }
             } else {
                 checkBoxArray.add(new CheckBox(questionArray.get(index).getOptions().get(j)));
+                checkBoxArray.get(j).setWrapText(true);
+                checkBoxArray.get(j).setMaxWidth(300);
                 vBoxQuest.getChildren().add(checkBoxArray.get(j));
 
                 if (answerString != null) {
@@ -244,7 +248,10 @@ public class QuestionPresenter extends SelectionPresenter {
                     }
                 }
             }
+
         }
+        
+      
     }
 
     @FXML
